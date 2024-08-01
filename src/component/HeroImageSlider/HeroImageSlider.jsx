@@ -17,7 +17,8 @@ const HeroImageSlider = () => {
         <h1 className="font-semibold text-2xl ml-8 lg:ml-2 py-10 md:px-14">
           General showcase of all products
         </h1>
-        <div className="hidden md:flex flex-wrap justify-center m-8 lg:grid-cols-2 lg:gap-10 lg:p-4">
+
+        {/* <div className="hidden md:flex flex-wrap justify-center m-8 lg:grid-cols-2 lg:gap-10 lg:p-4">
           {images.map((image, index) => (
             <motion.a
               href="/"
@@ -35,7 +36,41 @@ const HeroImageSlider = () => {
               />
             </motion.a>
           ))}
+        </div> */}
+        <div className="hidden md:flex flex-wrap justify-center m-8 lg:grid-cols-2 lg:gap-10 lg:p-4 relative">
+          {images.map((image, index) => (
+            <motion.a
+              href="/"
+              key={index}
+              className={`relative xl:absolute xl:top-[${index * 2}rem] xl:z-${
+                images.length - index
+              }`}
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2, delay: index * 0.5 }}
+              style={{
+                left: `calc(${index * -1.5}rem + 50%)`, // Adjusted to center the overlapping images
+                transform: `translateX(${index * 1.5}rem)`, // Ensure proper centering effect
+                zIndex: images.length - index, // Ensure proper stacking order
+              }}
+            >
+              <img
+                className={`object-cover rounded-3xl transition-transform duration-300 ease-in-out transform ${
+                  index === images.length - 1
+                    ? "group-hover:scale-110"
+                    : "xl:scale-100"
+                } hover:rounded-[2.2rem] md:h-[17rem] md:w-[17rem] md:mt-4 md:ml-12 lg:h-[20rem] lg:w-[25rem] lg:-mt-[2rem] lg:mb-14 lg:space-y-24 lg:-ml-2 lg:mr-5 xl:h-[22rem] xl:w-[22rem] xl:group-hover:h-[22rem] xl:group-hover:w-[22rem] ${
+                  index !== images.length - 1
+                    ? "opacity-60 xl:opacity-60" // Faint visibility for non-hovered images
+                    : "opacity-100" // Full visibility for hovered image
+                } hover:opacity-100 xl:group-hover:opacity-100`}
+                src={image}
+                alt={`image-${index}`}
+              />
+            </motion.a>
+          ))}
         </div>
+
         <div className="grid grid-cols-3 gap-4 p-4 md:hidden">
           {images.map((image, index) => (
             <motion.div
