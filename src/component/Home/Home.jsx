@@ -119,8 +119,6 @@ const Home = () => {
       }
     };
 
-    playVideoWithSound();
-
     const handleVisibilityChange = () => {
       if (document.hidden) {
         video.pause();
@@ -147,6 +145,8 @@ const Home = () => {
 
     observer.observe(video);
 
+    playVideoWithSound(); // Ensure video tries to play with sound immediately
+
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       observer.unobserve(video);
@@ -159,7 +159,6 @@ const Home = () => {
         <video
           ref={videoRef}
           className="w-full h-full object-cover"
-          muted={false} // Attempt to start unmuted
           autoPlay
           loop
           playsInline
