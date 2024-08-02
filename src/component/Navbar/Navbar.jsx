@@ -497,7 +497,7 @@ const Navbar = ({ isHome }) => {
     <nav
       className={`sticky top-0 left-0 w-full z-20 transition duration-300 ${navbarBg}`}
     >
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+      <div className="container mx-auto px-4 flex justify-between items-center lg:px-[5rem]">
         <div className="text-white font-bold text-lg">
           <Link to="/">
             <img

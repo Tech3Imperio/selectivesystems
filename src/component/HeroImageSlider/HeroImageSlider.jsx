@@ -87,7 +87,7 @@ const HeroImageSlider = () => {
 
         {/* Grid Layout for Smaller Devices  */}
 
-        <div className="grid grid-cols-1 gap-4 ml-2 mr-10 p-4 md:hidden">
+        <div className="grid grid-cols-2 gap-4 ml-2 mr-10 p-4 md:hidden">
           {" "}
           {images.map((image, index) => (
             <motion.div
