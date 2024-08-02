@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SelectingSystem from "../../assets/HeroVideo/SelectingSystem.mp4";
 import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
 // import { motion } from "framer-motion";
@@ -11,17 +11,59 @@ import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
 // const images = [image1, image2, image3, image4, image5];
 
 const Home = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    // Try to play the video muted initially
+    const playVideo = async () => {
+      try {
+        await video.play();
+      } catch (error) {
+        console.error("Autoplay failed:", error);
+      }
+    };
+
+    playVideo();
+  }, []);
+
+  const handlePlayWithSound = () => {
+    const video = videoRef.current;
+    video.muted = false;
+    video.play();
+  };
   return (
     <>
-      <div className="relative h-screen w-full -mt-[4.5rem]">
-        <video
+      {/* <div className="relative col-start-12 h-screen w-full -mt-[4.5rem]"> */}
+      {/* <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           src={SelectingSystem}
           autoPlay
           loop
           muted
-        />
-        {/* <div className="absolute inset-0 bg-black opacity-50 z-10"></div>{" "} */}
+        /> */}
+      <div
+        className="bg-gray-100 flex items-center justify-center h-screen"
+        onClick={handlePlayWithSound}
+      >
+        <video
+          ref={videoRef}
+          className="w-full h-full object-cover"
+          muted
+          autoPlay
+          loop
+          playsInline
+        >
+          <source src={SelectingSystem} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* <button
+          className="absolute bottom-4 left-4 bg-blue-500 text-white px-4 py-2 rounded"
+          onClick={handlePlayWithSound}
+        >
+          Unmute
+        </button> */}
       </div>
       {/* <div className="bg-[#e4e4e4] w-full h-[45rem] mt-28">
         <h1 className="font-semibold text-3xl  ml-32 py-10">Product Gallery</h1>
