@@ -1,9 +1,10 @@
 // import { first, second, third } from "../assets/About/index";
-import first from "../../src/assets/About/first.png";
-import second from "../../src/assets/About/second.png";
-import third from "../../src/assets/About/third.png";
+import RobustPackaging from "../../src/assets/About/RobustPackaging.png";
+import EndtoEndService from "../../src/assets/About/End-to-EndService.png";
+import CustomerSatisfaction from "../../src/assets/About/CustomerSatisfaction.png";
 import qualityAssurance from "../../src/assets/About/qualityAssurance.png";
 import ontimedelivery from "../../src/assets/About/ontimedelivery.png";
+import guaranty from "../../src/assets/About/guaranty.png";
 
 export const aboutData = [
   {
@@ -13,19 +14,19 @@ export const aboutData = [
     alt: "qualityAssurance",
   },
   {
-    img: second,
+    img: EndtoEndService,
     title: "End-to-End Service",
     desc: "From start to finish, our end-to-end service ensures seamless integration and top-notch quality, transforming your vision into reality with unmatched precision.",
     alt: "End-to-End Service",
   },
   {
-    img: third,
+    img: CustomerSatisfaction,
     title: "Customer Satisfaction",
     desc: "Customer satisfaction is our core focus. We are dedicated to exceeding expectations through every interaction, delivering exceptional, precisely tailored results.",
     alt: "Customer Satisfaction",
   },
   {
-    img: first,
+    img: RobustPackaging,
     title: "Robust Packaging",
     desc: "Robust packaging ensures your products arrive safely and securely. It's the first step in delivering excellence, maintaining product integrity, and reflecting our commitment to quality and protection.",
     alt: "Customer Satisfaction",
@@ -33,6 +34,12 @@ export const aboutData = [
   {
     img: ontimedelivery,
     title: "On Time Delivery",
+    desc: "On-time delivery is the cornerstone of our service commitment. We ensure every order arrives promptly, reflecting our dedication to reliability and customer satisfaction.",
+    alt: "Customer Satisfaction",
+  },
+  {
+    img: guaranty,
+    title: "Guaranty",
     desc: "On-time delivery is the cornerstone of our service commitment. We ensure every order arrives promptly, reflecting our dedication to reliability and customer satisfaction.",
     alt: "Customer Satisfaction",
   },

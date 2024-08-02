@@ -13,63 +13,30 @@ const images = [image1, image2, image3, image4, image5, image6];
 const HeroImageSlider = () => {
   return (
     <>
-      <div className="bg-[#e4e4e4] w-full h-auto mt-28 md:h-[70rem] lg:h-[80rem] xl:h-[38rem]">
-        <h1 className="font-semibold text-2xl ml-8 lg:ml-2 py-10 md:px-14">
+      {/* <div className="bg-[#e4e4e4] w-full h-[30rem] mt-24 md:h-[70rem] lg:h-screen xl:h-screen">
+        <h1 className="font-semibold text-2xl ml-8 px-2 lg:ml-2 py-7 md:px-14 lg:py-24 xl:py-24">
           General showcase of all products
         </h1>
-
-        {/* <div className="hidden md:flex flex-wrap justify-center m-8 lg:grid-cols-2 lg:gap-10 lg:p-4">
-          {images.map((image, index) => (
-            <motion.a
-              href="/"
-              key={index}
-              className="relative group"
-              initial={{ opacity: 0, x: "100%" }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, delay: index * 0.3 }}
-              style={{ zIndex: images.length - index }}
-            >
-              <img
-                className="-mt-44 object-cover rounded-3xl transition-transform duration-300 ease-in-out transform group-hover:scale-110 hover:rounded-[2.2rem] md:h-[17rem] md:w-[17rem] md:mt-4 md:ml-12 lg:h-[20rem] lg:w-[25rem] lg:-mt-[2rem] lg:mb-14 lg:space-y-24 lg:-ml-2 lg:mr-5  xl:h-[22rem] xl:w-[10rem] xl:-ml-[7rem] xl:mr-[7rem] xl:group-hover:h-[22rem] xl:group-hover:w-[22rem]"
+        <motion.div
+          className="flex justify-center items-center -ml-24 min-h-screen overflow-hidden"
+          initial={{ opacity: 0, x: "100%" }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
+        >
+          <div className="image-container flex relative -ml-[10rem] justify-center md:-mr-[7rem] lg:-ml-28 xl:mr-[20rem]">
+            {images.map((image, index) => (
+              <motion.img
+                key={index}
                 src={image}
                 alt={`image-${index}`}
+                className="w-[12rem] h-[12rem] object-cover -mt-[15rem] transition-transform duration-300 ease-in-out mr-[-20%] rounded-3xl hover:scale-150 hover:z-20 md:h-[20rem] md:w-[20rem] md:mr-[-20%] md:hover:scale-110 md:z-10 lg:h-[25rem] lg-w-[28rem] lg:-mt-[25rem] lg:mr-[-16%] lg:hover:scale-125 lg:hover:z-20 xl:h-[30rem] xl:w-[30rem] xl:mr-[-22%] xl:hover:scale-150 xl:hover:z-20"
+                initial={{ opacity: 0, x: "100%" }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: index * 0.2 }}
               />
-            </motion.a>
-          ))}
-        </div> */}
-        <div className="hidden md:flex flex-wrap justify-center m-8 lg:grid-cols-2 lg:gap-10 lg:p-4 relative">
-          {images.map((image, index) => (
-            <motion.a
-              href="/"
-              key={index}
-              className={`relative xl:absolute xl:top-[${index * 2}rem] xl:z-${
-                images.length - index
-              }`}
-              initial={{ opacity: 0, x: "100%" }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, delay: index * 0.5 }}
-              style={{
-                left: `calc(${index * -1.5}rem + 50%)`, // Adjusted to center the overlapping images
-                transform: `translateX(${index * 1.5}rem)`, // Ensure proper centering effect
-                zIndex: images.length - index, // Ensure proper stacking order
-              }}
-            >
-              <img
-                className={`object-cover rounded-3xl transition-transform duration-300 ease-in-out transform ${
-                  index === images.length - 1
-                    ? "group-hover:scale-110"
-                    : "xl:scale-100"
-                } hover:rounded-[2.2rem] md:h-[17rem] md:w-[17rem] md:mt-4 md:ml-12 lg:h-[20rem] lg:w-[25rem] lg:-mt-[2rem] lg:mb-14 lg:space-y-24 lg:-ml-2 lg:mr-5 xl:h-[22rem] xl:w-[22rem] xl:group-hover:h-[22rem] xl:group-hover:w-[22rem] ${
-                  index !== images.length - 1
-                    ? "opacity-60 xl:opacity-60" // Faint visibility for non-hovered images
-                    : "opacity-100" // Full visibility for hovered image
-                } hover:opacity-100 xl:group-hover:opacity-100`}
-                src={image}
-                alt={`image-${index}`}
-              />
-            </motion.a>
-          ))}
-        </div>
+            ))}
+          </div>
+        </motion.div>
 
         <div className="grid grid-cols-3 gap-4 p-4 md:hidden">
           {images.map((image, index) => (
@@ -88,25 +55,78 @@ const HeroImageSlider = () => {
             </motion.div>
           ))}
         </div>
+      </div> */}
+      <div className="bg-[#e4e4e4] w-full py-5 h-full mt-24 md:h-[70rem] lg:h-screen xl:h-screen">
+        <h1 className="font-semibold text-2xl ml-4 py-4 lg:ml-2 md:pt-24 md:px-12 lg:py-24 xl:py-10">
+          General showcase of all products
+        </h1>
+
+        {/* Motion Animation for Medium and Larger Devices  */}
+
+        <motion.div
+          className="hidden md:flex justify-center items-center -ml-24 min-h-screen overflow-hidden"
+          initial={{ opacity: 0, x: "100%" }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
+        >
+          <div className="image-container flex relative -ml-[10rem] justify-center md:-mr-[2rem] lg:-ml-28 xl:mr-[20rem]">
+            {" "}
+            {images.map((image, index) => (
+              <motion.img
+                key={index}
+                src={image}
+                alt={`image-${index}`}
+                className="w-[12rem] h-[12rem] object-cover  -mt-[15rem] transition-transform duration-300 ease-in-out mr-[-20%] rounded-3xl hover:scale-150 hover:z-20 md:h-[24rem] md:w-[24rem] md:mr-[-27%] md:hover:scale-110 md:z-10 lg:h-[25rem] lg-w-[28rem] lg:-mt-[25rem] lg:mr-[-20%] lg:hover:scale-125 lg:hover:z-20 xl:h-[23rem] xl:w-[23rem] xl:-mr-[20%] xl:-mt-24 xl:hover:scale-125 xl:hover:z-20 2xl:h-[25rem] 2xl:w-[25rem] 2xl:hover:h-[30rem] 2xl:hover:w-[30rem] 2xl:-mr-[20%]"
+                initial={{ opacity: 0, x: "100%" }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: index * 0.2 }}
+              />
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Grid Layout for Smaller Devices  */}
+
+        <div className="grid grid-cols-1 gap-4 ml-2 mr-10 p-4 md:hidden">
+          {" "}
+          {images.map((image, index) => (
+            <motion.div
+              key={index}
+              className="relative group"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.2, delay: index * 0.3 }}
+            >
+              <img
+                className="h-[20rem] w-[20rem] ml-5  object-cover rounded-3xl transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+                src={image}
+                alt={`image-${index}`}
+              />
+            </motion.div>
+          ))}
+        </div>
       </div>
+
+      {/* About data start */}
       <div
-        className="grid mb-5 px-[18rem] m-24 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center"
+        className="grid mb-5 px-5 py-14 md:mr-10 lg:-ml-[0.5rem] lg:-mr-[0.5rem] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 justify-items-center"
+        data-aos="slide-up"
         style={{ gap: "15px" }}
       >
         {aboutData.map((item, index) => (
           <div
             key={index}
-            className="bg-white border shadow-lg hover:shadow-black rounded-3xl
-        cursor-pointer overflow-hidden text-center w-full md:w-[20rem] lg:w-[22rem] pb-10 transform transition-transform duration-700
-        hover:scale-105 flex flex-col items-center"
-            style={{ height: "32rem" }} // Fixed height for all cards
+            className="bg-white hover:border shadow hover:shadow-black rounded-3xl cursor-pointer overflow-hidden text-center w-full pb-10 flex flex-col items-center md:h-[13rem] md:w-[15rem] lg:w-[18rem] xl:h-[22rem] xl:w-[22rem]"
+            style={{
+              height: "32rem",
+            }} // Fixed height for all cards
           >
             <div className="flex items-center justify-center h-[17rem] w-full">
               <img
                 src={item.img}
                 title={item.title}
                 alt={item.alt}
-                className="h-[15rem] w-[13rem] object-cover"
+                className="h-[13.rem] w-[13rem] object-cover"
               />
             </div>
             <div className="p-4 flex-grow">

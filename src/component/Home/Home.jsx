@@ -94,12 +94,29 @@
 
 // export default Home;
 
-import React, { useEffect, useRef } from "react";
-import SelectingSystem from "../../assets/HeroVideo/SelectingSystem.mp4";
+import React, { useEffect, useRef, useState } from "react";
+import SelectingSystemDesktop from "../../assets/HeroVideo/SelectingSystemDesktop.mp4"; // Video for screens 630px and above
+import SelectingSystemMobile from "../../assets/HeroVideo/SelectingSystemmobile.mp4"; // Video for screens below 630px
 import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
 
 const Home = () => {
   const videoRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 630);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 630);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -140,12 +157,12 @@ const Home = () => {
           }
         });
       },
-      { threshold: 0.5 } // Adjust this threshold as needed
+      { threshold: 0.5 }
     );
 
     observer.observe(video);
 
-    playVideoWithSound(); // Ensure video tries to play with sound immediately
+    playVideoWithSound();
 
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
@@ -155,15 +172,19 @@ const Home = () => {
 
   return (
     <>
-      <div className="bg-gray-100 flex items-center justify-center h-screen">
+      <div className="bg-gray-100 flex items-center justify-center h-screen -mt-[5.7rem]">
         <video
           ref={videoRef}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover sm:min-h-screen sm:min-w-min md:h-[100%] md:w-[65rem] lg:h-[100%] lg:w-[100%] xl:h-screen xl:w-screen"
           autoPlay
           loop
           playsInline
+          muted={isMobile} // Mute video on mobile devices
         >
-          <source src={SelectingSystem} type="video/mp4" />
+          <source
+            src={isMobile ? SelectingSystemMobile : SelectingSystemDesktop}
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -173,3 +194,85 @@ const Home = () => {
 };
 
 export default Home;
+
+// This code is with controlers
+// import React, { useEffect, useRef } from "react";
+// import SelectingSystem from "../../assets/HeroVideo/SelectingSystem.mp4";
+// import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
+
+// const Home = () => {
+//   const videoRef = useRef(null);
+
+//   useEffect(() => {
+//     const video = videoRef.current;
+
+//     const playVideoWithSound = async () => {
+//       try {
+//         video.muted = false;
+//         await video.play();
+//       } catch (error) {
+//         console.error("Autoplay with sound failed:", error);
+//         video.muted = true;
+//         try {
+//           await video.play();
+//         } catch (error) {
+//           console.error("Autoplay muted also failed:", error);
+//         }
+//       }
+//     };
+
+//     const handleVisibilityChange = () => {
+//       if (document.hidden) {
+//         video.pause();
+//       } else {
+//         playVideoWithSound();
+//       }
+//     };
+
+//     document.addEventListener("visibilitychange", handleVisibilityChange);
+
+//     const observer = new IntersectionObserver(
+//       (entries) => {
+//         entries.forEach((entry) => {
+//           if (entry.isIntersecting) {
+//             video.muted = false;
+//             playVideoWithSound();
+//           } else {
+//             video.muted = true;
+//           }
+//         });
+//       },
+//       { threshold: 0.5 }
+//     );
+
+//     observer.observe(video);
+
+//     playVideoWithSound(); // Ensure video tries to play with sound immediately
+
+//     return () => {
+//       document.removeEventListener("visibilitychange", handleVisibilityChange);
+//       observer.unobserve(video);
+//     };
+//   }, []);
+
+//   return (
+//     <>
+//       <div className="bg-gray-100 flex items-center justify-center h-screen relative overflow-hidden">
+//         <video
+//           ref={videoRef}
+//           className="absolute inset-0 w-full h-full object-cover"
+//           autoPlay
+//           loop
+//           playsInline
+//           controls
+//         >
+//           <source src={SelectingSystem} type="video/mp4" />
+//           Your browser does not support the video tag.
+//         </video>
+//       </div>
+//       <HeroImageSlider />
+//     </>
+//   );
+// };
+
+// export default Home;
