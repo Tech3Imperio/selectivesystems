@@ -98,7 +98,7 @@ const HeroImageSlider = () => {
               transition={{ duration: 1.2, delay: index * 0.3 }}
             >
               <img
-                className="h-[20rem] w-[20rem] ml-5  object-cover rounded-3xl transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+                className="h-[12rem] w-[20rem] ml-5  object-cover rounded-3xl transition-transform duration-300 ease-in-out transform group-hover:scale-110"
                 src={image}
                 alt={`image-${index}`}
               />
