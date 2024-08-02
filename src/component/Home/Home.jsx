@@ -104,21 +104,28 @@ const Home = () => {
   useEffect(() => {
     const video = videoRef.current;
 
-    const playVideo = async () => {
+    const playVideoWithSound = async () => {
       try {
+        video.muted = false;
         await video.play();
       } catch (error) {
-        console.error("Autoplay failed:", error);
+        console.error("Autoplay with sound failed:", error);
+        video.muted = true;
+        try {
+          await video.play();
+        } catch (error) {
+          console.error("Autoplay muted also failed:", error);
+        }
       }
     };
 
-    playVideo();
+    playVideoWithSound();
 
     const handleVisibilityChange = () => {
       if (document.hidden) {
         video.pause();
       } else {
-        playVideo();
+        playVideoWithSound();
       }
     };
 
@@ -129,7 +136,7 @@ const Home = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             video.muted = false;
-            playVideo();
+            playVideoWithSound();
           } else {
             video.muted = true;
           }
@@ -146,22 +153,13 @@ const Home = () => {
     };
   }, []);
 
-  const handlePlayWithSound = () => {
-    const video = videoRef.current;
-    video.muted = false;
-    video.play();
-  };
-
   return (
     <>
-      <div
-        className="bg-gray-100 flex items-center justify-center h-screen"
-        onClick={handlePlayWithSound}
-      >
+      <div className="bg-gray-100 flex items-center justify-center h-screen">
         <video
           ref={videoRef}
           className="w-full h-full object-cover"
-          muted
+          muted={false} // Attempt to start unmuted
           autoPlay
           loop
           playsInline
