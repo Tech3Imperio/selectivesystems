@@ -124,8 +124,25 @@ const Home = () => {
 
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.muted = false;
+            playVideo();
+          } else {
+            video.muted = true;
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust this threshold as needed
+    );
+
+    observer.observe(video);
+
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
+      observer.unobserve(video);
     };
   }, []);
 
