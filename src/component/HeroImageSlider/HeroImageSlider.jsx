@@ -127,7 +127,7 @@ const HeroImageSlider = () => {
                 src={item.img}
                 title={item.title}
                 alt={item.alt}
-                className="h-[4.rem] w-[5rem] p-2 md:h-[9.rem] md:w-[10rem] lg:h-[11.rem] lg:w-[11rem] xl:h-[7.rem] xl:w-[7rem] object-cover"
+                className="h-[5.rem] w-[5rem] -p-2 md:h-[9.rem] md:w-[10rem] lg:h-[11.rem] lg:w-[11rem] xl:h-[7.rem] xl:w-[7rem] object-cover"
               />
             </div>
             <div className="p-2 flex-grow">
