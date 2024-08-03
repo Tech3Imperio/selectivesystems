@@ -77,7 +77,7 @@ const HeroImageSlider = () => {
                 key={index}
                 src={image}
                 alt={`image-${index}`}
-                className="w-[12rem] h-[12rem] object-cover -mt-[15rem] transition-transform duration-300 ease-in-out mr-[-20%] rounded-3xl hover:scale-150 hover:z-20 md:h-[24rem] md:w-[24rem] md:mr-[-27%] md:hover:scale-110 md:z-10 lg:h-[25rem] lg-w-[28rem] lg:-mt-[25rem] lg:mr-[-20%] lg:hover:scale-125 lg:hover:z-20 xl:h-[23rem] xl:w-[23rem] xl:-mr-[20%] xl:-mt-24 xl:hover:scale-125 xl:hover:z-20 2xl:h-[25rem] 2xl:w-[25rem] 2xl:hover:h-[30rem] 2xl:hover:w-[30rem] 2xl:-mr-[21.%]"
+                className="w-[12rem] h-[12rem] object-cover -mt-[15rem] transition-transform duration-300 ease-in-out mr-[-20%] rounded-3xl hover:scale-150 hover:z-20 md:h-[24rem] md:w-[24rem] md:mr-[-27%] md:hover:scale-110 md:z-10 lg:h-[25rem] lg-w-[28rem] lg:-mt-[25rem] lg:mr-[-20%] lg:hover:scale-125 lg:hover:z-20 xl:h-[23rem] xl:w-[23rem] xl:-mr-[20%] xl:-mt-24 xl:hover:scale-125 xl:hover:z-20 2xl:h-[25rem] 2xl:w-[25rem] 2xl:hover:h-[30rem] 2xl:hover:w-[30rem] 2xl:-mr-[20%]"
                 initial={{ opacity: 0, x: "100%" }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: index * 0.2 }}
@@ -117,7 +117,7 @@ const HeroImageSlider = () => {
         {aboutData.map((item, index) => (
           <div
             key={index}
-            className=" h-[23rem] w-[11.1rem] bg-white hover:border shadow hover:shadow-black rounded-3xl cursor-pointer overflow-hidden text-center flex flex-col items-center md:h-[28rem] md:w-[17rem] lg:h-[32rem] lg:w-[20rem] xl:h-[27rem] xl:w-[17rem]"
+            className=" h-[24rem] w-[11.1rem] bg-white hover:border shadow hover:shadow-black rounded-3xl cursor-pointer overflow-hidden text-center flex flex-col items-center md:h-[28rem] md:w-[17rem] lg:h-[32rem] lg:w-[20rem] xl:h-[27rem] xl:w-[17rem]"
             // style={{
             //   height: "32rem",
             // }} // Fixed height for all cards
@@ -127,7 +127,7 @@ const HeroImageSlider = () => {
                 src={item.img}
                 title={item.title}
                 alt={item.alt}
-                className="h-[4.rem] w-[4.rem] -pb-2  md:h-[9.rem] md:w-[10rem] lg:h-[11.rem] lg:w-[11rem] xl:h-[7.rem] xl:w-[7rem] object-cover"
+                className="h-[4.rem] w-[4rem] py-4 md:h-[9.rem] md:w-[10rem] lg:h-[11.rem] lg:w-[11rem] xl:h-[7.rem] xl:w-[7rem] object-cover"
               />
             </div>
             <div className="p-2 flex-grow">
