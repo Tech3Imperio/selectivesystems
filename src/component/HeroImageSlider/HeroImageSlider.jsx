@@ -117,7 +117,7 @@ const HeroImageSlider = () => {
         {aboutData.map((item, index) => (
           <div
             key={index}
-            className=" h-[23rem] w-[11rem] bg-white hover:border shadow hover:shadow-black rounded-3xl cursor-pointer overflow-hidden text-center flex flex-col items-center md:h-[28rem] md:w-[17rem] lg:h-[32rem] lg:w-[20rem] xl:h-[27rem] xl:w-[17rem]"
+            className=" h-[23.2rem] w-[11rem] bg-white hover:border shadow hover:shadow-black rounded-3xl cursor-pointer overflow-hidden text-center flex flex-col items-center md:h-[28rem] md:w-[17rem] lg:h-[32rem] lg:w-[20rem] xl:h-[27rem] xl:w-[17rem]"
             // style={{
             //   height: "32rem",
             // }} // Fixed height for all cards
@@ -127,7 +127,7 @@ const HeroImageSlider = () => {
                 src={item.img}
                 title={item.title}
                 alt={item.alt}
-                className="h-[5.rem] w-[5rem] -p-2 md:h-[9.rem] md:w-[10rem] lg:h-[10.rem] lg:w-[11rem] xl:h-[7.rem] xl:w-[7rem] object-cover"
+                className="h-[5.rem] w-[5rem] py-1 md:h-[9.rem] md:w-[10rem] lg:h-[11.rem] lg:w-[11rem] xl:h-[6.rem] xl:-py-4 xl:w-[7rem] object-cover"
               />
             </div>
             <div className="p-2 flex-grow">
