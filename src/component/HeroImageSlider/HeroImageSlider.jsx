@@ -117,7 +117,7 @@ const HeroImageSlider = () => {
         {aboutData.map((item, index) => (
           <div
             key={index}
-            className=" h-[23.2rem] w-[11rem] bg-white hover:border shadow hover:shadow-black rounded-3xl cursor-pointer overflow-hidden text-center flex flex-col items-center md:h-[28rem] md:w-[17rem] lg:h-[32rem] lg:w-[20rem] xl:h-[27rem] xl:w-[17rem]"
+            className=" h-[25.5rem] w-[11.rem] bg-white hover:border shadow hover:shadow-black rounded-3xl cursor-pointer overflow-hidden text-center flex flex-col items-center md:h-[28rem] md:w-[17rem] lg:h-[32rem] lg:w-[20rem] xl:h-[27rem] xl:w-[18.2rem]"
             // style={{
             //   height: "32rem",
             // }} // Fixed height for all cards
@@ -131,10 +131,10 @@ const HeroImageSlider = () => {
               />
             </div>
             <div className="p-2 flex-grow">
-              <h3 className="mt-4 text-xl md:text-2xl font-semibold">
+              <h3 className="mt-2 text-xl md:text-2xl font-semibold">
                 {item.title}
               </h3>
-              <p className="mt-2 text-gray-600 text-sm md:text-base pt-4 pb-4">
+              <p className="mt-2 text-gray-600 text-sm md:text-base  poppins-regular">
                 {item.desc}
               </p>
             </div>
