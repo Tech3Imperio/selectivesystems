@@ -450,6 +450,261 @@
 
 // export default Navbar;
 
+// import React, { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import whiteLogo from "../../assets/Logo/whiteLogo.png";
+
+// const Navbar = ({ isHome }) => {
+//   const [navbarBg, setNavbarBg] = useState(
+//     isHome ? "bg-transparent" : "bg-gray-900 bg-opacity-50 backdrop-blur"
+//   );
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [isProductsOpen, setIsProductsOpen] = useState(false);
+
+//   const handleScroll = () => {
+//     if (isHome && window.scrollY >= 80) {
+//       setNavbarBg("bg-gray-900 bg-opacity-50 backdrop-blur");
+//     } else if (isHome) {
+//       setNavbarBg("bg-transparent");
+//     }
+//   };
+
+//   useEffect(() => {
+//     if (isHome) {
+//       window.addEventListener("scroll", handleScroll);
+//       return () => {
+//         window.removeEventListener("scroll", handleScroll);
+//       };
+//     } else {
+//       setNavbarBg("bg-gray-900 bg-opacity-50 backdrop-blur");
+//     }
+//   }, [isHome]);
+
+//   const handleLinkClick = () => {
+//     setIsOpen(false);
+//     setIsProductsOpen(false);
+//   };
+
+//   const handleProductsClick = () => {
+//     setIsProductsOpen(!isProductsOpen);
+//   };
+
+//   const toggleNavbar = () => {
+//     setIsOpen(!isOpen);
+//   };
+
+//   return (
+//     <nav
+//       className={`sticky top-0 left-0 w-full z-20 transition duration-300 ${navbarBg}`}
+//     >
+//       <div className="container mx-auto px-4 flex justify-between items-center lg:px-[5rem] md:mr-[2rem]">
+//         <div className="text-white font-bold text-lg">
+//           <Link to="/">
+//             <img
+//               className={`h-20 w-48 ${isOpen ? "h-20 w-48 " : ""}`}
+//               src={whiteLogo}
+//               alt="logo"
+//             />
+//           </Link>
+//         </div>
+//         <div className="flex items-center">
+//           <div className="lg:hidden">
+//             <button
+//               onClick={toggleNavbar}
+//               className="text-white focus:outline-none"
+//             >
+//               {isOpen ? (
+//                 <svg
+//                   className="w-10 h-10"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   viewBox="0 0 24 24"
+//                   xmlns="http://www.w3.org/2000/svg"
+//                 >
+//                   <path
+//                     strokeLinecap="round"
+//                     strokeLinejoin="round"
+//                     strokeWidth="2"
+//                     d="M6 18L18 6M6 6l12 12"
+//                   ></path>
+//                 </svg>
+//               ) : (
+//                 <svg
+//                   className="w-10 h-10"
+//                   fill="none"
+//                   stroke="currentColor"
+//                   viewBox="0 0 24 24"
+//                   xmlns="http://www.w3.org/2000/svg"
+//                 >
+//                   <path
+//                     strokeLinecap="round"
+//                     strokeLinejoin="round"
+//                     strokeWidth="2"
+//                     d="M4 6h16M4 12h16m-7 6h7"
+//                   ></path>
+//                 </svg>
+//               )}
+//             </button>
+//           </div>
+//           <div className={`hidden lg:flex items-center space-x-6`}>
+//             <Link to="/" className="text-white">
+//               Home
+//             </Link>
+//             <Link to="/about" className="text-white">
+//               About Us
+//             </Link>
+//             <div className="relative group">
+//               <button className="text-white">Products</button>
+//               <div className="absolute left-0 mt-0.4 w-48 bg-white rounded-lg shadow-lg hidden group-hover:block">
+//                 <Link
+//                   to="/products/aluminium-windows"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+//                 >
+//                   Aluminium Windows
+//                 </Link>
+//                 <Link
+//                   to="/products/door-seals"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+//                 >
+//                   Door Seals
+//                 </Link>
+//                 <Link
+//                   to="/products/railings"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+//                 >
+//                   Railings
+//                 </Link>
+//                 <Link
+//                   to="/products/queue-manager"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+//                 >
+//                   Queue Manager
+//                 </Link>
+//                 <Link
+//                   to="/products/invisible-grill"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+//                 >
+//                   Invisible Grill
+//                 </Link>
+//                 <Link
+//                   to="/products/office-partitions"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+//                 >
+//                   Office Partitions
+//                 </Link>
+//                 <Link
+//                   to="/products/bathroom-partitions"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+//                 >
+//                   Bathroom Partitions
+//                 </Link>
+//               </div>
+//             </div>
+//             <Link to="/contact" className="text-white">
+//               Contact Us
+//             </Link>
+//           </div>
+//         </div>
+//       </div>
+//       {isOpen && (
+//         <div className="sm:hidden bg-gray-900 bg-opacity-50 backdrop-blur h-[100%] px-2 pt-2 pb-3 space-y-1 sm:px-3">
+//           <Link
+//             to="/"
+//             onClick={handleLinkClick}
+//             className="block px-4 py-4 text-white"
+//           >
+//             Home
+//           </Link>
+//           <Link
+//             to="/about"
+//             onClick={handleLinkClick}
+//             className="block px-4 py-4 text-white"
+//           >
+//             About Us
+//           </Link>
+//           <div className="relative">
+//             <button
+//               onClick={handleProductsClick}
+//               className="block px-4 py-4 text-white w-full text-left"
+//             >
+//               Products
+//             </button>
+//             {isProductsOpen && (
+//               <div className="pl-4">
+//                 <Link
+//                   to="/products/aluminium-windows"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
+//                 >
+//                   Aluminium Windows
+//                 </Link>
+//                 <Link
+//                   to="/products/door-seals"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
+//                 >
+//                   Door Seals
+//                 </Link>
+//                 <Link
+//                   to="/products/railings"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
+//                 >
+//                   Railings
+//                 </Link>
+//                 <Link
+//                   to="/products/queue-manager"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
+//                 >
+//                   Queue Manager
+//                 </Link>
+//                 <Link
+//                   to="/products/invisible-grill"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
+//                 >
+//                   Invisible Grill
+//                 </Link>
+//                 <Link
+//                   to="/products/office-partitions"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
+//                 >
+//                   Office Partitions
+//                 </Link>
+//                 <Link
+//                   to="/products/bathroom-partitions"
+//                   onClick={handleLinkClick}
+//                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
+//                 >
+//                   Bathroom Partitions
+//                 </Link>
+//               </div>
+//             )}
+//           </div>
+//           <Link
+//             to="/contact"
+//             onClick={handleLinkClick}
+//             className="block px-4 py-4 text-white"
+//           >
+//             Contact Us
+//           </Link>
+//         </div>
+//       )}
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import whiteLogo from "../../assets/Logo/whiteLogo.png";
@@ -497,11 +752,11 @@ const Navbar = ({ isHome }) => {
     <nav
       className={`sticky top-0 left-0 w-full z-20 transition duration-300 ${navbarBg}`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center lg:px-[5rem]">
+      <div className="container mx-auto px-4 flex justify-between items-center lg:px-[5rem] md:mr-[2rem]">
         <div className="text-white font-bold text-lg">
           <Link to="/">
             <img
-              className={`h-20 w-44 ${isOpen ? "h-20 w-48" : ""}`}
+              className={`h-20 w-48 ${isOpen ? "h-20 w-48 " : ""}`}
               src={whiteLogo}
               alt="logo"
             />
@@ -614,7 +869,7 @@ const Navbar = ({ isHome }) => {
         </div>
       </div>
       {isOpen && (
-        <div className="sm:hidden bg-gray-900 bg-opacity-50 backdrop-blur h-[100%] px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="lg:hidden bg-gray-900 bg-opacity-50 backdrop-blur h-[100%] px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <Link
             to="/"
             onClick={handleLinkClick}

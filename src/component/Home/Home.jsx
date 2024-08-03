@@ -95,16 +95,16 @@
 // export default Home;
 
 import React, { useEffect, useRef, useState } from "react";
-import SelectingSystemDesktop from "../../assets/HeroVideo/SelectingSystemDesktop.mp4"; // Video for screens 630px and above
-import SelectingSystemMobile from "../../assets/HeroVideo/SelectingSystemmobile.mp4"; // Video for screens below 630px
+import SelectingSystemDesktop from "../../assets/HeroVideo/SelectingSystemDesktop.mp4"; // Video for screens above 1024px
+import SelectingSystemMobile from "../../assets/HeroVideo/SelectingSystemmobile.mp4"; // Video for screens up to 1024px
 import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
 
 const Home = () => {
   const videoRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 630);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 630);
+    setIsMobile(window.innerWidth <= 1024);
   };
 
   useEffect(() => {
@@ -121,39 +121,15 @@ const Home = () => {
   useEffect(() => {
     const video = videoRef.current;
 
-    const playVideoWithSound = async () => {
-      try {
-        video.muted = false;
-        await video.play();
-      } catch (error) {
-        console.error("Autoplay with sound failed:", error);
-        video.muted = true;
-        try {
-          await video.play();
-        } catch (error) {
-          console.error("Autoplay muted also failed:", error);
-        }
-      }
-    };
-
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        video.pause();
-      } else {
-        playVideoWithSound();
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            video.muted = false;
-            playVideoWithSound();
+            video.play().catch((error) => {
+              console.error("Video play failed:", error);
+            });
           } else {
-            video.muted = true;
+            video.pause();
           }
         });
       },
@@ -162,11 +138,10 @@ const Home = () => {
 
     observer.observe(video);
 
-    playVideoWithSound();
-
     return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-      observer.unobserve(video);
+      if (video) {
+        observer.unobserve(video);
+      }
     };
   }, []);
 
@@ -179,7 +154,7 @@ const Home = () => {
           autoPlay
           loop
           playsInline
-          muted={isMobile} // Mute video on mobile devices
+          muted // Always mute the video
         >
           <source
             src={isMobile ? SelectingSystemMobile : SelectingSystemDesktop}
