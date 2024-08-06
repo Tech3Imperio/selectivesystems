@@ -708,7 +708,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import whiteLogo from "../../assets/Logo/whiteLogo.png";
-import { motion } from "framer-motion";
 
 const Navbar = ({ isHome }) => {
   const [navbarBg, setNavbarBg] = useState(
@@ -751,7 +750,7 @@ const Navbar = ({ isHome }) => {
 
   return (
     <nav
-      className={`sticky top-0 left-0 w-full z-20 poppins-light transition duration-300 rounded-b-3xl ${navbarBg}`}
+      className={`sticky top-0 left-0 w-full poppins-regular z-20 transition duration-300 rounded-b-3xl ${navbarBg}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center lg:px-[5rem] md:mr-[2rem]">
         <div className="text-white font-bold text-lg">
