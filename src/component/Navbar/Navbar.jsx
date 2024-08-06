@@ -708,6 +708,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import whiteLogo from "../../assets/Logo/whiteLogo.png";
+import { motion } from "framer-motion";
 
 const Navbar = ({ isHome }) => {
   const [navbarBg, setNavbarBg] = useState(
@@ -750,7 +751,7 @@ const Navbar = ({ isHome }) => {
 
   return (
     <nav
-      className={`sticky top-0 left-0 w-full z-20 transition duration-300 ${navbarBg}`}
+      className={`sticky top-0 left-0 w-full z-20 poppins-light transition duration-300 rounded-b-3xl ${navbarBg}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center lg:px-[5rem] md:mr-[2rem]">
         <div className="text-white font-bold text-lg">
@@ -810,53 +811,53 @@ const Navbar = ({ isHome }) => {
             </Link>
             <div className="relative group">
               <button className="text-white">Products</button>
-              <div className="absolute left-0 mt-0.4 w-48 bg-white rounded-lg shadow-lg hidden group-hover:block">
+              <div className="absolute left-0 mb-6 mt-0.4 w-52 rounded-2xl bg-[#e4e4e4] shadow-lg hidden group-hover:block">
                 <Link
                   to="/products/aluminium-windows"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  className="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb]  hover:rounded-2xl"
                 >
                   Aluminium Windows
                 </Link>
                 <Link
                   to="/products/door-seals"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  className="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Door Seals
                 </Link>
                 <Link
                   to="/products/railings"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  className="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Railings
                 </Link>
                 <Link
                   to="/products/queue-manager"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  className="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Queue Manager
                 </Link>
                 <Link
                   to="/products/invisible-grill"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  className="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Invisible Grill
                 </Link>
                 <Link
                   to="/products/office-partitions"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  className="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Office Partitions
                 </Link>
                 <Link
                   to="/products/bathroom-partitions"
                   onClick={handleLinkClick}
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  className="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Bathroom Partitions
                 </Link>
@@ -865,6 +866,13 @@ const Navbar = ({ isHome }) => {
             <Link to="/contact" className="text-white">
               Contact Us
             </Link>
+            <button
+              className="border-none text-sm bg-[#14ff72cb] text-[#fff] w-[4rem] h-[2rem] rounded-[2rem]  cursor-pointer md:font-semibold lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-[#e4e4e4] hover:text-[#000]"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              GET IN TOUCH
+            </button>
           </div>
         </div>
       </div>
@@ -952,6 +960,13 @@ const Navbar = ({ isHome }) => {
           >
             Contact Us
           </Link>
+          <button
+            className="border-none text-sm bg-[#14ff72cb] text-[#fff] w-[4rem] h-[2rem] rounded-[2rem] cursor-pointer md:font-sm md:h-[2.8rem] md:px-2 md:w-[7.2rem] lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-[#e4e4e4] hover:text-[#000]"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            GET IN TOUCH
+          </button>
         </div>
       )}
     </nav>
