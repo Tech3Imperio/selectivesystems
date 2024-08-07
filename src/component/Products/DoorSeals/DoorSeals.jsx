@@ -1,70 +1,133 @@
 import React, { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
-import bathroomPartition1 from "../../../assets/BathroomPartition/bathroomPartition1.jpeg";
-import bathroomPartition2 from "../../../assets/BathroomPartition/bathroomPartition2.jpeg";
-import bathroomPartition3 from "../../../assets/BathroomPartition/bathroomPartition3.jpeg";
-import bathroomPartition4 from "../../../assets/BathroomPartition/bathroomPartition4.jpeg";
+import SelectingSystemDesktop from "../../../assets/HeroVideo/SelectingSystemDesktop.mp4"; // Video for screens above 1024px
+import SelectingSystemMobile from "../../../assets/HeroVideo/SelectingSystemmobile.mp4"; // Video for screens up to 1024px
+// import { motion } from "framer-motion";
+// import bathroomPartition1 from "../../../assets/BathroomPartition/bathroomPartition1.jpeg";
+// import bathroomPartition2 from "../../../assets/BathroomPartition/bathroomPartition2.jpeg";
+// import bathroomPartition3 from "../../../assets/BathroomPartition/bathroomPartition3.jpeg";
+// import bathroomPartition4 from "../../../assets/BathroomPartition/bathroomPartition4.jpeg";
 import AluminiumData from "../../../Data/Aluminium/AluminiumData";
 
 const DoorSeals = () => {
-  const [sliderItems, setSliderItems] = useState([
-    {
-      imgSrc: bathroomPartition1,
-      title: "Bathroom Partitions",
-      type: "DOORS",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
-    },
-    {
-      imgSrc: bathroomPartition2,
-      title: "ALUMINIUM",
-      type: "WINDOWS",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
-    },
-    {
-      imgSrc: bathroomPartition3,
-      title: "ALUMINIUM",
-      type: "SLIDER",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
-    },
-    {
-      imgSrc: bathroomPartition4,
-      title: "ALUMINIUM",
-      type: "PARTITION",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
-    },
-  ]);
+  // const [sliderItems, setSliderItems] = useState([
+  //   {
+  //     imgSrc: bathroomPartition1,
+  //     title: "Bathroom Partitions",
+  //     type: "DOORS",
+  //     description:
+  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+  //   },
+  //   {
+  //     imgSrc: bathroomPartition2,
+  //     title: "ALUMINIUM",
+  //     type: "WINDOWS",
+  //     description:
+  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+  //   },
+  //   {
+  //     imgSrc: bathroomPartition3,
+  //     title: "ALUMINIUM",
+  //     type: "SLIDER",
+  //     description:
+  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+  //   },
+  //   {
+  //     imgSrc: bathroomPartition4,
+  //     title: "ALUMINIUM",
+  //     type: "PARTITION",
+  //     description:
+  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+  //   },
+  // ]);
 
-  const [currentItemIndex, setCurrentItemIndex] = useState(0);
-  const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
+  // const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  // const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
 
-  const moveSlider = (direction) => {
-    if (direction === "next") {
-      setCurrentItemIndex((currentItemIndex + 1) % sliderItems.length);
-    } else {
-      setCurrentItemIndex(
-        (currentItemIndex - 1 + sliderItems.length) % sliderItems.length
-      );
-    }
-  };
+  // const moveSlider = (direction) => {
+  //   if (direction === "next") {
+  //     setCurrentItemIndex((currentItemIndex + 1) % sliderItems.length);
+  //   } else {
+  //     setCurrentItemIndex(
+  //       (currentItemIndex - 1 + sliderItems.length) % sliderItems.length
+  //     );
+  //   }
+  // };
 
-  const handleThumbnailClick = (index) => {
-    setCurrentItemIndex(index);
+  // const handleThumbnailClick = (index) => {
+  //   setCurrentItemIndex(index);
+  // };
+
+  // useEffect(() => {
+  //   // Scroll to the top of the component when it comes into view
+  //   if (aluminiumRef.current) {
+  //     aluminiumRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [currentItemIndex]);
+
+  const videoRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 1024);
   };
 
   useEffect(() => {
-    // Scroll to the top of the component when it comes into view
-    if (aluminiumRef.current) {
-      aluminiumRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [currentItemIndex]);
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch((error) => {
+              console.error("Video play failed:", error);
+            });
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+
+    return () => {
+      if (video) {
+        observer.unobserve(video);
+      }
+    };
+  }, []);
 
   return (
     <>
-      <div
+      <div className="bg-gray-100 flex items-center justify-center h-screen -mt-[5rem]">
+        <video
+          ref={videoRef}
+          className="w-full h-full object-cover sm:min-h-screen sm:min-w-min md:h-[100%] md:w-[65rem] lg:h-[100%] lg:w-[100%] xl:h-screen xl:w-screen"
+          autoPlay
+          loop
+          playsInline
+          muted // Always mute the video
+        >
+          <source
+            src={isMobile ? SelectingSystemMobile : SelectingSystemDesktop}
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      {/* <div
         ref={aluminiumRef}
         className="slider h-screen -mt-10 w-screen overflow-hidden relative"
       >
@@ -169,7 +232,7 @@ const DoorSeals = () => {
             {">"}
           </button>
         </div>
-      </div>
+      </div> */}
       {/* product start */}
       <div className="grid grid-cols-1 -ml-28  md:grid-cols-3 poppins-regular px-32 lg:justify-center md:-ml-32 md:gap-24 lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-10 xl:mb-10">
         {AluminiumData.map((item, index) => (

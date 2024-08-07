@@ -1,36 +1,36 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import bathroomPartition1 from "../../../assets/BathroomPartition/bathroomPartition1.jpeg";
-import bathroomPartition2 from "../../../assets/BathroomPartition/bathroomPartition2.jpeg";
-import bathroomPartition3 from "../../../assets/BathroomPartition/bathroomPartition3.jpeg";
-import bathroomPartition4 from "../../../assets/BathroomPartition/bathroomPartition4.jpeg";
-import AluminiumData from "../../../Data/Aluminium/AluminiumData";
+import queuemanager from "../../../assets/QueueManager/HeroQueue-manager/queuemanager.png";
+import queuemanager2 from "../../../assets/QueueManager/HeroQueue-manager/queuemanager2.png";
+import queuemanager3 from "../../../assets/QueueManager/HeroQueue-manager/queuemanager3.png";
+import queuemanager4 from "../../../assets/QueueManager/HeroQueue-manager/queuemanager4.png";
+import QueueData from "../../../Data/QueueManager/QueueManager";
 
 const QueueManager = () => {
   const [sliderItems, setSliderItems] = useState([
     {
-      imgSrc: bathroomPartition1,
+      imgSrc: queuemanager,
       title: "Bathroom Partitions",
       type: "DOORS",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
     },
     {
-      imgSrc: bathroomPartition2,
+      imgSrc: queuemanager2,
       title: "ALUMINIUM",
       type: "WINDOWS",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
     },
     {
-      imgSrc: bathroomPartition3,
+      imgSrc: queuemanager3,
       title: "ALUMINIUM",
       type: "SLIDER",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
     },
     {
-      imgSrc: bathroomPartition4,
+      imgSrc: queuemanager4,
       title: "ALUMINIUM",
       type: "PARTITION",
       description:
@@ -172,7 +172,7 @@ const QueueManager = () => {
       </div>
       {/* product start */}
       <div className="grid grid-cols-1 -ml-28  md:grid-cols-3 poppins-regular px-32 lg:justify-center md:-ml-32 md:gap-24 lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-10 xl:mb-10">
-        {AluminiumData.map((item, index) => (
+        {QueueData.map((item, index) => (
           <div
             key={index}
             className="relative group h-[23rem] w-[20rem] m-2 bg-white hover:border shadow hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-300 ease-in-out  md:mt-7 md:h-[30rem] md:w-[15rem] lg:h-[28rem] lg:w-[17rem]  xl:h[25rem] xl:w-[20rem]"
@@ -185,7 +185,7 @@ const QueueManager = () => {
                 className="transition-transform duration-300 ease-in-out group-hover:scale-90 object-cover"
               />
             </div>
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out md:py-4">
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out md:py-4 xl:py-10 xl:text-sm">
               <div className="text-center">
                 <p className="text-lg font-semibold mb-2 py-2">{item.title}</p>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
@@ -196,20 +196,24 @@ const QueueManager = () => {
                       <td>{item.color}</td>
                     </tr>
                     <tr>
-                      <td className="font-semibold pr-2">Appearance:</td>
-                      <td>{item.appearance}</td>
+                      <td className="font-semibold pr-2">Height:</td>
+                      <td>{item.heights}</td>
                     </tr>
                     <tr>
-                      <td className="font-semibold pr-2">Glass Thickness:</td>
-                      <td>{item.glassThickness}</td>
+                      <td className="font-semibold pr-2">Base Diameter:</td>
+                      <td>{item.Basediameter}</td>
                     </tr>
                     <tr>
                       <td className="font-semibold pr-2">Frame Material:</td>
                       <td>{item.frameMaterial}</td>
                     </tr>
                     <tr>
-                      <td className="font-semibold pr-2">Surface Finishing:</td>
-                      <td>{item.surfaceFinishing}</td>
+                      <td className="font-semibold pr-2">Weight:</td>
+                      <td>{item.weight}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">Usage Application:</td>
+                      <td>{item.UsageApplication}</td>
                     </tr>
                   </tbody>
                 </table>

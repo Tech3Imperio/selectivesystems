@@ -1,167 +1,174 @@
-// import React, { useEffect, useRef } from "react";
-// import SelectingSystem from "../../assets/HeroVideo/SelectingSystem.mp4";
-// import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
-// // import { motion } from "framer-motion";
-// // import image1 from "../../assets/SliderImages/image1.jpg";
-// // import image2 from "../../assets/SliderImages/image2.jpg";
-// // import image3 from "../../assets/SliderImages/image3.jpg";
-// // import image4 from "../../assets/SliderImages/image4.jpg";
-// // import image5 from "../../assets/SliderImages/image5.jpg";
-
-// // const images = [image1, image2, image3, image4, image5];
-
-// const Home = () => {
-//   const videoRef = useRef(null);
-
-//   useEffect(() => {
-//     const video = videoRef.current;
-
-//     // Try to play the video muted initially
-//     const playVideo = async () => {
-//       try {
-//         await video.play();
-//       } catch (error) {
-//         console.error("Autoplay failed:", error);
-//       }
-//     };
-
-//     playVideo();
-//   }, []);
-
-//   const handlePlayWithSound = () => {
-//     const video = videoRef.current;
-//     video.muted = false;
-//     video.play();
-//   };
-//   return (
-//     <>
-//       {/* <div className="relative col-start-12 h-screen w-full -mt-[4.5rem]"> */}
-//       {/* <video
-//           className="absolute top-0 left-0 w-full h-full object-cover"
-//           src={SelectingSystem}
-//           autoPlay
-//           loop
-//           muted
-//         /> */}
-//       <div
-//         className="bg-gray-100 flex items-center justify-center h-screen"
-//         onClick={handlePlayWithSound}
-//       >
-//         <video
-//           ref={videoRef}
-//           className="w-full h-full object-cover"
-//           muted
-//           autoPlay
-//           loop
-//           playsInline
-//         >
-//           <source src={SelectingSystem} type="video/mp4" />
-//           Your browser does not support the video tag.
-//         </video>
-//         {/* <button
-//           className="absolute bottom-4 left-4 bg-blue-500 text-white px-4 py-2 rounded"
-//           onClick={handlePlayWithSound}
-//         >
-//           Unmute
-//         </button> */}
-//       </div>
-//       {/* <div className="bg-[#e4e4e4] w-full h-[45rem] mt-28">
-//         <h1 className="font-semibold text-3xl  ml-32 py-10">Product Gallery</h1>
-//         <div className="flex flex-row justify-center m-[16rem]">
-//           {images.map((image, index) => (
-//             <motion.a
-//               href="/"
-//               key={index}
-//               className="relative group"
-//               initial={{ opacity: 0, x: "100%" }}
-//               animate={{ opacity: 1, x: 0 }}
-//               transition={{ duration: 1.2, delay: index * 0.3 }}
-//               style={{ zIndex: images.length - index }}
-//             >
-//               <img
-//                 className="h-[25rem] w-[15rem] -mt-[14rem] object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-110 rounded-[2.2rem] group-hover:h-[30rem] -ml-[5rem] group-hover:w-[33rem]"
-//                 src={image}
-//                 alt={`image-${index}`}
-//               />
-//             </motion.a>
-//           ))}
-//         </div>
-//       </div> */}
-//       <HeroImageSlider />
-//     </>
-//   );
-// };
-
-// export default Home;
-
 import React, { useEffect, useRef, useState } from "react";
-import SelectingSystemDesktop from "../../assets/HeroVideo/SelectingSystemDesktop.mp4"; // Video for screens above 1024px
-import SelectingSystemMobile from "../../assets/HeroVideo/SelectingSystemmobile.mp4"; // Video for screens up to 1024px
 import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
+import { motion } from "framer-motion";
+import img1 from "../../assets/AluminiumProduct/img1.jpg";
+import bathroomPartition1 from "../../assets/BathroomPartition/bathroomPartition1.jpeg";
+import railing2 from "../../assets/Railing/HeroImage/railing2.jpg";
+import queuemanager from "../../assets/QueueManager/HeroQueue-manager/queuemanager.png";
 
 const Home = () => {
-  const videoRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const [sliderItems, setSliderItems] = useState([
+    {
+      imgSrc: img1,
+      title: "ALUMINIUM WINDOWS",
+      type: "WINDOWS",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+    },
+    {
+      imgSrc: bathroomPartition1,
+      title: "BATHROOM PARTITIONS",
+      type: "BATHROOM GLASS",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+    },
+    {
+      imgSrc: railing2,
+      title: "GLASS RAILING",
+      type: "TERRACE GLASS RAILING",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+    },
+    {
+      imgSrc: queuemanager,
+      title: "QUEUE MANAGER",
+      type: "ALUMINIUM QUEUE STAND",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+    },
+  ]);
 
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 1024);
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
+
+  const moveSlider = (direction) => {
+    if (direction === "next") {
+      setCurrentItemIndex((currentItemIndex + 1) % sliderItems.length);
+    } else {
+      setCurrentItemIndex(
+        (currentItemIndex - 1 + sliderItems.length) % sliderItems.length
+      );
+    }
+  };
+
+  const handleThumbnailClick = (index) => {
+    setCurrentItemIndex(index);
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    // Initial check
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    const video = videoRef.current;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            video.play().catch((error) => {
-              console.error("Video play failed:", error);
-            });
-          } else {
-            video.pause();
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(video);
-
-    return () => {
-      if (video) {
-        observer.unobserve(video);
-      }
-    };
-  }, []);
+    // Scroll to the top of the component when it comes into view
+    if (aluminiumRef.current) {
+      aluminiumRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [currentItemIndex]);
 
   return (
     <>
-      <div className="bg-gray-100 flex items-center justify-center h-screen -mt-[5.7rem]">
-        <video
-          ref={videoRef}
-          className="w-full h-full object-cover sm:min-h-screen sm:min-w-min md:h-[100%] md:w-[65rem] lg:h-[100%] lg:w-[100%] xl:h-screen xl:w-screen"
-          autoPlay
-          loop
-          playsInline
-          muted // Always mute the video
-        >
-          <source
-            src={isMobile ? SelectingSystemMobile : SelectingSystemDesktop}
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+      <div
+        ref={aluminiumRef}
+        className="slider h-screen -mt-10 w-screen overflow-hidden relative"
+      >
+        <div className="list relative w-full h-full">
+          {sliderItems.map((item, index) => (
+            <motion.div
+              key={index}
+              className={`item absolute inset-0 transition-opacity duration-500 ease-in-out ${
+                index === currentItemIndex ? "opacity-100" : "opacity-0"
+              }`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: index === currentItemIndex ? 1 : 0 }}
+              transition={{ duration: 1 }}
+            >
+              <img
+                src={item.imgSrc}
+                alt=""
+                className="w-full h-full object-cover"
+              />
+              <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+              <div className="content absolute top-[12%] text-sm w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] lg:top-[20%] xl:top-[15%] ">
+                <motion.div
+                  className="title text-[3em] font-bold leading-[1.3em]"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: index === currentItemIndex ? 1 : 0,
+                    y: index === currentItemIndex ? 0 : 20,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {item.title}
+                </motion.div>
+                <motion.div
+                  className="type text-[3em] font-bold leading-[1.3em] text-[#14ff72cb]"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: index === currentItemIndex ? 1 : 0,
+                    y: index === currentItemIndex ? 0 : 20,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {item.type}
+                </motion.div>
+                <motion.div
+                  className="description text-[1.2em]"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: index === currentItemIndex ? 1 : 0,
+                    y: index === currentItemIndex ? 0 : 20,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {item.description}
+                </motion.div>
+                <motion.div
+                  className="button grid grid-cols-1 mt-5"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: index === currentItemIndex ? 1 : 0,
+                    y: index === currentItemIndex ? 0 : 20,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <motion.button
+                    className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] poppins-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    GET IN TOUCH
+                  </motion.button>
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        <div className="thumbnail absolute bottom-14 left-1/1 gap-2 ml-1 transform -translate-x-2/7 flex z-10 md:-translate-x-[-8rem] md:gap-3 lg:gap-4 lg:-translate-x-[-15rem] xl:gap-5 xl:translate-x-60 xl:left-1/3">
+          {sliderItems.map((item, index) => (
+            <div
+              key={index}
+              className="item w-[5.4rem] h-[10rem] hover:scale-110 flex-shrink-0 relative cursor-pointer md:h-[15rem] md:w-[9rem] lg:h-[18rem] lg:w-[11rem] xl:h-[200px] xl:w-[160px]"
+              onClick={() => handleThumbnailClick(index)}
+            >
+              <img
+                src={item.imgSrc}
+                alt=""
+                className="w-full h-full object-cover rounded-[20px] shadow-md"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="nextPrevArrows absolute top-[58%] right-[4%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr-24 md:top-[60%] md:right-[54%] md:gap-5 lg:mr-24 lg:top-[80%] lg:right-[54%] xl:top-[70%] xl:gap-5 xl:right-[36%]">
+          <button
+            className="prev w-10 h-10 rounded-full bg-[#14ff72cb] border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-white hover:text-black sm:h-[2rem] sm:w-[2rem] md:h-[3rem] md:w-[3rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[3rem] xl:w-[3rem]"
+            onClick={() => moveSlider("prev")}
+          >
+            {"<"}
+          </button>
+          <button
+            className="next w-10 h-10 rounded-full bg-[#14ff72cb] border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-white hover:text-black sm:h-[2rem] sm:w-[2rem]  md:h-[3rem] md:w-[3rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[3rem] xl:w-[3rem]"
+            onClick={() => moveSlider("next")}
+          >
+            {">"}
+          </button>
+        </div>
       </div>
       <HeroImageSlider />
     </>
@@ -169,85 +176,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// This code is with controlers
-// import React, { useEffect, useRef } from "react";
-// import SelectingSystem from "../../assets/HeroVideo/SelectingSystem.mp4";
-// import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
-
-// const Home = () => {
-//   const videoRef = useRef(null);
-
-//   useEffect(() => {
-//     const video = videoRef.current;
-
-//     const playVideoWithSound = async () => {
-//       try {
-//         video.muted = false;
-//         await video.play();
-//       } catch (error) {
-//         console.error("Autoplay with sound failed:", error);
-//         video.muted = true;
-//         try {
-//           await video.play();
-//         } catch (error) {
-//           console.error("Autoplay muted also failed:", error);
-//         }
-//       }
-//     };
-
-//     const handleVisibilityChange = () => {
-//       if (document.hidden) {
-//         video.pause();
-//       } else {
-//         playVideoWithSound();
-//       }
-//     };
-
-//     document.addEventListener("visibilitychange", handleVisibilityChange);
-
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             video.muted = false;
-//             playVideoWithSound();
-//           } else {
-//             video.muted = true;
-//           }
-//         });
-//       },
-//       { threshold: 0.5 }
-//     );
-
-//     observer.observe(video);
-
-//     playVideoWithSound(); // Ensure video tries to play with sound immediately
-
-//     return () => {
-//       document.removeEventListener("visibilitychange", handleVisibilityChange);
-//       observer.unobserve(video);
-//     };
-//   }, []);
-
-//   return (
-//     <>
-//       <div className="bg-gray-100 flex items-center justify-center h-screen relative overflow-hidden">
-//         <video
-//           ref={videoRef}
-//           className="absolute inset-0 w-full h-full object-cover"
-//           autoPlay
-//           loop
-//           playsInline
-//           controls
-//         >
-//           <source src={SelectingSystem} type="video/mp4" />
-//           Your browser does not support the video tag.
-//         </video>
-//       </div>
-//       <HeroImageSlider />
-//     </>
-//   );
-// };
-
-// export default Home;

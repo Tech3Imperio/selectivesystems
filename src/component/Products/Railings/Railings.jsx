@@ -1,38 +1,38 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import bathroomPartition1 from "../../../assets/BathroomPartition/bathroomPartition1.jpeg";
-import bathroomPartition2 from "../../../assets/BathroomPartition/bathroomPartition2.jpeg";
-import bathroomPartition3 from "../../../assets/BathroomPartition/bathroomPartition3.jpeg";
-import bathroomPartition4 from "../../../assets/BathroomPartition/bathroomPartition4.jpeg";
-import AluminiumData from "../../../Data/Aluminium/AluminiumData";
+import railing1 from "../../../assets/Railing/HeroImage/railing1.png";
+import railing2 from "../../../assets/Railing/HeroImage/railing2.jpg";
+import railing3 from "../../../assets/Railing/HeroImage/railing3.jpg";
+import railing4 from "../../../assets/Railing/HeroImage/railing4.jpg";
+import RailingData from "../../../Data/Railing/RailingData";
 
 const Railings = () => {
   const [sliderItems, setSliderItems] = useState([
     {
-      imgSrc: bathroomPartition1,
-      title: "Bathroom Partitions",
-      type: "DOORS",
+      imgSrc: railing1,
+      title: "Glass Railing",
+      type: "Terrace",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
     },
     {
-      imgSrc: bathroomPartition2,
-      title: "ALUMINIUM",
-      type: "WINDOWS",
+      imgSrc: railing2,
+      title: "Glass Railing",
+      type: "Terrace",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
     },
     {
-      imgSrc: bathroomPartition3,
-      title: "ALUMINIUM",
-      type: "SLIDER",
+      imgSrc: railing3,
+      title: "Glass Railing",
+      type: "Balcony",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
     },
     {
-      imgSrc: bathroomPartition4,
-      title: "ALUMINIUM",
-      type: "PARTITION",
+      imgSrc: railing4,
+      title: "Glass Railing",
+      type: "C Balcony",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
     },
@@ -172,12 +172,12 @@ const Railings = () => {
       </div>
       {/* product start */}
       <div className="grid grid-cols-1 -ml-28  md:grid-cols-3 poppins-regular px-32 lg:justify-center md:-ml-32 md:gap-24 lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-10 xl:mb-10">
-        {AluminiumData.map((item, index) => (
+        {RailingData.map((item, index) => (
           <div
             key={index}
-            className="relative group h-[23rem] w-[20rem] m-2 bg-white hover:border shadow hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-300 ease-in-out  md:mt-7 md:h-[30rem] md:w-[15rem] lg:h-[28rem] lg:w-[17rem]  xl:h[25rem] xl:w-[20rem]"
+            className="relative group h-[23rem]  w-[20rem] m-2 bg-white hover:border shadow hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-300 ease-in-out  md:mt-7 md:h-[30rem] md:w-[15rem] lg:h-[28rem] lg:w-[17rem]  xl:h[25rem] xl:w-[20rem]"
           >
-            <div className="flex items-center justify-center h-full w-full overflow-hidden">
+            <div className="flex items-center justify-center h-[26rem] w-[19.9rem] rounded-[1rem] overflow-hidden">
               <img
                 src={item.img}
                 title={item.title}

@@ -388,14 +388,14 @@ const Aluminium = () => {
         {AluminiumData.map((item, index) => (
           <div
             key={index}
-            className="relative group h-[23rem] w-[20rem] m-2 bg-white hover:border shadow hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-300 ease-in-out  md:mt-7 md:h-[30rem] md:w-[15rem] lg:h-[28rem] lg:w-[17rem]  xl:h[25rem] xl:w-[20rem]"
+            className="relative group h-[27rem] w-[20rem] ml-4 mb-10 bg-white hover:border  hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-300 ease-in-out  md:mt-7 md:h-[30rem] md:w-[15rem] md:text-sm lg:h-[28rem] lg:-pt-[5rem] lg:w-[17rem] xl:h[22rem] xl:w-[20rem]"
           >
             <div className="flex items-center justify-center h-full w-full overflow-hidden">
               <img
                 src={item.img}
                 title={item.title}
                 alt={item.alt}
-                className="transition-transform duration-300 ease-in-out group-hover:scale-90 object-cover"
+                className="transition-transform duration-300 ease-in-out rounded-[1rem]  group-hover:scale-90 object-cover"
               />
             </div>
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out md:py-4">
