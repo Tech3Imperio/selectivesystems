@@ -1,5 +1,5 @@
-import stairs from "../../assets/Railing/RailingProducts/stairs.jpg";
-import terase from "../../assets/Railing/RailingProducts/terase.jpg";
+import stairs from "../../assets/Railing/RailingProducts/stairs.webp";
+import terase from "../../assets/Railing/RailingProducts/terase.webp";
 // import windows3 from "../../assets/AluminiumProduct/AluminiumWindows/windows3.jpg";
 // import windows4 from "../../assets/AluminiumProduct/AluminiumWindows/windows4.jpg";
 // import windows5 from "../../assets/AluminiumProduct/AluminiumWindows/windows5.jpg";

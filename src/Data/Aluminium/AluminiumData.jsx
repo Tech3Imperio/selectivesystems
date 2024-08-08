@@ -1,9 +1,9 @@
-import windows1 from "../../assets/AluminiumProduct/AluminiumWindows/windows1.jpg";
-import windows2 from "../../assets/AluminiumProduct/AluminiumWindows/windows2.jpg";
-import windows3 from "../../assets/AluminiumProduct/AluminiumWindows/windows3.jpg";
-import windows4 from "../../assets/AluminiumProduct/AluminiumWindows/windows4.jpg";
-import windows5 from "../../assets/AluminiumProduct/AluminiumWindows/windows5.jpg";
-import windows6 from "../../assets/AluminiumProduct/AluminiumWindows/windows6.jpg";
+import windows1 from "../../assets/AluminiumProduct/AluminiumWindows/windows1.webp";
+import windows2 from "../../assets/AluminiumProduct/AluminiumWindows/windows2.webp";
+import windows3 from "../../assets/AluminiumProduct/AluminiumWindows/windows3.webp";
+import windows4 from "../../assets/AluminiumProduct/AluminiumWindows/windows4.webp";
+import windows5 from "../../assets/AluminiumProduct/AluminiumWindows/windows5.webp";
+import windows6 from "../../assets/AluminiumProduct/AluminiumWindows/windows6.webp";
 
 // import guaranty from "../../src/assets/About/guaranty.png";
 const AluminiumData = [
@@ -31,7 +31,7 @@ const AluminiumData = [
   },
   {
     img: windows3,
-    title: "Black Modern Aluminum Tilt and Turn Window",
+    title: "Black Aluminum Window",
     desc: "Quality Assurance is not merely a checkpoint but a relentless pursuit of excellence at every phase. It’s the commitment to perfection and the precision in each step that defines true quality.",
     alt: "Customer Satisfaction",
     color: "Black",
@@ -53,7 +53,7 @@ const AluminiumData = [
   },
   {
     img: windows5,
-    title: "Modern Silver Aluminium Sliding Window",
+    title: "Aluminium Sliding Window",
     desc: "Quality Assurance is not merely a checkpoint but a relentless pursuit of excellence at every phase. It’s the commitment to perfection and the precision in each step that defines true quality.",
     alt: "Customer Satisfaction",
     color: "Silver",
