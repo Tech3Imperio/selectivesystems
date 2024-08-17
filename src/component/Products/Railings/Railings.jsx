@@ -178,7 +178,7 @@ const Railings = () => {
         {RailingData.map((item, index) => (
           <div
             key={index}
-            className="relative group h-[24rem] w-[20rem] ml-2 mt-10 mb-14  bg-white hover:border hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-300 ease-in-out md:mb-10 md:ml-8 md:mt-7 md:h-[30rem] md:w-[20rem] md:text-sm lg:h-[28rem] lg:-ml-0 lg:-pt-[5rem] lg:w-[19rem] lg:mb-14 xl:h[22rem] xl:w-[22rem]"
+            className="relative group h-[24rem] w-[20rem] ml-2 mt-10 mb-14 bg-white hover:border hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-300 ease-in-out md:mb-10 md:ml-8 md:mt-7 md:h-[30rem] md:w-[20rem] md:text-sm lg:h-[28rem] lg:-ml-0 lg:-pt-[5rem] lg:w-[19rem] lg:mb-14 xl:h[22rem] xl:w-[22rem]"
           >
             <div className="flex items-center justify-center mb-8 h-[116%] mr-2 w-[116%] md:-mb-16 lg:-mb-5 xl:-mb-4 overflow-hidden">
               <img
@@ -188,7 +188,7 @@ const Railings = () => {
                 className="transition-transform duration-700 ease-in-out group-hover:scale-90 object-cover"
               />
             </div>
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out md:py-4 xl:-m-2">
+            <div className="absolute inset-0 py-28 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out md:py-4 xl:-m-2">
               <div className="text-center">
                 <p className="text-lg font-semibold mb-2 py-2">{item.title}</p>
                 <p className="text-gray-600 text-sm lg:text-sm lg:px-3 xl:text-sm xl:px-10">
@@ -219,9 +219,9 @@ const Railings = () => {
                     <tr>
                       <td className="font-semibold pr-2">Click to Visit:</td>
                       <td>
-                        <Link to="https://www.imperiorailing.com/products">
+                        <a href="https://www.imperiorailing.com/products">
                           {item.visit}
-                        </Link>
+                        </a>
                       </td>
                     </tr>
                   </tbody>
