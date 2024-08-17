@@ -80,7 +80,7 @@ const HeroImageSlider = () => {
                 variants={FadeRight(0.6)}
                 initial="hidden"
                 animate="visible"
-                className="text-4xl -mt-8 text-primary font-bold leading-relaxed xl:leading-loose font-poppins md:mb- md:ml-12 md:text-3xl md:-mb-[25px] lg:mb-2 lg:text-3xl lg:ml-14 lg:mt-12 xl:text-5xl xl:ml-36 xl:-mb-8"
+                className="text-4xl -mt-8 text-primary poppins-regular  leading-relaxed xl:leading-loose md:mb- md:ml-12 md:text-3xl md:-mb-[25px] lg:mb-2 lg:text-3xl lg:ml-14 lg:mt-12 xl:text-5xl xl:ml-36 xl:-mb-8"
               >
                 Aluminum
               </motion.h1>
