@@ -194,7 +194,7 @@ const Railings = () => {
                 <p className="text-gray-600 text-sm lg:text-sm lg:px-3 xl:text-sm xl:px-10">
                   {item.desc}
                 </p>
-                <table className="mt-4 text-left w-full px-14 text-[0.680rem] md:text-[0.600rem] md:px-14 lg:text-[0.500rem] xl:ml-10 xl:mr-24 xl:px-14 xl:text-[0.620rem]">
+                <table className="mt-4 text-left w-full px-14 text-[0.680rem] md:text-[0.600rem] md:px-14 lg:text-[0.500rem] xl:ml-10 xl:mr-24 xl:px-14 xl:text-[0.600rem]">
                   <tbody>
                     <tr>
                       <td className="font-semibold pr-2">Color:</td>
