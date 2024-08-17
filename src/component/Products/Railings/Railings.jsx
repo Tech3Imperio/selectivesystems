@@ -197,6 +197,14 @@ const Railings = () => {
                 <table className="mt-4 text-left w-full px-14 text-[0.680rem] md:text-[0.600rem] md:px-14 lg:text-[0.500rem] xl:ml-10 xl:mr-24 xl:px-14 xl:text-[0.600rem]">
                   <tbody>
                     <tr>
+                      <td className="font-semibold pr-2">Click to Visit:</td>
+                      <td>
+                        <Link to="https://www.imperiorailing.com/products">
+                          {item.visit}
+                        </Link>
+                      </td>
+                    </tr>
+                    <tr>
                       <td className="font-semibold pr-2">Color:</td>
                       <td>{item.color}</td>
                     </tr>
@@ -215,14 +223,6 @@ const Railings = () => {
                     <tr>
                       <td className="font-semibold pr-2">Surface Finishing:</td>
                       <td>{item.surfaceFinishing}</td>
-                    </tr>
-                    <tr>
-                      <td className="font-semibold pr-2">Click to Visit:</td>
-                      <td>
-                        <a href="https://www.imperiorailing.com/products">
-                          {item.visit}
-                        </a>
-                      </td>
                     </tr>
                   </tbody>
                 </table>
