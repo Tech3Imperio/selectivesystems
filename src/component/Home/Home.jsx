@@ -1,0 +1,181 @@
+import React, { useEffect, useRef, useState } from "react";
+import HeroImageSlider from "../HeroImageSlider/HeroImageSlider";
+import { motion } from "framer-motion";
+import img1 from "../../assets/AluminiumProduct/img1.jpg";
+import bathroomPartition1 from "../../assets/BathroomPartition/bathroomPartition1.jpeg";
+import railing2 from "../../assets/Railing/HeroImage/railing2.jpg";
+import queuemanager from "../../assets/QueueManager/HeroQueue-manager/queuemanager.png";
+import { Link } from "react-router-dom";
+
+const Home = () => {
+  const [sliderItems, setSliderItems] = useState([
+    {
+      imgSrc: img1,
+      title: "ALUMINIUM",
+      type: "WINDOWS",
+      description:
+        "Opt for aluminium windows to experience superior durability and contemporary elegance. These windows offer exceptional energy efficiency, minimal maintenance, and a sleek, modern design. Elevate your home or business with a choice that combines style, longevity, and performance.",
+    },
+    {
+      imgSrc: bathroomPartition1,
+      title: "BATHROOM",
+      type: "GLASS PARTITIONS",
+      description:
+        "Transform your bathroom with a sleek glass partition that combines elegance with functionality. Our high-quality glass partitions provide a modern, spacious feel while ensuring privacy and easy maintenance. Enhance your bathroom's aesthetics with a solution that’s both stylish and durable.",
+    },
+    {
+      imgSrc: railing2,
+      title: "RAILING",
+      type: "GLASS RAILING",
+      description:
+        "Experience unparalleled clarity and style with Imperio's glass railing systems. Our expertly crafted railings blend safety and sophistication, enhancing any space with innovative, high-quality solutions. Whether for residential or commercial projects, trust Imperio to deliver excellence in every detail.",
+    },
+    {
+      imgSrc: queuemanager,
+      title: "QUEUE",
+      type: "ALUMINIUM STAND",
+      description:
+        "Enhance crowd control with our robust aluminium queue manager stands. Designed for durability and elegance, these stands provide a reliable solution for guiding foot traffic in any environment. Ideal for both indoor and outdoor settings, they combine strength with a sleek, modern appearance",
+    },
+  ]);
+
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
+
+  const moveSlider = (direction) => {
+    if (direction === "next") {
+      setCurrentItemIndex((currentItemIndex + 1) % sliderItems.length);
+    } else {
+      setCurrentItemIndex(
+        (currentItemIndex - 1 + sliderItems.length) % sliderItems.length
+      );
+    }
+  };
+
+  const handleThumbnailClick = (index) => {
+    setCurrentItemIndex(index);
+  };
+
+  useEffect(() => {
+    // Scroll to the top of the component when it comes into view
+    if (aluminiumRef.current) {
+      aluminiumRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [currentItemIndex]);
+
+  return (
+    <>
+      <div
+        ref={aluminiumRef}
+        className="slider h-screen -mt-10 w-screen overflow-hidden relative"
+      >
+        <div className="list relative w-full h-full">
+          {sliderItems.map((item, index) => (
+            <motion.div
+              key={index}
+              className={`item absolute inset-0 transition-opacity duration-500 ease-in-out ${
+                index === currentItemIndex ? "opacity-100" : "opacity-0"
+              }`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: index === currentItemIndex ? 1 : 0 }}
+              transition={{ duration: 1 }}
+            >
+              <img
+                src={item.imgSrc}
+                alt=""
+                className="w-full h-full object-cover"
+              />
+              <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+              <div className="content absolute top-[9%]  text-sm w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] lg:top-[20%] xl:top-[15%] ">
+                <motion.div
+                  className="title text-[3em] font-bold leading-[1.3em]"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: index === currentItemIndex ? 1 : 0,
+                    y: index === currentItemIndex ? 0 : 20,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {item.title}
+                </motion.div>
+                <motion.div
+                  className="type text-[3em] font-bold leading-[1.3em] text-[#14ff72cb]"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: index === currentItemIndex ? 1 : 0,
+                    y: index === currentItemIndex ? 0 : 20,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {item.type}
+                </motion.div>
+                <motion.div
+                  className="description text-[1.2em]"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: index === currentItemIndex ? 1 : 0,
+                    y: index === currentItemIndex ? 0 : 20,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {item.description}
+                </motion.div>
+                <motion.div
+                  className="button grid grid-cols-1 mt-5"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: index === currentItemIndex ? 1 : 0,
+                    y: index === currentItemIndex ? 0 : 20,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Link to="/contact">
+                    <motion.button
+                      className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] poppins-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      GET IN TOUCH
+                    </motion.button>
+                  </Link>
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        <div className="thumbnail absolute bottom-14 left-1/1 gap-2 ml-1 transform -translate-x-2/7 flex z-10 md:-translate-x-[-8rem] md:gap-3 lg:gap-4 lg:-translate-x-[-15rem] xl:gap-5 xl:translate-x-60 xl:left-[34%]">
+          {sliderItems.map((item, index) => (
+            <div
+              key={index}
+              className="item w-[5.4rem] h-[10rem] hover:scale-110 flex-shrink-0 relative cursor-pointer md:h-[15rem] md:w-[9rem] lg:h-[18rem] lg:w-[11rem] xl:h-[200px] xl:w-[160px]"
+              onClick={() => handleThumbnailClick(index)}
+            >
+              <img
+                src={item.imgSrc}
+                alt=""
+                className="w-full h-full object-cover rounded-[20px] mt-10 shadow-md"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="nextPrevArrows absolute top-[60%] right-[4%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr-24 md:top-[60%] md:right-[54%] md:gap-5 lg:mr-24 lg:top-[80%] lg:right-[54%] xl:top-[70%] xl:gap-5 xl:right-[36%]">
+          <button
+            className="prev w-10 h-10 rounded-full bg-[#14ff72cb] border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-white hover:text-black sm:h-[2rem] sm:w-[2rem] md:h-[3rem] md:w-[3rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[3rem] xl:w-[3rem]"
+            onClick={() => moveSlider("prev")}
+          >
+            {"<"}
+          </button>
+          <button
+            className="next w-10 h-10 rounded-full bg-[#14ff72cb] border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-white hover:text-black sm:h-[2rem] sm:w-[2rem]  md:h-[3rem] md:w-[3rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[3rem] xl:w-[3rem]"
+            onClick={() => moveSlider("next")}
+          >
+            {">"}
+          </button>
+        </div>
+      </div>
+      <HeroImageSlider />
+    </>
+  );
+};
+
+export default Home;
