@@ -254,7 +254,7 @@ const DoorSeals = () => {
                 <p className="text-gray-600 text-[0.700rem] lg:text-[0.700rem] xl:text-[0.800rem]">
                   {item.desc}
                 </p>
-                <table className="mt-4 text-left w-full text-[0.800rem] lg:text-[0.700rem] xl:text-[0.800rem]">
+                <table className="mt-4 text-left w-full text-[0.750rem] lg:text-[0.700rem] xl:text-[0.800rem]">
                   <tbody>
                     <tr>
                       <td className="font-semibold pr-2">Profile Type:</td>
