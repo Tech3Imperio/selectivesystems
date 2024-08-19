@@ -18,21 +18,21 @@ const BathroomPartitions = () => {
     },
     {
       imgSrc: bathroomPartition2,
-      title: "ALUMINIUM",
-      type: "WINDOWS",
+      title: "Bathroom Partitions",
+      type: "Glass",
       description:
         "Enhance your restroom's aesthetics and functionality with premium bathroom partition windows, offering privacy while allowing natural light to brighten the space",
     },
     {
       imgSrc: bathroomPartition3,
-      title: "ALUMINIUM",
+      title: "Bathroom Partitions",
       type: "SLIDER",
       description:
         "Optimize your restroom space with sleek bathroom partition slider doors, designed to save space while providing privacy and a modern aesthetic.",
     },
     {
       imgSrc: bathroomPartition4,
-      title: "ALUMINIUM",
+      title: "Bathroom",
       type: "PARTITION",
       description:
         "Elevate your restroom design with bathroom partitions featuring a durable aluminum frame and high water-resistant glass, combining strength with modern elegance for long-lasting performance.",

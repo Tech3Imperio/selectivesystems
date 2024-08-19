@@ -232,11 +232,7 @@ const Aluminium = () => {
               animate={{ opacity: index === currentItemIndex ? 1 : 0 }}
               transition={{ duration: 1 }}
             >
-              <img
-                src={item.imgSrc}
-                alt=""
-                className="w-full h-full object-cover"
-              />
+              <img src={item.imgSrc} alt="" className="w-full h-full" />
               <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
               <div className="content absolute top-[14%]  text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] md:text-sm lg:top-[10%] lg:text-2xl xl:top-[14%] xl:text-base ">
                 <motion.div

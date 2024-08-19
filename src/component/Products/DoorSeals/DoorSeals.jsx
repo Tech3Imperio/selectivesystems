@@ -6,7 +6,7 @@ import SelectingSystemMobile from "../../../assets/HeroVideo/SelectingSystemmobi
 // import bathroomPartition2 from "../../../assets/BathroomPartition/bathroomPartition2.jpeg";
 // import bathroomPartition3 from "../../../assets/BathroomPartition/bathroomPartition3.jpeg";
 // import bathroomPartition4 from "../../../assets/BathroomPartition/bathroomPartition4.jpeg";
-import AluminiumData from "../../../Data/Aluminium/AluminiumData";
+import DoorData from "../../../Data/DoorSeals/Doorseals";
 
 const DoorSeals = () => {
   // const [sliderItems, setSliderItems] = useState([
@@ -234,45 +234,57 @@ const DoorSeals = () => {
         </div>
       </div> */}
       {/* product start */}
-      <div className="grid grid-cols-1 -ml-28  md:grid-cols-3 poppins-regular px-32 lg:justify-center md:-ml-32 md:gap-24 lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-10 xl:mb-10">
-        {AluminiumData.map((item, index) => (
+      <div className="grid grid-cols-1 -ml-28 md:grid-cols-2 lg:grid-cols-3 poppins-regular px-32 md:justify-center md:mt-8 md:gap-20 lg:justify-center lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-3 xl:mb-10">
+        {DoorData.map((item, index) => (
           <div
             key={index}
-            className="relative group h-[23rem] w-[20rem] m-2 bg-white hover:border shadow hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-300 ease-in-out  md:mt-7 md:h-[30rem] md:w-[15rem] lg:h-[28rem] lg:w-[17rem]  xl:h[25rem] xl:w-[20rem]"
+            className="relative group h-[23.4rem] w-[20rem] ml-5 mt-14 mb-8 bg-white hover:border hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-700 ease-in-out md:mt-7 md:h-[30rem] md:w-[20rem] md:text-sm lg:h-[28rem] lg:-pt-[5rem] lg:w-[17rem] xl:h[18rem] xl:w-[20rem]"
           >
-            <div className="flex items-center justify-center h-full w-full overflow-hidden">
+            <div className="flex items-center justify-center h-[116%] mr-2 w-[116%] overflow-hidden md:-mb-20 xl:-mb-40">
               <img
                 src={item.img}
                 title={item.title}
                 alt={item.alt}
-                className="transition-transform duration-300 ease-in-out group-hover:scale-90 object-cover"
+                className="transition-transform duration-700 ease-in-out group-hover:scale-90 object-cover"
               />
             </div>
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out md:py-4">
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-2 transition-opacity duration-300 ease-in-out">
               <div className="text-center">
                 <p className="text-lg font-semibold mb-2 py-2">{item.title}</p>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-                <table className="mt-4 text-left w-full">
+                <p className="text-gray-600 text-[0.700rem] lg:text-[0.700rem] xl:text-[0.800rem]">
+                  {item.desc}
+                </p>
+                <table className="mt-4 text-left w-full text-[0.800rem] lg:text-[0.700rem] xl:text-[0.800rem]">
                   <tbody>
                     <tr>
-                      <td className="font-semibold pr-2">Color:</td>
-                      <td>{item.color}</td>
+                      <td className="font-semibold pr-2">Profile Type:</td>
+                      <td>{item.ProfileType}</td>
                     </tr>
                     <tr>
-                      <td className="font-semibold pr-2">Appearance:</td>
-                      <td>{item.appearance}</td>
+                      <td className="font-semibold pr-2">Dimensions:</td>
+                      <td>{item.Dimensions}</td>
                     </tr>
                     <tr>
-                      <td className="font-semibold pr-2">Glass Thickness:</td>
-                      <td>{item.glassThickness}</td>
+                      <td className="font-semibold pr-2">Finish:</td>
+                      <td>{item.Finish}</td>
                     </tr>
                     <tr>
-                      <td className="font-semibold pr-2">Frame Material:</td>
-                      <td>{item.frameMaterial}</td>
+                      <td className="font-semibold pr-2">Maximum Length:</td>
+                      <td>{item.MaximumLength}</td>
                     </tr>
                     <tr>
-                      <td className="font-semibold pr-2">Surface Finishing:</td>
-                      <td>{item.surfaceFinishing}</td>
+                      <td className="font-semibold pr-2">Cutting:</td>
+                      <td>{item.Cutting}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">
+                        Sound absorption value:
+                      </td>
+                      <td>{item.Soundabsorptionvalue}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">Fastening:</td>
+                      <td>{item.Fastening}</td>
                     </tr>
                   </tbody>
                 </table>
