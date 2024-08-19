@@ -105,7 +105,7 @@ const HeroImageSlider = () => {
                 variants={FadeRight(1.3)}
                 initial="hidden"
                 animate="visible"
-                className="text-gray-300 w-[16rem] ml-12  text-[0.800rem] font-raleway md:text-[0.860rem] md:w-[28rem] lg:ml-11 lg:w-[35rem] lg:text-sm xl:ml-36 xl:text-sm xl:w-[38rem] xl:py-2"
+                className="text-gray-300 w-[16rem] ml-12  text-[0.600rem] font-raleway md:text-[0.860rem] md:w-[28rem] lg:ml-11 lg:w-[35rem] lg:text-sm xl:ml-36 xl:text-sm xl:w-[38rem] xl:py-2"
               >
                 Upgrade your home or office with modern glass windows featuring
                 durable aluminum frames. Our glass door windows are designed for
