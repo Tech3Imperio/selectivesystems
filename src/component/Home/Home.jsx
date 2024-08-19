@@ -81,12 +81,12 @@ const Home = () => {
               transition={{ duration: 1 }}
             >
               <img
-                src={isPhoneSize ? item.phoneImgSrc : item.imgSrc}
+                src={item.imgSrc}
                 alt=""
-                className="w-full h-full"
+                className="w-full h-full object-cover"
               />
               <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-              <div className="content absolute top-[14%]  text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] md:text-sm lg:top-[10%] lg:text-2xl xl:top-[14%] xl:text-base ">
+              <div className="content absolute top-[14%]  text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] md:text-sm lg:top-[10%] lg:text-2xl xl:top-[14%] xl:text-base">
                 <motion.div
                   className="title text-[3em] font-bold leading-[1.3em]"
                   initial={{ opacity: 0, y: 20 }}
@@ -151,14 +151,14 @@ const Home = () => {
               onClick={() => handleThumbnailClick(index)}
             >
               <img
-                src={isPhoneSize ? item.phoneImgSrc : item.imgSrc}
+                src={item.imgSrc}
                 alt=""
-                className="w-full h-full object-cover rounded-[20px] mt-10 shadow-md"
+                className="w-full h-full object-cover rounded-[20px] shadow-md"
               />
             </div>
           ))}
         </div>
-        <div className="nextPrevArrows absolute top-[60%] right-[4%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr-24 md:top-[60%] md:right-[54%] md:gap-5 lg:mr-24 lg:top-[80%] lg:right-[54%] xl:top-[70%] xl:gap-5 xl:right-[36%]">
+        <div className="nextPrevArrows absolute top-[58%] right-[4%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr-24 md:top-[60%] md:right-[54%] md:gap-5 lg:mr-24 lg:top-[80%] lg:right-[54%] xl:top-[70%] xl:gap-5 xl:right-[36%]">
           <button
             className="prev w-10 h-10 rounded-full bg-[#14ff72cb] border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-white hover:text-black sm:h-[2rem] sm:w-[2rem] md:h-[3rem] md:w-[3rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[3rem] xl:w-[3rem]"
             onClick={() => moveSlider("prev")}
