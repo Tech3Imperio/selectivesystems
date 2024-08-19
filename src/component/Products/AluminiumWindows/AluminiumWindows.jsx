@@ -156,13 +156,17 @@ import img1 from "../../../assets/AluminiumProduct/img1.jpg";
 import img2 from "../../../assets/AluminiumProduct/img2.jpg";
 import img3 from "../../../assets/AluminiumProduct/img3.jpg";
 import img4 from "../../../assets/AluminiumProduct/img4.jpg";
-import AluminiumData from "../../../Data/Aluminium/AluminiumData";
+import aluminumPhone from "../../../assets/AluminiumProduct/AluminiumPhoneImages/aluminumPhone.jpg";
+import AluminumPhoneDoor from "../../../assets/AluminiumProduct/AluminiumPhoneImages/AluminumPhoneDoor.jpg";
+import AluminumPhoneWindow from "../../../assets/AluminiumProduct/AluminiumPhoneImages/AluminumPhoneWindow.jpg";
+import AluminumData from "../../../Data/Aluminium/AluminiumData";
 import { Link } from "react-router-dom";
 
 const Aluminium = () => {
   const [sliderItems, setSliderItems] = useState([
     {
       imgSrc: img1,
+      phoneImgSrc: aluminumPhone,
       title: "ALUMINIUM",
       type: "DOORS",
       description:
@@ -170,6 +174,7 @@ const Aluminium = () => {
     },
     {
       imgSrc: img2,
+      phoneImgSrc: AluminumPhoneWindow,
       title: "ALUMINIUM",
       type: "WINDOWS",
       description:
@@ -177,13 +182,15 @@ const Aluminium = () => {
     },
     {
       imgSrc: img3,
+      phoneImgSrc: AluminumPhoneDoor,
       title: "ALUMINIUM",
       type: "SLIDER",
       description:
-        "Experience seamless functionality with our aluminium sliding doors, designed for sleek aesthetics and exceptional durability. Perfect for maximizing space and natural light, our aluminium sliders offer energy efficiency, smooth operation, and modern design for residential and commercial properties",
+        "Experience seamless functionality with our aluminium sliding doors, designed for sleek aesthetics and exceptional durability. Perfect for maximizing space and natural light, our aluminium sliders offer energy efficiency, smooth operation, and modern design for residential and commercial properties.",
     },
     {
       imgSrc: img4,
+      phoneImgSrc: aluminumPhone,
       title: "ALUMINIUM",
       type: "PARTITION",
       description:
@@ -192,7 +199,8 @@ const Aluminium = () => {
   ]);
 
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
-  const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
+  const [isPhoneSize, setIsPhoneSize] = useState(window.innerWidth < 768); // Track screen size
+  const aluminiumRef = useRef(null);
 
   const moveSlider = (direction) => {
     if (direction === "next") {
@@ -209,7 +217,17 @@ const Aluminium = () => {
   };
 
   useEffect(() => {
-    // Scroll to the top of the component when it comes into view
+    const handleResize = () => {
+      setIsPhoneSize(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
     if (aluminiumRef.current) {
       aluminiumRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -232,7 +250,11 @@ const Aluminium = () => {
               animate={{ opacity: index === currentItemIndex ? 1 : 0 }}
               transition={{ duration: 1 }}
             >
-              <img src={item.imgSrc} alt="" className="w-full h-full" />
+              <img
+                src={isPhoneSize ? item.phoneImgSrc : item.imgSrc}
+                alt=""
+                className="w-full h-full"
+              />
               <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
               <div className="content absolute top-[14%]  text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] md:text-sm lg:top-[10%] lg:text-2xl xl:top-[14%] xl:text-base ">
                 <motion.div
@@ -299,7 +321,7 @@ const Aluminium = () => {
               onClick={() => handleThumbnailClick(index)}
             >
               <img
-                src={item.imgSrc}
+                src={isPhoneSize ? item.phoneImgSrc : item.imgSrc}
                 alt=""
                 className="w-full h-full object-cover rounded-[20px] mt-10 shadow-md"
               />
@@ -384,7 +406,7 @@ const Aluminium = () => {
 
       {/* table data */}
       <div className="grid grid-cols-1 -ml-28 md:grid-cols-2 lg:grid-cols-3 poppins-regular px-32 md:justify-center md:mt-8 md:gap-20 lg:justify-center lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-3 xl:mb-10">
-        {AluminiumData.map((item, index) => (
+        {AluminumData.map((item, index) => (
           <div
             key={index}
             className="relative group h-[23.4rem] w-[20rem] ml-5 mt-14 mb-8 bg-white hover:border hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-700 ease-in-out md:mt-7 md:h-[30rem] md:w-[20rem] md:text-sm lg:h-[28rem] lg:-pt-[5rem] lg:w-[17rem] xl:h[18rem] xl:w-[20rem]"

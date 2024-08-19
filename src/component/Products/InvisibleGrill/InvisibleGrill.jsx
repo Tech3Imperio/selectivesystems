@@ -1,41 +1,41 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import bathroomPartition1 from "../../../assets/BathroomPartition/bathroomPartition1.jpeg";
-import bathroomPartition2 from "../../../assets/BathroomPartition/bathroomPartition2.jpeg";
-import bathroomPartition3 from "../../../assets/BathroomPartition/bathroomPartition3.jpeg";
-import bathroomPartition4 from "../../../assets/BathroomPartition/bathroomPartition4.jpeg";
-import AluminiumData from "../../../Data/Aluminium/AluminiumData";
+import invisiblegrill from "../../../assets/InvisibleGrill/invisiblegrill.png";
+import slider from "../../../assets/InvisibleGrill/slider.png";
+import Invisiblebacony from "../../../assets/InvisibleGrill/Invisiblebacony.webp";
+import Invisiblebaconyimg from "../../../assets/InvisibleGrill/Invisiblebaconyimg.png";
+import InvisibleData from "../../../Data/InvisibleGrill/InvisibleGrill";
 import { Link } from "react-router-dom";
 
 const InvisibleGrill = () => {
   const [sliderItems, setSliderItems] = useState([
     {
-      imgSrc: bathroomPartition1,
-      title: "Bathroom Partitions",
-      type: "DOORS",
+      imgSrc: invisiblegrill,
+      title: "Alumimium",
+      type: "Rope",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+        " Lightweight and durable aluminum rope designed for various applications, including construction, rigging, and outdoor activities. Offers excellent strength-to-weight ratio and corrosion resistance, ensuring reliable performance in demanding conditions. Ideal for use in both industrial and recreational settings.",
     },
     {
-      imgSrc: bathroomPartition2,
-      title: "ALUMINIUM",
-      type: "WINDOWS",
+      imgSrc: slider,
+      title: "Invisible",
+      type: "Grill",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+        "Modern safety solution featuring thin, stainless steel wires that provide robust protection without obstructing views. Ideal for windows, balconies, and staircases, it offers a sleek and secure way to enhance safety while maintaining aesthetic appeal. Perfect for both residential and commercial properties.",
     },
     {
-      imgSrc: bathroomPartition3,
-      title: "ALUMINIUM",
-      type: "SLIDER",
+      imgSrc: Invisiblebacony,
+      title: "Invisible grill",
+      type: "Balcony",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+        "Secure your balcony with our sleek invisible grill, featuring thin stainless steel wires that provide safety without blocking the view. Perfect for modern homes and commercial spaces, this durable solution ensures both security and style. Ideal for enhancing balcony safety while maintaining an unobtrusive appearance.",
     },
     {
-      imgSrc: bathroomPartition4,
-      title: "ALUMINIUM",
-      type: "PARTITION",
+      imgSrc: Invisiblebaconyimg,
+      title: "Invisible grill",
+      type: "Terrace",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+        "Secure your terrace with our sleek invisible grill, featuring slim stainless steel wires that ensure safety while preserving your view. Ideal for both residential and commercial spaces, it combines durability with modern aesthetics.",
     },
   ]);
 
@@ -174,45 +174,73 @@ const InvisibleGrill = () => {
         </div>
       </div>
       {/* product start */}
-      <div className="grid grid-cols-1 -ml-28  md:grid-cols-3 poppins-regular px-32 lg:justify-center md:-ml-32 md:gap-24 lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-10 xl:mb-10">
-        {AluminiumData.map((item, index) => (
+      <div className="grid grid-cols-1 -ml-28 md:grid-cols-2 lg:grid-cols-3 poppins-regular px-32 md:justify-center md:mt-8 md:gap-20 lg:justify-center lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-3 xl:mb-10">
+        {InvisibleData.map((item, index) => (
           <div
             key={index}
-            className="relative group h-[23rem] w-[20rem] m-2 bg-white hover:border shadow hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-300 ease-in-out  md:mt-7 md:h-[30rem] md:w-[15rem] lg:h-[28rem] lg:w-[17rem]  xl:h[25rem] xl:w-[20rem]"
+            className="relative group h-[23.4rem] w-[20rem] ml-5 mt-14 mb-8 bg-white hover:border hover:shadow-black rounded-[1rem] cursor-pointer overflow-hidden text-center flex flex-col items-center transition-transform duration-700 ease-in-out md:mt-7 md:h-[30rem] md:w-[20rem] md:text-sm lg:h-[28rem] lg:-pt-[5rem] lg:w-[17rem] xl:h[18rem] xl:w-[20rem]"
           >
-            <div className="flex items-center justify-center h-full w-full overflow-hidden">
+            <div className="flex items-center justify-center h-[116%] mr-2 w-[116%] overflow-hidden md:-mb-20 xl:-mb-40">
               <img
                 src={item.img}
                 title={item.title}
                 alt={item.alt}
-                className="transition-transform duration-300 ease-in-out group-hover:scale-90 object-cover"
+                className="transition-transform duration-700 ease-in-out group-hover:scale-90 object-cover mb-12 md:mb-10 lg:mb-8 xl:mb-14 "
               />
             </div>
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out md:py-4">
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out">
               <div className="text-center">
-                <p className="text-lg font-semibold mb-2 py-2">{item.title}</p>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-                <table className="mt-4 text-left w-full">
+                <p className="text-lg font-semibold mb-2 py-2 lg:text-[0.740rem] xl:text-[0.850rem]">
+                  {item.title}
+                </p>
+                <p className="text-gray-600 text-[0.620rem] md:text-[0.650rem] lg:text-[0.600rem] xl:text-[0.730rem]">
+                  {item.desc}
+                </p>
+                <table className="mt-4 text-left w-full text-[0.700rem] md:text-[0.700rem] lg:text-[0.650rem] xl:text-[0.750rem]">
                   <tbody>
                     <tr>
+                      <td className="font-semibold pr-2"> Grade Field:</td>
+                      <td>{item.GradeField}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">Technique:</td>
+                      <td>{item.Technique}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">Material:</td>
+                      <td>{item.Material}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">Product Type:</td>
+                      <td>{item.ProductType}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">UsageApplication:</td>
+                      <td>{item.UsageApplication}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">GrillDesign:</td>
+                      <td>{item.GrillDesign}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">WireDiameter:</td>
+                      <td>{item.WireDiameter}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">SurfaceFinish:</td>
+                      <td>{item.SurfaceFinish}</td>
+                    </tr>
+                    <tr>
+                      <td className="font-semibold pr-2">WireSpacing:</td>
+                      <td>{item.WireSpacing}</td>
+                    </tr>
+                    <tr>
                       <td className="font-semibold pr-2">Color:</td>
-                      <td>{item.color}</td>
+                      <td>{item.Color}</td>
                     </tr>
                     <tr>
-                      <td className="font-semibold pr-2">Appearance:</td>
-                      <td>{item.appearance}</td>
-                    </tr>
-                    <tr>
-                      <td className="font-semibold pr-2">Glass Thickness:</td>
-                      <td>{item.glassThickness}</td>
-                    </tr>
-                    <tr>
-                      <td className="font-semibold pr-2">Frame Material:</td>
-                      <td>{item.frameMaterial}</td>
-                    </tr>
-                    <tr>
-                      <td className="font-semibold pr-2">Surface Finishing:</td>
-                      <td>{item.surfaceFinishing}</td>
+                      <td className="font-semibold pr-2">Feature:</td>
+                      <td>{item.Feature}</td>
                     </tr>
                   </tbody>
                 </table>
