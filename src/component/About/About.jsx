@@ -52,7 +52,7 @@ const About = () => {
         showThumbs={false}
         showStatus={false}
         showArrows={false}
-        className="relative w-screen h-screen overflow-hidden justify-center text-center -mt-7"
+        className="relative w-screen h-[30rem] overflow-hidden justify-center text-center -mt-7"
       >
         {sliderItems.map((item, index) => (
           <div key={index} className="relative w-full h-full md:mb-14">
