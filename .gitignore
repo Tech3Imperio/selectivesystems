@@ -9,12 +9,6 @@
 /coverage
 
 
-# production
-
-log.txt
-*.log
-
-
 # misc
 .DS_Store
 .env

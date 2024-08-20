@@ -72,7 +72,7 @@ const HeroImageSlider = () => {
       {/* About data start */}
 
       <section>
-        <div className="container bg-gray-800 mt-36 w-[22rem] h-[45rem] rounded-[3rem] grid gris-cols-1 md:grid-cols-2 relative  font-poppins overflow-hidden md:w-[46rem] md:h-[28rem] md:rounded-[5rem] lg:w-[60rem] lg:h-[31rem] lg:rounded-[5rem] xl:w-[91rem] xl:h-[32rem] xl:rounded-[6rem]">
+        <div className="container bg-gray-800 mt-36 w-[22rem] h-[47rem] rounded-[3rem] grid gris-cols-1 md:grid-cols-2 relative  font-poppins overflow-hidden md:w-[46rem] md:h-[28rem] md:rounded-[5rem] lg:w-[60rem] lg:h-[31rem] lg:rounded-[5rem] xl:w-[91rem] xl:h-[32rem] xl:rounded-[6rem]">
           {/* product info */}
           <div className="flex flex-col justify-center py-14 mb-4 md:py-0 relative z-10">
             <div className=" text-center md:text-left space-y-2 lg:max-w-[25rem]">

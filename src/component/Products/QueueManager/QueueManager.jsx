@@ -11,31 +11,31 @@ const QueueManager = () => {
   const [sliderItems, setSliderItems] = useState([
     {
       imgSrc: queuemanager,
-      title: "Bathroom Partitions",
-      type: "DOORS",
+      title: "Champagne",
+      type: "Stanchion ",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+        "Elevate event management with a stylish champagne-colored queue manager stand. Ideal for red carpet events, weddings, and corporate functions, this premium stanchion offers both elegance and durability. Shop now for the best deals on luxury stanchion stands.",
     },
     {
       imgSrc: queuemanager2,
-      title: "ALUMINIUM",
-      type: "WINDOWS",
+      title: "Stainless Steel",
+      type: "Stanchion",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+        "Sleek stainless steel queue manager for efficient crowd control. Ideal for events, venues, and public spaces.",
     },
     {
       imgSrc: queuemanager3,
-      title: "ALUMINIUM",
-      type: "SLIDER",
+      title: "Queue",
+      type: "Manager",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+        "Enhance crowd control with our sleek stainless steel queue manager stand. Ideal for events and public spaces, combining durability and style",
     },
     {
       imgSrc: queuemanager4,
-      title: "ALUMINIUM",
-      type: "PARTITION",
+      title: "Barrier",
+      type: "Post",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
+        "Upgrade your crowd management with our modern stainless steel barrier post. Perfect for events and public areas, offering both strength and elegance.",
     },
   ]);
 
