@@ -133,16 +133,16 @@ const About = () => {
                     <i className="fas fa-square-full"></i>
                   </span>
                 </h6>
-                <h1 className="text-2xl ml-4 font-bold mb-6 poppins-regular text-primary md:text-3xl lg:text-3xl lg:ml-10 xl:text-4xl xl:w-[48rem] xl:-ml-16">
+                <h1 className="text-2xl ml-4 font-bold mb-6 poppins-regular text-primary md:text-3xl lg:text-3xl lg:ml-10 xl:text-4xl xl:w-[48rem] xl:-ml-12">
                   About Us
                 </h1>
-                <p className="mb-6 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-base lg:w-[33rem] lg:px-8 xl:text-sm xl:w-[48rem] xl:-ml-24">
+                <p className="mb-6 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-base lg:w-[33rem] lg:px-8 xl:text-sm xl:w-[48rem] xl:-ml-20">
                   Selective Systems are #1 Manufacturers & Supplier of
                   High-Quality INVISIBLE GRILLE & Pleated Mosquito Net, Roller
                   Mosquito Net. Raw Materials. Maximum Safety | Easy
                   Installation & Maintenance | Sleek & Stylish.
                 </p>
-                <p className="mb-6 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-base lg:w-[33rem] lg:px-8 xl:w-[48rem] xl:-ml-24">
+                <p className="mb-6 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-base lg:w-[33rem] lg:px-8 xl:w-[48rem] xl:-ml-20">
                   Selective Systems are best Invisible Grill, Pleated Mosquito
                   Net, Roller Mosquito Net Manufacturers in Mumbai. In today’s
                   time, installing invisible grills is common in high-rise
