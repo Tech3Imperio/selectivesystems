@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-const apiUrl = process.env.REACT_APP_API_URL;
+// const apiUrl = process.env.REACT_APP_API_URL;
+import { BASE_URL } from "../../Service/Api/Api";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +21,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${window.location.origin}/contact`, {
+      const response = await fetch(`${BASE_URL}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +43,7 @@ const Contact = () => {
     } catch (error) {
       alert("An unexpected error occurred.");
     }
-    console.log("API URL:", apiUrl);
+    console.log("API URL:", BASE_URL);
   };
 
   return (
