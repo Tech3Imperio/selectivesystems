@@ -52,19 +52,19 @@ const About = () => {
         showThumbs={false}
         showStatus={false}
         showArrows={false}
-        className="relative w-screen h-full overflow-hidden justify-center text-center -mt-7"
+        className="relative w-screen h-full overflow-hidden justify-center text-center -mt-5"
       >
         {sliderItems.map((item, index) => (
           <div key={index} className="relative w-full h-full">
             <img
               src={item.imgSrc}
               alt={item.title}
-              className="w-full h-[30rem] object-cover"
+              className="w-full h-full object-cover"
             />
             <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
             <div className="content absolute top-[20%] text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] md:text-sm lg:top-[28%] lg:text-2xl xl:top-[20%] xl:text-base">
               <motion.div
-                className="title text-xl poppins-regular font-bold leading-[1.3em] md:text-3xl lg:text-4xl"
+                className="title text-base poppins-regular font-bold leading-[1.3em] md:text-3xl lg:text-4xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -72,7 +72,7 @@ const About = () => {
                 {item.title}
               </motion.div>
               <motion.div
-                className="type text-lg py-1 font-bold poppins-regular leading-[1.3em] text-[#14ff72cb] md:text-3xl lg:text-3xl"
+                className="type text-sm py-1 font-bold poppins-regular leading-[1.3em] text-[#14ff72cb] md:text-3xl lg:text-3xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -80,7 +80,7 @@ const About = () => {
                 {item.type}
               </motion.div>
               <motion.div
-                className="description text-sm w-[18rem] font-raleway py-2 md:text-base md:w-[30rem] md:ml-10 lg:text-2xl lg:w-[45rem] lg:ml-10 xl:text-base xl:ml-44"
+                className="description text-[0.500rem] w-[18rem] font-raleway py-2 md:text-base md:w-[30rem] md:ml-10 lg:text-2xl lg:w-[45rem] lg:ml-10 xl:text-base xl:ml-44"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -93,7 +93,7 @@ const About = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <Link to="/contact">
+                {/* <Link to="/contact">
                   <motion.button
                     className="border-none text-[0.700rem] ml-14 bg-[#e4e4e4] hover:bg-[#14ff72cb] hover:text-white text-black w-[6rem] h-[2rem] rounded-[2rem] poppins-regular cursor-pointer transition-all duration-400 md:h-[3rem] md:w-[8rem] md:font-semibold lg:h-[4rem] lg:w-[10rem] lg:rounded-[3rem] lg:text-base xl:h-[3rem] xl:w-[8rem] xl:text-base"
                     whileHover={{ scale: 1.0 }}
@@ -101,7 +101,7 @@ const About = () => {
                   >
                     GET IN TOUCH
                   </motion.button>
-                </Link>
+                </Link> */}
               </motion.div>
             </div>
           </div>
@@ -111,7 +111,7 @@ const About = () => {
       {/* Carousel end */}
 
       {/* Rest of your content */}
-      <div className="pt-24 pb-32 overflow-hidden">
+      <div className="pt-14 pb-32 overflow-hidden">
         <div className="container mx-auto">
           <div className="flex flex-wrap">
             {/* Left Section */}
@@ -136,13 +136,13 @@ const About = () => {
                 <h1 className="text-2xl ml-4 font-bold mb-6 poppins-regular text-primary md:text-3xl lg:text-3xl lg:ml-10 xl:text-4xl xl:w-[48rem] xl:-ml-12">
                   About Us
                 </h1>
-                <p className="mb-6 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-base lg:w-[33rem] lg:px-8 xl:text-sm xl:w-[48rem] xl:-ml-20">
+                <p className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-base lg:w-[33rem] lg:px-8 xl:text-sm xl:w-[48rem] xl:-ml-20">
                   Selective Systems are #1 Manufacturers & Supplier of
                   High-Quality INVISIBLE GRILLE & Pleated Mosquito Net, Roller
                   Mosquito Net. Raw Materials. Maximum Safety | Easy
                   Installation & Maintenance | Sleek & Stylish.
                 </p>
-                <p className="mb-6 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-base lg:w-[33rem] lg:px-8 xl:w-[48rem] xl:-ml-20">
+                <p className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-base lg:w-[33rem] lg:px-8 xl:w-[48rem] xl:-ml-20">
                   Selective Systems are best Invisible Grill, Pleated Mosquito
                   Net, Roller Mosquito Net Manufacturers in Mumbai. In today’s
                   time, installing invisible grills is common in high-rise
@@ -165,9 +165,9 @@ const About = () => {
             </div>
           </div>
 
-          <div className="mt-12 font-raleway">
+          <div className=" font-raleway">
             <div className=" lg:flex-row">
-              <p className="mb-6 text-[0.700rem] lg:mb-0 px-4 md:text-base md:w-[49rem] lg:text-base lg:w-full xl:text-sm  xl:w-screen">
+              <p className="mb-2 text-[0.700rem] lg:mb-0 px-4 md:text-base md:w-[49rem] lg:text-base lg:w-full xl:text-sm  xl:w-screen">
                 We Selective Systems offer different varieties of pleated &
                 Roller mosquito nets in customized designs. Our designs are
                 prompt as specified by customer needs.
