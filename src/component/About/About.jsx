@@ -59,7 +59,7 @@ const About = () => {
             <img
               src={item.imgSrc}
               alt={item.title}
-              className="w-full h-full object-cover"
+              className="w-full h-[28rem] object-cover"
             />
             <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
             <div className="content absolute top-[20%] text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] md:text-sm lg:top-[28%] lg:text-2xl xl:top-[20%] xl:text-base">
@@ -80,7 +80,7 @@ const About = () => {
                 {item.type}
               </motion.div>
               <motion.div
-                className="description text-[0.500rem] w-[18rem] font-raleway py-2 md:text-base md:w-[30rem] md:ml-10 lg:text-2xl lg:w-[45rem] lg:ml-10 xl:text-base xl:ml-44"
+                className="description text-[0.700rem] w-[18rem] font-raleway py-2 md:text-base md:w-[30rem] md:ml-10 lg:text-2xl lg:w-[45rem] lg:ml-10 xl:text-base xl:ml-44"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -93,7 +93,7 @@ const About = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                {/* <Link to="/contact">
+                <Link to="/contact">
                   <motion.button
                     className="border-none text-[0.700rem] ml-14 bg-[#e4e4e4] hover:bg-[#14ff72cb] hover:text-white text-black w-[6rem] h-[2rem] rounded-[2rem] poppins-regular cursor-pointer transition-all duration-400 md:h-[3rem] md:w-[8rem] md:font-semibold lg:h-[4rem] lg:w-[10rem] lg:rounded-[3rem] lg:text-base xl:h-[3rem] xl:w-[8rem] xl:text-base"
                     whileHover={{ scale: 1.0 }}
@@ -101,7 +101,7 @@ const About = () => {
                   >
                     GET IN TOUCH
                   </motion.button>
-                </Link> */}
+                </Link>
               </motion.div>
             </div>
           </div>
