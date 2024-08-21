@@ -164,7 +164,7 @@ export const Footer = () => {
     const object2 = document.getElementById("button");
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbz4A_wnMBKRu2xkbK16NsIIJDur0eterys6an4bG6mdYafyzKrSINPeZ_Nmp4RH1I3EXg/exec",
+      "https://script.google.com/macros/s/AKfycbwbxfnZuTky8UJ-NDgoJUuo2rLDviIQIg359ctB_oC3vguNnNqbSzD_2kZyj2qXYx0jXQ/exec",
       {
         method: "POST",
         body: JSON.stringify({
@@ -264,13 +264,13 @@ export const Footer = () => {
           />
           <button
             type="submit"
-            className="bg-gray-300 border text-black rounded px-4 py-2 hover:bg-black hover:text-white transition duration-500"
+            className=" bg-primary text-black border rounded px-4 py-2 hover:bg-secondary hover:text-black hover:border-black transition duration-500"
             id="button"
           >
             Subscribe
           </button>
           <div
-            className="text-white border-2 border-white rounded px-4 py-2 bg-black"
+            className="text-black border-2 border-black rounded px-4 py-2 bg-secondary"
             id="submited"
             style={{ display: "none" }}
           >
