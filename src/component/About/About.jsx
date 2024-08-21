@@ -52,14 +52,14 @@ const About = () => {
         showThumbs={false}
         showStatus={false}
         showArrows={false}
-        className="relative w-screen h-[33rem] overflow-hidden justify-center text-center -mt-7"
+        className="relative w-screen h-[calc(100vh-4rem)] overflow-hidden justify-center text-center -mt-7"
       >
         {sliderItems.map((item, index) => (
-          <div key={index} className="relative w-full h-full md:mb-14">
+          <div key={index} className="relative w-full h-full">
             <img
               src={item.imgSrc}
               alt={item.title}
-              className="w-screen h-screen object-cover"
+              className="w-full h-full object-cover"
             />
             <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
             <div className="content absolute top-[20%] text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] md:text-sm lg:top-[28%] lg:text-2xl xl:top-[20%] xl:text-base">
@@ -72,7 +72,7 @@ const About = () => {
                 {item.title}
               </motion.div>
               <motion.div
-                className="type text-xl py-1 font-bold poppins-regular leading-[1.3em] text-[#14ff72cb] md:text-3xl lg:text-3xl "
+                className="type text-xl py-1 font-bold poppins-regular leading-[1.3em] text-[#14ff72cb] md:text-3xl lg:text-3xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
