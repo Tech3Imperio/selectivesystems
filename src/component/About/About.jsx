@@ -59,7 +59,7 @@ const About = () => {
             <img
               src={item.imgSrc}
               alt={item.title}
-              className="w-full h-full object-cover"
+              className="w-full h-[35rem] object-cover"
             />
             <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
             <div className="content absolute top-[20%] text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] md:text-sm lg:top-[28%] lg:text-2xl xl:top-[20%] xl:text-base">
