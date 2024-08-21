@@ -52,7 +52,7 @@ const About = () => {
         showThumbs={false}
         showStatus={false}
         showArrows={false}
-        className="relative w-screen h-[calc(400vh-4rem)] overflow-hidden justify-center text-center -mt-7"
+        className="relative w-screen h-[30rem] overflow-hidden justify-center text-center -mt-7"
       >
         {sliderItems.map((item, index) => (
           <div key={index} className="relative w-full h-full">
@@ -64,7 +64,7 @@ const About = () => {
             <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
             <div className="content absolute top-[20%] text-[0.700rem] w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] md:text-sm lg:top-[28%] lg:text-2xl xl:top-[20%] xl:text-base">
               <motion.div
-                className="title text-2xl poppins-regular font-bold leading-[1.3em] md:text-3xl lg:text-4xl"
+                className="title text-xl poppins-regular font-bold leading-[1.3em] md:text-3xl lg:text-4xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -72,7 +72,7 @@ const About = () => {
                 {item.title}
               </motion.div>
               <motion.div
-                className="type text-xl py-1 font-bold poppins-regular leading-[1.3em] text-[#14ff72cb] md:text-3xl lg:text-3xl"
+                className="type text-lg py-1 font-bold poppins-regular leading-[1.3em] text-[#14ff72cb] md:text-3xl lg:text-3xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -80,7 +80,7 @@ const About = () => {
                 {item.type}
               </motion.div>
               <motion.div
-                className="description text-[1rem] w-[18rem] font-raleway py-2 md:text-base md:w-[30rem] md:ml-10 lg:text-2xl lg:w-[45rem] lg:ml-10 xl:text-base xl:ml-44"
+                className="description text-sm w-[18rem] font-raleway py-2 md:text-base md:w-[30rem] md:ml-10 lg:text-2xl lg:w-[45rem] lg:ml-10 xl:text-base xl:ml-44"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
