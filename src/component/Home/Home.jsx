@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import img1 from "../../assets/AluminiumProduct/img1.jpg";
 import bathroomPartition1 from "../../assets/BathroomPartition/bathroomPartition1.jpeg";
 import railing2 from "../../assets/Railing/HeroImage/railing2.jpg";
+import Invisiblebacony from "../../assets/InvisibleGrill/Invisiblebacony.webp";
+import Longoffice from "../../assets/Officepartition/Longoffice.png";
 import queuemanager from "../../assets/QueueManager/HeroQueue-manager/queuemanager.png";
 import { Link } from "react-router-dom";
 
@@ -17,13 +19,6 @@ const Home = () => {
         "Opt for aluminium windows to experience superior durability and contemporary elegance. These windows offer exceptional energy efficiency, minimal maintenance, and a sleek, modern design. Elevate your home or business with a choice that combines style, longevity, and performance.",
     },
     {
-      imgSrc: bathroomPartition1,
-      title: "BATHROOM",
-      type: "GLASS PARTITIONS",
-      description:
-        "Transform your bathroom with a sleek glass partition that combines elegance with functionality. Our high-quality glass partitions provide a modern, spacious feel while ensuring privacy and easy maintenance. Enhance your bathroom's aesthetics with a solution that’s both stylish and durable.",
-    },
-    {
       imgSrc: railing2,
       title: "RAILING",
       type: "GLASS RAILING",
@@ -32,10 +27,31 @@ const Home = () => {
     },
     {
       imgSrc: queuemanager,
-      title: "QUEUE",
-      type: "ALUMINIUM STAND",
+      title: "QUEUE MANAGER",
+      type: "STAINLESS STILL",
       description:
         "Enhance crowd control with our robust aluminium queue manager stands. Designed for durability and elegance, these stands provide a reliable solution for guiding foot traffic in any environment. Ideal for both indoor and outdoor settings, they combine strength with a sleek, modern appearance",
+    },
+    {
+      imgSrc: Invisiblebacony,
+      title: "INVISIBLE GRILL",
+      type: "STAINLESS STEEL",
+      description:
+        "Modern safety solution featuring thin, stainless steel wires that provide robust protection without obstructing views. Ideal for windows, balconies, and staircases, it offers a sleek and secure way to enhance safety while maintaining aesthetic appeal. Perfect for both residential and commercial properties.",
+    },
+    {
+      imgSrc: Longoffice,
+      title: "OFFICE PARTITION",
+      type: "TRANSPERANT GLASS",
+      description:
+        "Modern safety solution featuring thin, stainless steel wires that provide robust protection without obstructing views. Ideal for windows, balconies, and staircases, it offers a sleek and secure way to enhance safety while maintaining aesthetic appeal. Perfect for both residential and commercial properties.",
+    },
+    {
+      imgSrc: bathroomPartition1,
+      title: "BATHROOM",
+      type: "GLASS PARTITIONS",
+      description:
+        "Transform your bathroom with a sleek glass partition that combines elegance with functionality. Our high-quality glass partitions provide a modern, spacious feel while ensuring privacy and easy maintenance. Enhance your bathroom's aesthetics with a solution that’s both stylish and durable.",
     },
   ]);
 
@@ -143,11 +159,11 @@ const Home = () => {
             </motion.div>
           ))}
         </div>
-        <div className="thumbnail absolute bottom-14 left-1/1 gap-2 ml-1 transform -translate-x-2/7 flex z-10 md:-translate-x-[-8rem] md:gap-3 lg:gap-4 lg:-translate-x-[-15rem] xl:gap-5 xl:translate-x-60 xl:left-[34%]">
+        <div className="thumbnail absolute bottom-14 left-1/1 gap-2 ml-1 transform -translate-x-2/7 flex z-10 md:-translate-x-[-8rem] md:gap-3 lg:gap-4 lg:-translate-x-[-15rem] xl:gap-5 xl:translate-x-60 xl:left-[34%] 2xl:left-[35%] 2xl:-mb-8">
           {sliderItems.map((item, index) => (
             <div
               key={index}
-              className="item w-[5.4rem] h-[10rem] hover:scale-110 flex-shrink-0 relative cursor-pointer md:h-[15rem] md:w-[9rem] lg:h-[18rem] lg:w-[11rem] xl:h-[200px] xl:w-[160px]"
+              className="item w-[5.4rem] h-[10rem] hover:scale-110 flex-shrink-0 relative cursor-pointer md:h-[15rem] md:w-[9rem] lg:h-[18rem] lg:w-[11rem] xl:h-[200px] xl:w-[160px] 2xl:h-[12rem] 2xl:w-[7rem]"
               onClick={() => handleThumbnailClick(index)}
             >
               <img
