@@ -193,7 +193,7 @@ export const Footer = () => {
         <Link to="/">
           <img
             src={blackLogo}
-            className="w-40 mb-2"
+            className="w-48 mb-2"
             alt="Logo"
             loading="lazy"
           />
@@ -202,7 +202,7 @@ export const Footer = () => {
           <Link
             to="https://goo.gl/maps/WS9LBcQF6RsXW9mHA"
             target="_blank"
-            className="text-black-300 hover:underline font-semibold"
+            className="text-black-300 hover:underline font-raleway font-semibold"
           >
             Charni Road, Mumbai - 400004
           </Link>
@@ -210,7 +210,7 @@ export const Footer = () => {
       </div>
       <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
         <div className="mb-2">
-          <h5 className="font-raleway">
+          <h5 className="font-raleway text-xl">
             <b>Contact Us</b>
           </h5>
           <div className="mt-2">
@@ -228,22 +228,22 @@ export const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start text-xl">
           <h5 className="font-raleway">
             <b>Follow Us</b>
           </h5>
           <div className="flex justify-start gap-4 text-xl">
             <Link target="_blank" to="/">
-              <Facebook className="w-10 h-10 bg-blue-900 text-white p-2 rounded-full hover:text-blue-500 transition duration-500" />
+              <Facebook className="w-10 h-10 bg-primary text-white p-2 rounded-full hover:text-blue-500 transition duration-500" />
             </Link>
             <Link target="_blank" to="/">
-              <Twitter className="w-10 h-10 bg-blue-900 text-white p-2 rounded-full hover:text-black transition duration-500" />
+              <Twitter className="w-10 h-10 bg-primary text-white p-2 rounded-full hover:text-black transition duration-500" />
             </Link>
             <Link target="_blank" to="/">
-              <Instagram className="w-10 h-10 bg-blue-900 text-white p-2 rounded-full hover:text-pink-600 transition duration-500" />
+              <Instagram className="w-10 h-10 bg-primary text-white p-2 rounded-full hover:text-pink-600 transition duration-500" />
             </Link>
             <Link target="_blank" to="/">
-              <Linkedin className="w-10 h-10 bg-blue-900 text-white p-2 rounded-full hover:text-blue-600 transition duration-500" />
+              <Linkedin className="w-10 h-10 bg-primary text-white p-2 rounded-full hover:text-blue-600 transition duration-500" />
             </Link>
           </div>
         </div>

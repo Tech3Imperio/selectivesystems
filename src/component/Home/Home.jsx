@@ -126,7 +126,7 @@ const Home = () => {
                   {item.type}
                 </motion.div>
                 <motion.div
-                  className="description text-[1.2em]"
+                  className="description text-[1em]"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{
                     opacity: index === currentItemIndex ? 1 : 0,
@@ -159,11 +159,11 @@ const Home = () => {
             </motion.div>
           ))}
         </div>
-        <div className="thumbnail absolute bottom-14 left-1/1 gap-2 ml-1 transform -translate-x-2/7 flex z-10 md:-translate-x-[-8rem] md:gap-3 lg:gap-4 lg:-translate-x-[-15rem] xl:gap-5 xl:translate-x-60 xl:left-[34%] 2xl:left-[35%] 2xl:-mb-8">
+        <div className="thumbnail absolute bottom-2 xl4:bottom-12 left-1/1 gap-1 ml- transform -translate-x-2/7 flex z-10 md:-translate-x-[-2rem] md:gap-3 lg:gap-4 lg:-translate-x-[-1rem] xl:gap-5 xl:translate-x-60 xl:left-[32%] xl4:mx-[7%] 2xl:-mb-8">
           {sliderItems.map((item, index) => (
             <div
               key={index}
-              className="item w-[5.4rem] h-[10rem] hover:scale-110 flex-shrink-0 relative cursor-pointer md:h-[15rem] md:w-[9rem] lg:h-[18rem] lg:w-[11rem] xl:h-[200px] xl:w-[160px] 2xl:h-[12rem] 2xl:w-[7rem]"
+              className="item w-[3.7rem] h-[8rem] hover:scale-110 flex-shrink-0 relative cursor-pointer md:h-[10rem] md:w-[6.5rem] lg:h-[15rem] lg:w-[9.2rem] xl:h-[200px] xl:w-[7rem] xl:mb-8 2xl:h-[12rem] xl4:w-[8rem]"
               onClick={() => handleThumbnailClick(index)}
             >
               <img
@@ -174,7 +174,7 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <div className="nextPrevArrows absolute top-[58%] right-[4%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr-24 md:top-[60%] md:right-[54%] md:gap-5 lg:mr-24 lg:top-[80%] lg:right-[54%] xl:top-[70%] xl:gap-5 xl:right-[36%]">
+        <div className="nextPrevArrows absolute top-[70%] right-[60%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr- md:top-[72%] md:right-[65%] md:gap-5 lg:mr-24 lg:top-[70%] lg:right-[54%] xl:top-[70%] xl:gap-5 xl:right-[36%] xl4:top-[77%]">
           <button
             className="prev w-10 h-10 rounded-full bg-[#14ff72cb] border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-white hover:text-black sm:h-[2rem] sm:w-[2rem] md:h-[3rem] md:w-[3rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[3rem] xl:w-[3rem]"
             onClick={() => moveSlider("prev")}

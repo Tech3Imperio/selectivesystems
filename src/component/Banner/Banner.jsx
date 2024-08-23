@@ -16,7 +16,7 @@ const Banner = () => {
         initial={{ opacity: 0, x: -200 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
-        className="text-lg  text-left pt-10 pb-10 font-poppins uppercase text-primary ml-4 md:ml-6 md:text-2xl md:pt-14 md:mb-4 lg:ml-4-28 lg:text-3xl lg:mb-4 xl:text-3xl xl:py-8 xl:ml-32"
+        className="text-lg text-left pt-10 pb-10 font-semibold poppins-regular uppercase text-primary ml-4 md:ml-6 md:text-2xl md:pt-14 md:mb-4 md:font-semibold lg:ml-4-28 lg:text-3xl lg:mb-4 lg:font-semibold xl:text-3xl xl:mb-12 xl:ml-32 xl4:ml-[14.2rem] xl:font-semibold"
       >
         Why Selective Systems ?
       </motion.h1>
@@ -42,9 +42,9 @@ const Banner = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-lg mr-10 uppercase font-poppins text-primary ml-12 md:text-xl lg:text-2xl xl:text-3xl "
+              className="text-lg mr-10 uppercase poppins-regular text-primary ml-12 md:text-xl lg:text-2xl xl:text-3xl "
             >
-              <span className=" text-lg md:-ml-2 md:text-xl lg:text-2xl xl:text-4xl font-poppins">
+              <span className=" text-lg md:-ml-2 md:text-xl lg:text-2xl xl:text-4xl poppins-regular">
                 1.
               </span>{" "}
               Quality Assurance
@@ -68,8 +68,9 @@ const Banner = () => {
               viewport={{ once: true }}
               className=" text-sm px-24 text-secondary font-raleway md:text-sm md:px-10 lg:text-sm lg:ml-0 xl:text-base xl:ml-1"
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Molestias, pariatur eligendi aliquam iusto esse a?
+              Through meticulous attention to detail and a proactive approach,
+              Quality Assurance ensures that every product and process
+              consistently meets the highest standards.
             </motion.p>
             {/* <motion.div 
                     variants={FadeUp(3.1)}
@@ -102,9 +103,9 @@ const Banner = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-lg uppercase font-poppins text-primary md:text-xl lg:text-2xl xl:text-3xl md:ml-[5rem] lg:-ml-2 xl:-ml-[5.2rem]"
+                className="text-lg uppercase poppins-regular text-primary md:text-xl lg:text-2xl xl:text-3xl md:ml-[5rem] lg:-ml-2 xl:-ml-[5.2rem]"
               >
-                <span className=" text-lg md:-ml-2 md:text-xl lg:2xl xl:text-4xl font-poppins">
+                <span className=" text-lg md:-ml-2 md:text-xl lg:2xl xl:text-4xl poppins-regular">
                   2.
                 </span>{" "}
                 End-to-End Service
@@ -115,12 +116,12 @@ const Banner = () => {
                 initial="hidden"
                 animate="visible"
                 viewport={{ once: true }}
-                className="text-sm px-[5rem]  text-secondary font-raleway md:text-sm md:ml-[rem] lg:text-sm lg:w-[35rem] lg:-ml-20 xl:text-base xl:-ml-[10.6rem] xl:w-[36rem]"
+                className="text-sm px-[5rem]  text-secondary font-raleway md:text-sm md:ml-[rem] lg:text-sm lg:w-[35rem] lg:-ml-20 xl:text-base xl:-ml-[10.6rem] xl:w-[37rem]"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt sequi tempora nam quia temporibus aut facilis deleniti!
-                Dolorem asperiores, dolore facilis quisquam iure repellat
-                laudantium sit nam, modi minima illum!
+                End-to-end service ensures seamless integration and execution
+                from initial concept to final delivery. By providing
+                comprehensive support at every stage, it enhances efficiency and
+                maintains high-quality standards throughout the entire process.
               </motion.p>
 
               <motion.p
@@ -128,10 +129,11 @@ const Banner = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-sm px-[5rem]  text-secondary font-raleway md:text-sm md:ml-[rem] lg:text-sm lg:w-[35rem] lg:-ml-20 xl:text-base xl:-ml-[10.6rem] xl:w-[38rem]"
+                className="text-sm px-[5rem]  text-secondary font-raleway md:text-sm md:ml-[rem] lg:text-sm lg:w-[35rem] lg:-ml-20 xl:text-base xl:-ml-[10.6rem] xl:w-[39rem]"
               >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Molestias, pariatur eligendi aliquam iusto esse a?
+                Experience our end-to-end service, delivering comprehensive
+                solutions and exceptional quality at every step, ensuring
+                top-rated results.
               </motion.p>
 
               {/* <motion.div 
@@ -168,12 +170,12 @@ const Banner = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-lg mr-10  uppercase font-poppins text-primary ml-12 md:text-xl md:ml-12 lg:text-2xl xl:text-3xl"
+              className="text-lg mr-10  uppercase poppins-regular text-primary ml-12 md:text-xl md:ml-12 lg:text-2xl xl:text-3xl"
             >
-              <spna className=" text-lg md:text-xl lg:text-2xl xl:text-4xl font-poppins">
+              <span className=" text-lg md:text-xl lg:text-2xl xl:text-4xl poppins-regular">
                 {" "}
                 3.
-              </spna>
+              </span>
               Customer Satisfaction
             </motion.h1>
             <motion.p
@@ -183,10 +185,11 @@ const Banner = () => {
               viewport={{ once: true }}
               className="text-sm px-[75px] text-secondary  font-raleway md:text-sm lg:text-sm lg:ml-14 xl:text-base xl:-ml-6"
             >
-              Quality Assurance is not merely a checkpoint but a relentless
-              pursuit of excellence at every phase. It’s the commitment to
-              perfection and the precision in each step that defines true
-              quality.
+              Customer satisfaction is the cornerstone of exceptional service,
+              achieved through tailored solutions and responsive support. By
+              prioritizing client needs and continuously improving based on
+              feedback, businesses can foster long-term loyalty and exceed
+              expectations
             </motion.p>
             <motion.p
               variants={FadeUp(0.2)}
@@ -195,8 +198,8 @@ const Banner = () => {
               viewport={{ once: true }}
               className="text-sm px-[75px] text-secondary font-raleway md:text-sm lg:text-sm lg:ml-14 xl:text-base xl:-ml-6"
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Molestias, pariatur eligendi aliquam iusto esse a?
+              Customer satisfaction drives success by ensuring tailored
+              solutions and responsive support that exceed client expectations.
             </motion.p>
             {/* <motion.div 
                     variants={FadeUp(5.3)}
@@ -230,9 +233,9 @@ const Banner = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-lg uppercase font-poppins text-primary md:text-xl lg:text-2xl xl:text-3xl md:ml-[5rem] lg:-ml-2 xl:-ml-[5.5rem]"
+                className="text-lg uppercase poppins-regular text-primary md:text-xl lg:text-2xl xl:text-3xl md:ml-[5rem] lg:-ml-2 xl:-ml-[5.5rem]"
               >
-                <span className=" text-lg md:-ml-2 md:text-xl lg:text-2xl xl:text-4xl font-poppins">
+                <span className=" text-lg md:-ml-2 md:text-xl lg:text-2xl xl:text-4xl poppins-regular">
                   4.
                 </span>{" "}
                 Robust Packaging
@@ -243,12 +246,13 @@ const Banner = () => {
                 initial="hidden"
                 animate="visible"
                 viewport={{ once: true }}
-                className="text-sm px-[6rem] text-secondary font-raleway md:text-sm md:px-24 md:-ml-6 lg:text-sm lg:w-[37rem] lg:-ml-28 xl:text-base xl:-ml-[11.8rem] xl:w-[36rem]"
+                className="text-sm px-[6rem] text-secondary font-raleway md:text-sm md:px-24 md:-ml-6 lg:text-sm lg:w-[37rem] lg:-ml-28 xl:text-base xl:-ml-[11.8rem] xl:w-[40rem]"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt sequi tempora nam quia temporibus aut facilis deleniti!
-                Dolorem asperiores, dolore facilis quisquam iure repellat
-                laudantium sit nam, modi minima illum!
+                Robust packaging is essential for ensuring the safety and
+                integrity of products during transit and storage. With advanced
+                materials and design techniques, it provides superior
+                protection, reducing the risk of damage and enhancing overall
+                product quality.
               </motion.p>
 
               <motion.p
@@ -256,10 +260,10 @@ const Banner = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-sm px-[6rem]  text-secondary font-raleway md:text-sm lg:text-sm lg:w-[35rem] lg:-ml-[89px] xl:text-base xl:-ml-[11.8rem] xl:w-[38rem]"
+                className="text-sm px-[6rem]  text-secondary font-raleway md:text-sm lg:text-sm lg:w-[35rem] lg:-ml-[89px] xl:text-base xl:-ml-[11.8rem] xl:w-[40rem]"
               >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Molestias, pariatur eligendi aliquam iusto esse a?
+                Robust packaging guarantees maximum protection and durability,
+                safeguarding products from damage throughout their journey.
               </motion.p>
 
               {/* <motion.div 
@@ -296,9 +300,9 @@ const Banner = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-lg mr-10 uppercase font-poppins text-primary ml-12 md:text-xl lg:text-2xl xl:text-3xl "
+              className="text-lg mr-10 uppercase poppins-regular text-primary ml-12 md:text-xl lg:text-2xl xl:text-3xl "
             >
-              <span className=" text-lg md:text-xl lg:text-2xl xl:text-4xl font-poppins">
+              <span className=" text-lg md:text-xl lg:text-2xl xl:text-4xl poppins-regular">
                 5.
               </span>{" "}
               On Time Deleivery
@@ -310,10 +314,10 @@ const Banner = () => {
               viewport={{ once: true }}
               className=" text-sm px-24 text-secondary font-raleway md:text-sm md:px-12 lg:text-sm lg:-ml-2 xl:text-base xl:-ml-0"
             >
-              Quality Assurance is not merely a checkpoint but a relentless
-              pursuit of excellence at every phase. It’s the commitment to
-              perfection and the precision in each step that defines true
-              quality.
+              On-time delivery is crucial for maintaining customer satisfaction
+              and trust. By adhering to strict timelines and optimizing
+              logistics, businesses ensure that products and services are
+              delivered promptly and efficiently
             </motion.p>
             <motion.p
               variants={FadeUp(0.1)}
@@ -322,8 +326,8 @@ const Banner = () => {
               viewport={{ once: true }}
               className=" text-sm px-24 text-secondary font-raleway md:text-sm md:px-12 lg:text-sm lg:-ml-0 lg:px-12 xl:text-base xl:-ml-0"
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Molestias, pariatur eligendi aliquam iusto esse a?
+              Consistent on-time delivery boosts reliability and customer
+              confidence by ensuring prompt and efficient service.
             </motion.p>
             {/* <motion.div 
                     variants={FadeUp(3.1)}

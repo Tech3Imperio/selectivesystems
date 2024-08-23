@@ -1,51 +1,54 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-import Invisiblebaconyimg from "../../assets/InvisibleGrill/Invisiblebaconyimg.png";
-import image1 from "../../assets/About/Carousel/Image1.webp";
-import image2 from "../../assets/About/Carousel/Image2.webp";
-import image3 from "../../assets/About/Carousel/Image3.webp";
+// import { Carousel } from "react-responsive-carousel";
+import terracefloor from "../../assets/About/terracefloor.webp";
+import primage from "../../assets/About/AboutpageImage/primage.png";
+import humanimage from "../../assets/About/AboutpageImage/humanimage.png";
 import { motion } from "framer-motion";
+// import image1 from "../../assets/About/Carousel/Image1.webp";
+// import image2 from "../../assets/About/Carousel/Image2.webp";
+// import image3 from "../../assets/About/Carousel/Image3.webp";
+// import { motion } from "framer-motion";
 
 const About = () => {
-  const [sliderItems] = useState([
-    {
-      imgSrc: image1,
-      title: "High-Durability Glass",
-      type: "Unmatched Strength & Clarity",
-      description:
-        "Discover our high-durability glass solutions, designed for superior impact resistance and long-lasting performance. Perfect for architectural and industrial applications, it combines strength with exceptional clarity.",
-    },
-    {
-      imgSrc: image2,
-      title: "Invisible Grill",
-      type: "Sleek Safety Solution for Modern Homes",
-      description:
-        "Enhance your home's security with our invisible grill systems, offering robust protection while maintaining an elegant, unobstructed view. Ideal for contemporary spaces, these grills blend seamlessly with your décor.",
-    },
-    {
-      imgSrc: image3,
-      title: "Aluminum Grill Rope",
-      type: "Durable and Stylish Safety Solutions",
-      description:
-        "Explore our premium aluminum grill rope, engineered for durability and aesthetic appeal. Perfect for creating secure and stylish grill installations, this high-quality rope offers strength and flexibility for any design. Ideal for modern security and decorative applications.",
-    },
-    // {
-    //   imgSrc: queuemanager,
-    //   title: "QUEUE",
-    //   type: "ALUMINIUM STAND",
-    //   description:
-    //     "Enhance crowd control with our robust aluminium queue manager stands. Designed for durability and elegance, these stands provide a reliable solution for guiding foot traffic in any environment. Ideal for both indoor and outdoor settings, they combine strength with a sleek, modern appearance.",
-    // },
-  ]);
+  // const [sliderItems] = useState([
+  //   {
+  //     imgSrc: image1,
+  //     title: "High-Durability Glass",
+  //     type: "Unmatched Strength & Clarity",
+  //     description:
+  //       "Discover our high-durability glass solutions, designed for superior impact resistance and long-lasting performance. Perfect for architectural and industrial applications, it combines strength with exceptional clarity.",
+  //   },
+  //   {
+  //     imgSrc: image2,
+  //     title: "Invisible Grill",
+  //     type: "Sleek Safety Solution for Modern Homes",
+  //     description:
+  //       "Enhance your home's security with our invisible grill systems, offering robust protection while maintaining an elegant, unobstructed view. Ideal for contemporary spaces, these grills blend seamlessly with your décor.",
+  //   },
+  //   {
+  //     imgSrc: image3,
+  //     title: "Aluminum Grill Rope",
+  //     type: "Durable and Stylish Safety Solutions",
+  //     description:
+  //       "Explore our premium aluminum grill rope, engineered for durability and aesthetic appeal. Perfect for creating secure and stylish grill installations, this high-quality rope offers strength and flexibility for any design. Ideal for modern security and decorative applications.",
+  //   },
+  //   // {
+  //   //   imgSrc: queuemanager,
+  //   //   title: "QUEUE",
+  //   //   type: "ALUMINIUM STAND",
+  //   //   description:
+  //   //     "Enhance crowd control with our robust aluminium queue manager stands. Designed for durability and elegance, these stands provide a reliable solution for guiding foot traffic in any environment. Ideal for both indoor and outdoor settings, they combine strength with a sleek, modern appearance.",
+  //   // },
+  // ]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
       {/* Carousel with auto-swipe, no dots, and no arrows */}
-      <Carousel
+      {/* <Carousel
         autoPlay
         interval={2000}
         infiniteLoop
@@ -106,7 +109,7 @@ const About = () => {
             </div>
           </div>
         ))}
-      </Carousel>
+      </Carousel> */}
 
       {/* Carousel end */}
 
@@ -118,9 +121,9 @@ const About = () => {
             <div className="lg:w-1/2 flex justify-center items-center">
               <div className="relative">
                 <img
-                  src={Invisiblebaconyimg}
+                  src={terracefloor}
                   alt="video popup bg image"
-                  className=" ml-[4px] h-[30rem] w-[23rem] rounded-3xl md:h-[40rem] md:w-[45rem] md:ml-4 lg:h-[37rem] lg:w-[32rem] lg:mt-4 xl:h-[30rem] xl:w-screen "
+                  className=" ml-[4px] h-[25rem] w-[23rem] rounded-3xl md:h-[40rem] md:w-[45rem] md:ml-6 lg:h-[25rem] lg:w-full xl:h-[35rem] xl:-ml-2 xl:w-[45rem] xl4:w-full xl4:h-[38rem] xl4:w-screen xl4:ml-8 "
                 />
               </div>
             </div>
@@ -133,33 +136,54 @@ const About = () => {
                     <i className="fas fa-square-full"></i>
                   </span>
                 </h6>
-                <h1 className="text-2xl ml-4 font-bold mb-6 poppins-regular text-primary md:text-3xl lg:text-3xl lg:ml-10 xl:text-4xl xl:w-[48rem] xl:-ml-12">
+                <h1 className="text-2xl ml-4 font-bold mb-6 poppins-regular text-primary md:text-3xl lg:text-3xl lg:ml-10 xl:text-4xl xl:w-[48rem] xl:-ml-24 xl:-mt-[2rem]">
                   About Us
                 </h1>
-                <p className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-base lg:w-[33rem] lg:px-8 xl:text-sm xl:w-[48rem] xl:-ml-20">
-                  Selective Systems are #1 Manufacturers & Supplier of
-                  High-Quality INVISIBLE GRILLE & Pleated Mosquito Net, Roller
-                  Mosquito Net. Raw Materials. Maximum Safety | Easy
-                  Installation & Maintenance | Sleek & Stylish.
+                <p className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-sm lg:w-[33rem] lg:px-8  xl:w-[52rem] xl:-ml-32 xl4:w-[56rem] xl4:text-base">
+                  Selective Systems is a leading manufacturer and supplier of
+                  premium high-durable glass railings, balcony windows, and
+                  invisible grilles. Our products are designed for maximum
+                  safety, easy installation, and low maintenance, all while
+                  offering a sleek and stylish finish. We use top-quality raw
+                  materials to ensure long-lasting performance and a modern
+                  aesthetic that complements any architectural design.
                 </p>
-                <p className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-base lg:w-[33rem] lg:px-8 xl:w-[48rem] xl:-ml-20">
-                  Selective Systems are best Invisible Grill, Pleated Mosquito
-                  Net, Roller Mosquito Net Manufacturers in Mumbai. In today’s
-                  time, installing invisible grills is common in high-rise
-                  residential apartments and commercial buildings to secure
-                  small children and pets. The Invisible Grill is a wonderful
-                  alternative for safety purposes. It is mainly designed for
-                  enhancing the interior and exterior decors of your home so
-                  that you can enjoy the unobstructed view of nature. As we are
-                  advancing into a new era with higher demand from the end-user,
-                  We are proud to present Invisible Grill which offers end users
-                  better visibility as compared to traditional grills without
-                  compromising safety concerns. As a plus point, it provides a
-                  safe environment for your loved ones while enjoying
-                  see-through panoramic views. With anything else, the facade
-                  and design of most homes are greatly compromised. Being
-                  invisible, looking into this new grill means you are now able
-                  to enjoy the outside view in a totally non-obscured manner.
+                <p className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[48.2rem] lg:text-sm lg:w-[33rem] lg:px-8 xl:w-[142%] xl:-ml-32 xl4:text-base xl4:w-[159%]">
+                  Selective Systems is a premier provider based in Mumbai,
+                  specializing in high-quality glass railings, aluminum windows,
+                  queue managers, bathroom partitions, door seals, and office
+                  partitions crafted from high-durable glass. We deliver
+                  innovative architectural solutions that enhance safety and
+                  aesthetics across residential, commercial, and industrial
+                  spaces. Our glass railings offer a modern, sleek look with
+                  unmatched safety for balconies, staircases, and terraces,
+                  while our aluminum windows combine durability, style, and
+                  energy efficiency. Our queue managers streamline customer flow
+                  in public spaces, and our bathroom partitions blend
+                  functionality with a clean, modern design. Door seals improve
+                  insulation and reduce noise, and our office partitions create
+                  flexible, customizable work environments. Committed to
+                  excellence, Selective Systems uses top-grade materials and
+                  cutting-edge technology to ensure each product meets the
+                  highest standards of quality and durability. Trust us for all
+                  your architectural and design needs, and discover the perfect
+                  balance of innovation and quality. At Selective Systems, we
+                  specialize in providing a diverse range of stainless steel and
+                  invisible grill solutions, tailored to meet your specific
+                  design needs. Our expertise in customized stainless steel
+                  designs ensures that you receive high-quality products that
+                  enhance the safety and aesthetics of your property. Whether
+                  you're looking for sleek and modern stainless steel railings,
+                  durable invisible grills, or other architectural elements, we
+                  deliver prompt and precise solutions to match your
+                  requirements. At Selective Systems, we prioritize customer
+                  satisfaction by offering customized designs that align with
+                  your unique vision. Our team of skilled professionals works
+                  closely with you to ensure that every detail is addressed,
+                  resulting in products that not only meet but exceed your
+                  expectations. We use top-grade materials and cutting-edge
+                  technology to deliver solutions that are both functional and
+                  aesthetically pleasing.
                 </p>
               </div>
             </div>
@@ -167,27 +191,47 @@ const About = () => {
 
           <div className=" font-raleway">
             <div className=" lg:flex-row">
-              <p className="mb-2 text-[0.700rem] lg:mb-0 px-4 md:text-base md:w-[49rem] lg:text-base lg:w-full xl:text-sm  xl:w-screen">
-                We Selective Systems offer different varieties of pleated &
-                Roller mosquito nets in customized designs. Our designs are
-                prompt as specified by customer needs.
+              <p className="mb-2 text-[0.700rem] lg:mb-0 px-4 md:text-base md:w-[48.2rem] lg:text-sm lg:w-full xl:w-auto xl:mt-8 xl4:text-base">
+                Choose Selective Systems for your stainless steel and invisible
+                grill needs, and experience the perfect blend of innovation,
+                quality, and design. Trust us to provide exceptional products
+                that enhance the beauty and safety of your space, all while
+                adhering to the highest standards of craftsmanship and service.
+                Selective Systems is renowned for its excellence in providing
+                top-quality solutions across various architectural needs,
+                including glass railings, queue managers, office partitions,
+                aluminum windows, and door seals. As specialists in glass
+                railings, we offer sleek, modern designs that enhance the safety
+                and aesthetic appeal of your space. Our queue managers are
+                expertly crafted to streamline customer flow in public and
+                commercial spaces, ensuring efficient organization and a
+                professional look.
               </p>
-              <p className="mb-6 text-[0.700rem]   px-4 lg:mb-0 md:text-base md:w-[49rem] lg:text-base lg:w-full xl:text-sm xl:w-screen">
-                A sliding mosquito net for sliding windows is a smart solution
-                to ward off mosquitoes and other bugs. Unlike the regular net
-                that hangs over the doorway, a sliding mosquito net for the
-                sliding window is customized as per the size of your window. Our
-                mosquito mesh is made from durable and strong wire. A sliding
-                mosquito net is very easy to put up and down. We as installers
-                of mosquito nets for sliding windows, customize them as per the
-                color of your home and the size of your windows. We design very
-                sleek-looking mosquito nets and merge them with the décor of
-                your home. Our mosquito nets allow a constant flow of air and
-                create a pleasant atmosphere in your home. Let’s look at the
-                striking features of our Mosquito nets:
+              <p className="mb-6 text-[0.700rem]  px-4 lg:mb-0 md:text-base md:w-[48.2rem] lg:text-sm lg:w-full xl:w-auto xl4:text-base">
+                We provide customized aluminum windows with a range of color
+                frame options to meet your specific design requirements,
+                combining durability with stylish aesthetics. Our office
+                partitions offer flexible and functional solutions for creating
+                productive work environments, with designs tailored to fit any
+                layout. In addition, our door seals are crafted from
+                high-quality materials to improve insulation and energy
+                efficiency, contributing to a more comfortable indoor
+                environment. At Selective Systems, all our products, including
+                glass railings, queue managers, office partitions, aluminum
+                windows, and door seals, are manufactured using stainless steel
+                and rubber components. We ensure that our solutions are not only
+                durable but also integrate seamlessly with your existing décor.
+                Our commitment to quality and customization guarantees that each
+                product meets the highest standards and perfectly suits your
+                specific needs. With our expertise in aluminum, stainless steel,
+                and glass railings, Selective Systems stands out as the leading
+                provider of innovative and reliable architectural solutions.
+                Trust us to deliver exceptional products that combine
+                functionality, style, and durability, tailored to enhance every
+                aspect of your space.
               </p>
             </div>
-            <div className="flex flex-wrap mt-6 px-4 text-[0.700rem] gap-4 md:text-base lg:text-base xl:text-sm xl:-space-x-14">
+            {/* <div className="flex flex-wrap mt-6 px-4 text-[0.700rem] gap-4 md:text-base lg:text-base xl:text-sm xl:-space-x-14">
               <ul className="flex-1 space-y-2">
                 <li>Sleek design</li>
                 <li>Ensures air circulation and natural light enter</li>
@@ -203,17 +247,69 @@ const About = () => {
                   Provides maximum safety and durability
                 </li>
               </ul>
-            </div>
+            </div> */}
 
-            <div className=" ml-6 mt-12 justify-center">
+            {/* <div className=" ml-6 mt-12 justify-center">
               <Link
                 to=""
                 className="btn theme-btn-2 btn-effect-1 bg-secondary text-black hover:bg-primary hover:text-white poppins-regular py-2 px-4 rounded-full"
               >
                 About Us
               </Link>
-            </div>
+            </div> */}
           </div>
+        </div>
+      </div>
+      <div className=" -mt-[4rem] relative flex items-center bg-gray-800 h-[33rem]">
+        <div className="absolute top-0 left-0 bottom-0 w-1/3 flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, x: -200 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <img
+              src={primage}
+              alt="Flex Image"
+              className="object-cover flex md:h-[17rem] lg:h-[22rem] xl:h-[32rem] xl4:h-[35rem]"
+            />
+          </motion.div>
+        </div>
+        <div className="container mx-auto flex flex-col items-center text-center z-10">
+          <div className=" mb-8">
+            <h6 className="text-sm w-[13rem] text-secondary poppins-regular md:text-sm md:w-auto lg:text-base lg:w-full xl:text-xl xl:w-auto">
+              If you have any inquiries, please feel free to reach out.
+            </h6>
+            <h1 className="text-base py-2 text-primary poppins-regular md:text-2xl lg:text-2xl xl:text-4xl">
+              9372593981
+            </h1>
+          </div>
+          <div className="flex gap-5 md:gap-10 lg:gap-12 xl:gap-14 poppins-regular">
+            <a
+              href="tel: 9372593981"
+              className="border-white  border p-2 rounded-[2rem] hover:scale-110  transition-colors text-primary duration-300 hover:bg-[#14ff72cb] hover:text-white "
+            >
+              MAKE A CALL
+            </a>
+            <Link
+              to="/contact"
+              className="border border-white p-2 rounded-[2rem] text-primary hover:scale-110 transition-colors duration-300 hover:bg-[#14ff72cb] hover:text-white"
+            >
+              CONTACT US
+            </Link>
+          </div>
+        </div>
+        <div className="absolute top-0 right-0 bottom-0 w-1/3 flex items-center justify-center overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, x: 200 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <img
+              src={humanimage}
+              alt="Human Image"
+              className="object-cover md:h-[17rem] lg:h-[22rem] xl:h-[32rem] xl4:h-[34rem]"
+            />
+          </motion.div>
         </div>
       </div>
     </>

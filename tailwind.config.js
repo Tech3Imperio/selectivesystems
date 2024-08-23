@@ -11,6 +11,9 @@ module.exports = {
         poppins: "poppins-regular",
         raleway: "raleway",
       },
+      screens: {
+        xl4: "1920px", // Custom breakpoint for 1920px and above
+      },
       container: {
         center: true,
         // padding: {
