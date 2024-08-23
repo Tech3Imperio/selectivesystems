@@ -234,16 +234,16 @@ export const Footer = () => {
           </h5>
           <div className="flex justify-start gap-4 text-xl">
             <Link target="_blank" to="/">
-              <Facebook className="w-10 h-10 bg-primary text-white p-2 rounded-full hover:text-blue-500 transition duration-500" />
+              <Facebook className="w-10 h-10 bg-[#25D366] text-white p-2 rounded-full hover:text-blue-500 transition duration-500" />
             </Link>
             <Link target="_blank" to="/">
-              <Twitter className="w-10 h-10 bg-primary text-white p-2 rounded-full hover:text-black transition duration-500" />
+              <Twitter className="w-10 h-10 bg-[#25D366] text-white p-2 rounded-full hover:text-black transition duration-500" />
             </Link>
             <Link target="_blank" to="/">
-              <Instagram className="w-10 h-10 bg-primary text-white p-2 rounded-full hover:text-pink-600 transition duration-500" />
+              <Instagram className="w-10 h-10 bg-[#25D366] text-white p-2 rounded-full hover:text-pink-600 transition duration-500" />
             </Link>
             <Link target="_blank" to="/">
-              <Linkedin className="w-10 h-10 bg-primary text-white p-2 rounded-full hover:text-blue-600 transition duration-500" />
+              <Linkedin className="w-10 h-10 bg-[#25D366] text-white p-2 rounded-full hover:text-blue-600 transition duration-500" />
             </Link>
           </div>
         </div>

@@ -123,7 +123,7 @@ const About = () => {
                 <img
                   src={terracefloor}
                   alt="video popup bg image"
-                  className=" ml-[4px] h-[25rem] w-[23rem] rounded-3xl md:h-[40rem] md:w-[45rem] md:ml-6 lg:h-[25rem] lg:w-full xl:h-[35rem] xl:-ml-2 xl:w-[45rem] xl4:w-full xl4:h-[38rem] xl4:w-screen xl4:ml-8 "
+                  className=" ml-[4.2px] h-[27rem] -mt-6 w-[23rem] rounded-3xl md:h-[40rem] md:w-[45rem] md:ml-6 lg:h-[25rem] lg:w-full xl:h-[35rem] xl:-ml-2 xl:w-[45rem] xl4:w-full xl4:h-[38rem] xl4:w-screen xl4:ml-8 "
                 />
               </div>
             </div>
