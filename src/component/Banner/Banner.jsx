@@ -34,7 +34,7 @@ const Banner = () => {
             className=" w-[8rem] h-[8rem] object-cover md:h-[10rem] md:w-[10rem] lg:h-[13rem] lg:w-[13rem] xl:h-[12rem] xl:w-[12rem] xl:ml-[12rem]"
           />
         </div>
-        {/* Brand ingo */}
+        {/* Brand image */}
         <div className=" flex flex-col justify-center ">
           <div className="text-center md:text-left space-y-1 lg:max-w-[600px]">
             <motion.h1

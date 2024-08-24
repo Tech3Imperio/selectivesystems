@@ -6,6 +6,7 @@ import terracefloor from "../../assets/About/terracefloor.webp";
 import primage from "../../assets/About/AboutpageImage/primage.png";
 import humanimage from "../../assets/About/AboutpageImage/humanimage.png";
 import { motion } from "framer-motion";
+import { FadeUp } from "../uitility/animation";
 // import image1 from "../../assets/About/Carousel/Image1.webp";
 // import image2 from "../../assets/About/Carousel/Image2.webp";
 // import image3 from "../../assets/About/Carousel/Image3.webp";
@@ -119,13 +120,18 @@ const About = () => {
           <div className="flex flex-wrap">
             {/* Left Section */}
             <div className="lg:w-1/2 flex justify-center items-center">
-              <div className="relative">
+              <motion.div
+                className="relative"
+                initial={{ opacity: 0, x: -200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+              >
                 <img
                   src={terracefloor}
-                  alt="video popup bg image"
-                  className=" ml-[4.2px] h-[27rem] -mt-6 w-[23rem] rounded-3xl md:h-[40rem] md:w-[45rem] md:ml-6 lg:h-[25rem] lg:w-full xl:h-[35rem] xl:-ml-2 xl:w-[45rem] xl4:w-full xl4:h-[38rem] xl4:w-screen xl4:ml-8 "
+                  alt="terracse image"
+                  className=" px-2 h-[27rem] -mt-6 w-full rounded-3xl md:h-[40rem] md:w-[45rem] md:ml-6 lg:h-[25rem] lg:w-full xl:h-[35rem] xl:-ml-2 xl:w-[45rem] xl4:w-full xl4:h-[38rem] xl4:w-screen xl4:ml-8 "
                 />
-              </div>
+              </motion.div>
             </div>
 
             {/* Right Section */}
@@ -136,10 +142,22 @@ const About = () => {
                     <i className="fas fa-square-full"></i>
                   </span>
                 </h6>
-                <h1 className="text-2xl ml-4 font-bold mb-6 poppins-regular text-primary md:text-3xl lg:text-3xl lg:ml-10 xl:text-4xl xl:w-[48rem] xl:-ml-24 xl:-mt-[2rem]">
+                <motion.h1
+                  variants={FadeUp(0.2)}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="text-2xl ml-4 font-bold mb-6 poppins-regular text-primary md:text-3xl lg:text-3xl lg:ml-10 xl:text-4xl xl:w-[48rem] xl:-ml-24 xl:-mt-[2rem]"
+                >
                   About Us
-                </h1>
-                <p className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-sm lg:w-[33rem] lg:px-8  xl:w-[52rem] xl:-ml-32 xl4:w-[56rem] xl4:text-base">
+                </motion.h1>
+                <motion.p
+                  variants={FadeUp(0.3)}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-sm lg:w-[33rem] lg:px-8  xl:w-[52rem] xl:-ml-32 xl4:w-[56rem] xl4:text-base"
+                >
                   Selective Systems is a leading manufacturer and supplier of
                   premium high-durable glass railings, balcony windows, and
                   invisible grilles. Our products are designed for maximum
@@ -147,8 +165,14 @@ const About = () => {
                   offering a sleek and stylish finish. We use top-quality raw
                   materials to ensure long-lasting performance and a modern
                   aesthetic that complements any architectural design.
-                </p>
-                <p className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[48.2rem] lg:text-sm lg:w-[33rem] lg:px-8 xl:w-[142%] xl:-ml-32 xl4:text-base xl4:w-[159%]">
+                </motion.p>
+                <motion.p
+                  variants={FadeUp(0.4)}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[48.2rem] lg:text-sm lg:w-[33rem] lg:px-8 xl:w-[142%] xl:-ml-32 xl4:text-base xl4:w-[159%]"
+                >
                   Selective Systems is a premier provider based in Mumbai,
                   specializing in high-quality glass railings, aluminum windows,
                   queue managers, bathroom partitions, door seals, and office
@@ -184,12 +208,18 @@ const About = () => {
                   expectations. We use top-grade materials and cutting-edge
                   technology to deliver solutions that are both functional and
                   aesthetically pleasing.
-                </p>
+                </motion.p>
               </div>
             </div>
           </div>
 
-          <div className=" font-raleway">
+          <motion.div
+            variants={FadeUp(0.5)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className=" font-raleway"
+          >
             <div className=" lg:flex-row">
               <p className="mb-2 text-[0.700rem] lg:mb-0 px-4 md:text-base md:w-[48.2rem] lg:text-sm lg:w-full xl:w-auto xl:mt-8 xl4:text-base">
                 Choose Selective Systems for your stainless steel and invisible
@@ -257,7 +287,7 @@ const About = () => {
                 About Us
               </Link>
             </div> */}
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className=" -mt-[4rem] relative flex items-center bg-gray-800 h-[33rem]">
@@ -274,7 +304,7 @@ const About = () => {
             />
           </motion.div>
         </div>
-        <div className="container mx-auto flex flex-col items-center text-center z-10">
+        <div className="container mx-auto flex flex-col items-center text-center z-10 ">
           <div className=" mb-8">
             <h6 className="text-sm w-[13rem] text-secondary poppins-regular md:text-sm md:w-auto lg:text-base lg:w-full xl:text-xl xl:w-auto">
               If you have any inquiries, please feel free to reach out.
@@ -307,7 +337,7 @@ const About = () => {
             <img
               src={humanimage}
               alt="Human Image"
-              className="object-cover md:h-[17rem] lg:h-[22rem] xl:h-[32rem] xl4:h-[34rem]"
+              className=" h-10 object-cover md:h-[17rem] lg:h-[22rem] xl:h-[32rem] xl4:h-[34rem]"
             />
           </motion.div>
         </div>

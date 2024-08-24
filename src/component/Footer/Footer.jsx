@@ -264,7 +264,7 @@ export const Footer = () => {
           />
           <button
             type="submit"
-            className=" bg-[#25D366] text-black border rounded-[3rem] px-4 py-2 w-[7rem] hover:bg-secondary hover:text-black hover:border-black transition duration-500"
+            className=" bg-[#25D366] text-white poppins-regular border rounded-[3rem] px-4 py-2 w-[7rem] hover:bg-secondary hover:text-black hover:border-black transition duration-500"
             id="button"
           >
             Subscribe
