@@ -62,7 +62,7 @@ const Contact = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="pt-24 mb-24 bg-gray-800 -mt-5 rounded-b-[2rem]"
+        className="pt-24 mb-24 bg-gray-800 -mt-5 rounded-b-[2rem] overflow-hidden"
       >
         <div className="container mx-auto">
           <div className="flex justify-center mb-12">
