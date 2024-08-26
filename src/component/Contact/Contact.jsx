@@ -6,6 +6,7 @@ import location from "../../assets/Contact/location.png";
 import contact from "../../assets/Contact/contact.png";
 import { FadeDown, FadeUp } from "../uitility/animation";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,13 +27,18 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${BASE_URL}/contact`, {
-        method: "POST",
+      const response = await axios.post(`${BASE_URL}/contact`, formData, {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
       });
+      // const response = await fetch(`${BASE_URL}/contact`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(formData),
+      // });
 
       if (response.ok) {
         alert("Message sent successfully!");
