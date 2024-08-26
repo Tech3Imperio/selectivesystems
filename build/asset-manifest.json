@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1e55c655.css",
-    "main.js": "/static/js/main.0ac5ee31.js",
+    "main.css": "/static/css/main.2e55bd3c.css",
+    "main.js": "/static/js/main.7e7d4a9b.js",
     "static/js/453.9b48651e.chunk.js": "/static/js/453.9b48651e.chunk.js",
     "static/media/SelectingSystemDesktop.mp4": "/static/media/SelectingSystemDesktop.78834d95a4b65707b859.mp4",
     "static/media/SelectingSystemmobile.mp4": "/static/media/SelectingSystemmobile.2fe95080da08402486a0.mp4",
@@ -20,6 +20,7 @@
     "static/media/primage.png": "/static/media/primage.8fb823d2df61e2eee74d.png",
     "static/media/Doorseal5.png": "/static/media/Doorseal5.877b52f0a058b10eb71e.png",
     "static/media/stairs.webp": "/static/media/stairs.62f6579cc97fd59764b3.webp",
+    "static/media/rightsideimage.png": "/static/media/rightsideimage.e14e20037795436a455d.png",
     "static/media/D75.webp": "/static/media/D75.012cfdefe9679ea767c9.webp",
     "static/media/Doorseal3.png": "/static/media/Doorseal3.74c18acd1559f5c5c6fd.png",
     "static/media/railing2.jpg": "/static/media/railing2.83b477212a0d0012bcfd.jpg",
@@ -65,7 +66,6 @@
     "static/media/AluminumPhoneDoor.jpg": "/static/media/AluminumPhoneDoor.2b6cecdadbdee7a226d2.jpg",
     "static/media/img2.jpg": "/static/media/img2.2b6cecdadbdee7a226d2.jpg",
     "static/media/queuemanager2.png": "/static/media/queuemanager2.09439830a7ef77b25f00.png",
-    "static/media/humanimage.png": "/static/media/humanimage.73d2f8ad8e6e4e563b9b.png",
     "static/media/customersatisfaction.jpg": "/static/media/customersatisfaction.1281da959a6c8c7e36b8.jpg",
     "static/media/Officecabins.png": "/static/media/Officecabins.c72491a6fd26e8938181.png",
     "static/media/aluminumPhone.jpg": "/static/media/aluminumPhone.f035c7076a215f4aeedc.jpg",
@@ -92,12 +92,12 @@
     "static/media/queue3.png": "/static/media/queue3.d089e264e5061773206a.png",
     "static/media/queue2.jpg": "/static/media/queue2.b9f7a83c49003df9e17c.jpg",
     "index.html": "/index.html",
-    "main.1e55c655.css.map": "/static/css/main.1e55c655.css.map",
-    "main.0ac5ee31.js.map": "/static/js/main.0ac5ee31.js.map",
+    "main.2e55bd3c.css.map": "/static/css/main.2e55bd3c.css.map",
+    "main.7e7d4a9b.js.map": "/static/js/main.7e7d4a9b.js.map",
     "453.9b48651e.chunk.js.map": "/static/js/453.9b48651e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e55c655.css",
-    "static/js/main.0ac5ee31.js"
+    "static/css/main.2e55bd3c.css",
+    "static/js/main.7e7d4a9b.js"
   ]
 }

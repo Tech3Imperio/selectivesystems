@@ -13,20 +13,8 @@ import OfficePartitions from "../src/component/Products/OfficePartitions/OfficeP
 import BathroomPartitions from "../src/component/Products/BathroomPartitions/BathroomPartitions.jsx";
 import { Footer } from "./component/Footer/Footer.jsx";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
-// import ContactForm from "./component/ContactForm/ContactForm.jsx";
 
 const App = () => {
-  // const [showContactForm, setShowContactForm] = useState(false);
-
-  // useEffect(() => {
-  //   // Show the contact form when the component mounts
-  //   setShowContactForm(true);
-  // }, []);
-
-  // const handleCloseForm = () => {
-  //   setShowContactForm(false);
-  // };
-
   return (
     <Router>
       <div>
