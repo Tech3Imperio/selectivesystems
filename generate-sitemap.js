@@ -15,7 +15,7 @@ const urls = [
   { url: "/products/invisiblegrill", changefreq: "monthly", priority: 0.8 },
   { url: "/products/officepartitions", changefreq: "monthly", priority: 0.8 },
   {
-    url: "/products/bathroom-partitions",
+    url: "/products/bathroompartitions",
     changefreq: "monthly",
     priority: 0.8,
   },

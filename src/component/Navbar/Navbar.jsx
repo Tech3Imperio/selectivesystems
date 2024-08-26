@@ -1375,13 +1375,13 @@ const Navbar = ({ isHome }) => {
               <div class="absolute left-0 mb-6 mt-0.4 w-52 rounded-2xl bg-[#e4e4e4] shadow-lg hidden group-hover:block">
                 <a
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb]  hover:rounded-2xl"
-                  href="/products/aluminium-windows"
+                  href="/products/aluminiumwindows"
                 >
                   Aluminium Windows
                 </a>
                 <a
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/door-seals"
+                  href="/products/doorseals"
                 >
                   Door Seals
                 </a>
@@ -1393,25 +1393,25 @@ const Navbar = ({ isHome }) => {
                 </a>
                 <a
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/queue-manager"
+                  href="/products/queuemanager"
                 >
                   Queue Manager
                 </a>
                 <a
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/invisible-grill"
+                  href="/products/invisiblegrill"
                 >
                   Invisible Grill
                 </a>
                 <a
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/office-partitions"
+                  href="/products/officepartitions"
                 >
                   Office Partitions
                 </a>
                 <a
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/bathroom-partitions"
+                  href="/products/bathroompartitions"
                 >
                   Bathroom Partitions
                 </a>
@@ -1463,14 +1463,14 @@ const Navbar = ({ isHome }) => {
             {isProductsOpen && (
               <div className="pl-4">
                 <Link
-                  to="/products/aluminium-windows"
+                  to="/products/aluminiumwindows"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >
                   Aluminium Windows
                 </Link>
                 <Link
-                  to="/products/door-seals"
+                  to="/products/doorseals"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >
@@ -1484,28 +1484,28 @@ const Navbar = ({ isHome }) => {
                   Railings
                 </Link>
                 <Link
-                  to="/products/queue-manager"
+                  to="/products/queuemanager"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >
                   Queue Manager
                 </Link>
                 <Link
-                  to="/products/invisible-grill"
+                  to="/products/invisiblegrill"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >
                   Invisible Grill
                 </Link>
                 <Link
-                  to="/products/office-partitions"
+                  to="/products/officepartitions"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >
                   Office Partitions
                 </Link>
                 <Link
-                  to="/products/bathroom-partitions"
+                  to="/products/bathroompartitions"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >
