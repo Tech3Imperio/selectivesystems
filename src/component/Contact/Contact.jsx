@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import axios from "axios";
 
 const Contact = () => {
+  const [isLoader, setIsLoader] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,6 +26,7 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
+    setIsLoader(true);
     e.preventDefault();
     try {
       const response = await axios.post(`${BASE_URL}/contact`, formData, {
@@ -39,8 +41,19 @@ const Contact = () => {
       //   },
       //   body: JSON.stringify(formData),
       // });
-
-      if (response.ok) {
+      console.log(response);
+      // if (response.ok) {
+      //   alert("Message sent successfully!");
+      //   setFormData({
+      //     name: "",
+      //     email: "",
+      //     whatsappNo: "",
+      //     message: "",
+      //   });
+      // } else {
+      //   alert("Error sending message.");
+      // }
+      if (response.status >= 200 && response.status < 300) {
         alert("Message sent successfully!");
         setFormData({
           name: "",
@@ -48,12 +61,17 @@ const Contact = () => {
           whatsappNo: "",
           message: "",
         });
+        setIsLoader(false);
       } else {
+        // Handle non-2xx status codes
         alert("Error sending message.");
       }
     } catch (error) {
+      setIsLoader(false);
       alert("An unexpected error occurred.");
+      console.log("Error", error);
     }
+
     console.log("API URL:", BASE_URL);
   };
   useEffect(() => {
@@ -224,7 +242,7 @@ const Contact = () => {
                   type="submit"
                   className="bg-[#25D366] w-[9rem] h-[3rem] mt-[2rem] poppins-regular text-xl text-white px-2 font-semibold rounded-[3rem] md:mt-3 lg:mt-6 xl:-ml-14 shadow-sm hover:text-black hover:bg-secondary hover:border hover:border-black hover:scale-110 transition duration-500 focus:outline-none focus:ring-[#25D366] focus:border-[#25D366]"
                 >
-                  Send
+                  {isLoader ? "Sending..." : "Send"}
                 </button>
               </div>
             </form>
