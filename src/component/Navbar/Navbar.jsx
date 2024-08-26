@@ -1373,48 +1373,48 @@ const Navbar = ({ isHome }) => {
                 Products
               </button>
               <div class="absolute left-0 mb-6 mt-0.4 w-52 rounded-2xl bg-[#e4e4e4] shadow-lg hidden group-hover:block">
-                <a
+                <Link
+                  to="/products/aluminium-windows"
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb]  hover:rounded-2xl"
-                  href="/products/aluminiumwindows"
                 >
                   Aluminium Windows
-                </a>
-                <a
+                </Link>
+                <Link
+                  to="/products/door-seals"
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/doorseals"
                 >
                   Door Seals
-                </a>
-                <a
+                </Link>
+                <Link
+                  to="/products/railings"
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/railings"
                 >
                   Railings
-                </a>
-                <a
+                </Link>
+                <Link
+                  to="/products/queue-manager"
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/queuemanager"
                 >
                   Queue Manager
-                </a>
-                <a
+                </Link>
+                <Link
+                  to="/products/invisiblegrill"
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/invisiblegrill"
                 >
                   Invisible Grill
-                </a>
-                <a
+                </Link>
+                <Link
+                  to="/products/office-partitions"
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/officepartitions"
                 >
                   Office Partitions
-                </a>
-                <a
+                </Link>
+                <Link
+                  to="/products/bathroom-partitions"
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                  href="/products/bathroompartitions"
                 >
                   Bathroom Partitions
-                </a>
+                </Link>
               </div>
             </div>
             <Link
@@ -1463,14 +1463,14 @@ const Navbar = ({ isHome }) => {
             {isProductsOpen && (
               <div className="pl-4">
                 <Link
-                  to="/products/aluminiumwindows"
+                  to="/products/aluminium-windows"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >
                   Aluminium Windows
                 </Link>
                 <Link
-                  to="/products/doorseals"
+                  to="/products/door-seals"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >
@@ -1498,14 +1498,14 @@ const Navbar = ({ isHome }) => {
                   Invisible Grill
                 </Link>
                 <Link
-                  to="/products/officepartitions"
+                  to="/products/office-partitions"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >
                   Office Partitions
                 </Link>
                 <Link
-                  to="/products/bathroompartitions"
+                  to="/products/bathroom-partitions"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >

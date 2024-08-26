@@ -8,14 +8,14 @@ const urls = [
   { url: "/", changefreq: "daily", priority: 0.8 },
   { url: "/about", changefreq: "monthly", priority: 0.8 },
   { url: "/products", changefreq: "monthly", priority: 0.8 },
-  { url: "/products/aluminiumwindows", changefreq: "monthly", priority: 0.8 },
-  { url: "/products/doorseals", changefreq: "monthly", priority: 0.8 },
+  { url: "/products/aluminium-windows", changefreq: "monthly", priority: 0.8 },
+  { url: "/products/door-seals", changefreq: "monthly", priority: 0.8 },
   { url: "/products/railings", changefreq: "monthly", priority: 0.8 },
-  { url: "/products/queuemanager", changefreq: "monthly", priority: 0.8 },
+  { url: "/products/queue-manager", changefreq: "monthly", priority: 0.8 },
   { url: "/products/invisiblegrill", changefreq: "monthly", priority: 0.8 },
-  { url: "/products/officepartitions", changefreq: "monthly", priority: 0.8 },
+  { url: "/products/office-partitions", changefreq: "monthly", priority: 0.8 },
   {
-    url: "/products/bathroompartitions",
+    url: "/products/bathroom-partitions",
     changefreq: "monthly",
     priority: 0.8,
   },
@@ -28,7 +28,7 @@ const _dirname = dirname(__filename);
 
 console.log("Generating sitemap...");
 
-const sitemap = new SitemapStream({ hostname: "https://selectivesystems.in/" });
+const sitemap = new SitemapStream({ hostname: "https://selectivesystems.in" });
 
 // Write URLs to sitemap
 urls.forEach((url) => sitemap.write(url));

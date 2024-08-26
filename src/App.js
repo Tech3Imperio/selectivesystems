@@ -34,19 +34,19 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route
-            path="/products/aluminiumwindows"
+            path="/products/aluminium-windows"
             element={<AluminiumWindows />}
           />
-          <Route path="/products/doorseals" element={<DoorSeals />} />
+          <Route path="/products/door-seals" element={<DoorSeals />} />
           <Route path="/products/railings" element={<Railings />} />
-          <Route path="/products/queuemanager" element={<QueueManager />} />
+          <Route path="/products/queue-manager" element={<QueueManager />} />
           <Route path="/products/invisiblegrill" element={<InvisibleGrill />} />
           <Route
-            path="/products/officepartitions"
+            path="/products/office-partitions"
             element={<OfficePartitions />}
           />
           <Route
-            path="/products/bathroompartitions"
+            path="/products/bathroom-partitions"
             element={<BathroomPartitions />}
           />
         </Routes>
