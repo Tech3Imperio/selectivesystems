@@ -133,9 +133,9 @@ const Contact = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="bg-gray-800 h-[40rem] rounded-t-[5rem] -mt-[3rem] md:rounded-t-[1000%] py-10 overflow-hidden md:py-20 md:h-[31rem] lg:py-20 lg:px-14"
+        className="bg-gray-800 h-[40rem] rounded-t-[5rem] -mt-[3rem] md:rounded-[6rem] md:w-[46rem] md:ml-[1rem] py-10 overflow-hidden md:py-14 md:mb-4 md:h-[28rem] lg:py-14 lg:px-14 lg:w-[61rem] lg:h-[31rem]  lg:ml-[1rem] xl:w-[80%] xl4:w-[70%] xl4:ml-[300px]"
       >
-        <div className="border h-[35rem] w-[22rem] ml-[1.5rem] bg-secondary mb-14 py-4 rounded-[4rem] backdrop-blur-44 md:h-[21rem] md:w-[46rem] md:ml-[1rem] lg:h-[24rem] lg:w-[49rem] lg:ml-[3.2rem] xl:w-[75rem] xl:ml-[18rem]">
+        <div className="border h-[35rem] w-[22.3rem] mx-auto bg-secondary mb-14 py-4 rounded-[4rem] backdrop-blur-44 md:h-[21rem] md:w-[44rem] md:ml-[1rem] lg:h-[24rem] lg:w-[51rem] lg:ml-[1.7rem] xl:w-[75rem] xl:-ml-[2px] xl4:[75rem] xl4:ml-[1rem]">
           <div className="max-w-lg mx-auto p-4">
             <h2 className="text-3xl font-bold mb-6 ml-[5rem] text-[#25D366] md:text-2xl md:-ml-24 lg:text-3xl xl:text-4xl xl:-ml-[20rem]">
               Get in Touch

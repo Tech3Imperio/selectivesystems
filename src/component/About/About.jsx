@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 // import { Carousel } from "react-responsive-carousel";
 import terracefloor from "../../assets/About/terracefloor.webp";
 import primage from "../../assets/About/AboutpageImage/primage.png";
-import humanimage from "../../assets/About/AboutpageImage/humanimage.png";
+import rightsideimage from "../../assets/About/AboutpageImage/rightsideimage.png";
 import { motion } from "framer-motion";
 import { FadeUp } from "../uitility/animation";
 // import image1 from "../../assets/About/Carousel/Image1.webp";
@@ -156,7 +156,7 @@ const About = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[49rem] lg:text-sm lg:w-[33rem] lg:px-8  xl:w-[52rem] xl:-ml-32 xl4:w-[56rem] xl4:text-base"
+                  className="mb-4 text-[0.700rem] px-4 md:text-base poppins-extralight md:w-[49rem] lg:text-sm lg:w-[33rem] lg:px-8  xl:w-[52rem] xl:-ml-32 xl4:w-[56rem] xl4:text-base"
                 >
                   Selective Systems is a leading manufacturer and supplier of
                   premium high-durable glass railings, balcony windows, and
@@ -171,7 +171,7 @@ const About = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="mb-4 text-[0.700rem] px-4 md:text-base md:w-[48.2rem] lg:text-sm lg:w-[33rem] lg:px-8 xl:w-[142%] xl:-ml-32 xl4:text-base xl4:w-[159%]"
+                  className="mb-4 text-[0.700rem] px-4 poppins-extralight md:text-base md:w-[48.2rem] lg:text-sm lg:w-[33rem] lg:px-8 xl:w-[142%] xl:-ml-32 xl4:text-base xl4:w-[159%]"
                 >
                   Selective Systems is a premier provider based in Mumbai,
                   specializing in high-quality glass railings, aluminum windows,
@@ -191,23 +191,24 @@ const About = () => {
                   cutting-edge technology to ensure each product meets the
                   highest standards of quality and durability. Trust us for all
                   your architectural and design needs, and discover the perfect
-                  balance of innovation and quality. At Selective Systems, we
-                  specialize in providing a diverse range of stainless steel and
-                  invisible grill solutions, tailored to meet your specific
-                  design needs. Our expertise in customized stainless steel
-                  designs ensures that you receive high-quality products that
-                  enhance the safety and aesthetics of your property. Whether
-                  you're looking for sleek and modern stainless steel railings,
-                  durable invisible grills, or other architectural elements, we
-                  deliver prompt and precise solutions to match your
-                  requirements. At Selective Systems, we prioritize customer
-                  satisfaction by offering customized designs that align with
-                  your unique vision. Our team of skilled professionals works
-                  closely with you to ensure that every detail is addressed,
-                  resulting in products that not only meet but exceed your
-                  expectations. We use top-grade materials and cutting-edge
-                  technology to deliver solutions that are both functional and
-                  aesthetically pleasing.
+                  balance of innovation and quality.
+                  <br />
+                  <br /> At Selective Systems, we specialize in providing a
+                  diverse range of stainless steel and invisible grill
+                  solutions, tailored to meet your specific design needs. Our
+                  expertise in customized stainless steel designs ensures that
+                  you receive high-quality products that enhance the safety and
+                  aesthetics of your property. Whether you're looking for sleek
+                  and modern stainless steel railings, durable invisible grills,
+                  or other architectural elements, we deliver prompt and precise
+                  solutions to match your requirements. At Selective Systems, we
+                  prioritize customer satisfaction by offering customized
+                  designs that align with your unique vision. Our team of
+                  skilled professionals works closely with you to ensure that
+                  every detail is addressed, resulting in products that not only
+                  meet but exceed your expectations. We use top-grade materials
+                  and cutting-edge technology to deliver solutions that are both
+                  functional and aesthetically pleasing.
                 </motion.p>
               </div>
             </div>
@@ -221,7 +222,7 @@ const About = () => {
             className=" font-raleway"
           >
             <div className=" lg:flex-row">
-              <p className="mb-2 text-[0.700rem] lg:mb-0 px-4 md:text-base md:w-[48.2rem] lg:text-sm lg:w-full xl:w-auto xl:mt-8 xl4:text-base">
+              <p className="mb-2 text-[0.700rem] poppins-extralight lg:mb-0 px-4 md:text-base md:w-[48.2rem] lg:text-sm lg:w-full xl:w-auto xl:mt-8 xl4:text-base">
                 Choose Selective Systems for your stainless steel and invisible
                 grill needs, and experience the perfect blend of innovation,
                 quality, and design. Trust us to provide exceptional products
@@ -237,7 +238,8 @@ const About = () => {
                 commercial spaces, ensuring efficient organization and a
                 professional look.
               </p>
-              <p className="mb-6 text-[0.700rem]  px-4 lg:mb-0 md:text-base md:w-[48.2rem] lg:text-sm lg:w-full xl:w-auto xl4:text-base">
+              <br />
+              <p className="mb-6 text-[0.700rem]  poppins-extralight px-4 lg:mb-0 md:text-base md:w-[48.2rem] lg:text-sm lg:w-full xl:w-auto xl4:text-base">
                 We provide customized aluminum windows with a range of color
                 frame options to meet your specific design requirements,
                 combining durability with stylish aesthetics. Our office
@@ -335,7 +337,7 @@ const About = () => {
             transition={{ duration: 1, delay: 0.3 }}
           >
             <img
-              src={humanimage}
+              src={rightsideimage}
               alt="Human Image"
               className=" h-10 object-cover md:h-[17rem] lg:h-[22rem] xl:h-[32rem] xl4:h-[34rem]"
             />
