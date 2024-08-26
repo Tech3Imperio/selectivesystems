@@ -42,7 +42,7 @@ const Home = () => {
     {
       imgSrc: Longoffice,
       title: "OFFICE PARTITION",
-      type: "TRANSPERANT GLASS",
+      type: "TRANSPARENT GLASS",
       description:
         "Modern safety solution featuring thin, stainless steel wires that provide robust protection without obstructing views. Ideal for windows, balconies, and staircases, it offers a sleek and secure way to enhance safety while maintaining aesthetic appeal. Perfect for both residential and commercial properties.",
     },
