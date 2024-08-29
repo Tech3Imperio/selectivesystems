@@ -1521,9 +1521,9 @@ const Navbar = ({ isHome }) => {
           >
             Contact Us
           </Link>
-          <div className="px-4 py-4">
+          <div className="px-2 py-2">
             <button
-              className="border-none text-sm bg-[#14ff72cb] text-[#fff] w-[4rem] h-[2rem] rounded-[2rem] cursor-pointer md:font-semibold lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-[#e4e4e4] hover:text-[#000]"
+              className="border-none text-sm bg-[#14ff72cb] text-[#fff] w-[7rem] p-2 h-[2.3rem] rounded-[2rem] cursor-pointer md:font-semibold lg:h-[3.5rem] lg:w-[8rem] lg:px-2 lg:rounded-[3rem] lg:text-sm xl:h-[2.7rem] xl:w-[8rem] xl:text-sm hover:bg-[#e4e4e4] hover:text-[#000]"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >

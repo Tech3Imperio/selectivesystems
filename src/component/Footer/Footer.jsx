@@ -200,7 +200,7 @@ export const Footer = () => {
         </Link>
         <p>
           <Link
-            to="https://goo.gl/maps/WS9LBcQF6RsXW9mHA"
+            to="/"
             target="_blank"
             className="text-black-300 hover:underline font-raleway font-semibold"
           >
@@ -270,7 +270,7 @@ export const Footer = () => {
             Subscribe
           </button>
           <div
-            className="text-black border-2 border-black rounded px-4 py-2 bg-secondary"
+            className="text-black  border-black border rounded-[3rem] px-4 py-2 bg-secondary"
             id="submited"
             style={{ display: "none" }}
           >

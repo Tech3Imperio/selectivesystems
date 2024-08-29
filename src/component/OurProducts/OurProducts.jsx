@@ -112,10 +112,10 @@ const OurProducts = () => {
                   className="h-[12rem] w-[18.5rem] -mt-8 m-1 py-2 px-1 scale-110 transform-translate-y-6 rounded-3xl sm:h-[12rem] sm:w-[19rem] md:h-[14rem] md:w-[18rem] md:m-2 md:-mt-8 lg:h-[15rem] lg:w-[22.5rem] lg:m-4 lg:-mt-10 lg:rounded-[2rem] xl:h-[10.2rem] xl:w-[16rem] xl:-ml-0 xl:m-2 xl:-mt-7"
                 />
                 <div>
-                  <h1 className="text-lg font-poppins mb-2 md:text-base md:mb-2 lg:text-lg lg:mb-2 xl:text-xl xl:mb-2">
+                  <h1 className="text-lg font-poppins mb-2 md:text-base md:mb-2 poppins-regular lg:text-lg lg:mb-2 xl:text-xl xl:mb-2">
                     {product.title}
                   </h1>
-                  <h1 className="text-base font-raleway md:text-sm lg:text-sm xl:text-sm">
+                  <h1 className="text-base poppins-light md:text-sm lg:text-sm xl:text-sm">
                     {product.Description}
                   </h1>
                 </div>

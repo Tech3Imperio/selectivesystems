@@ -12,47 +12,59 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const [sliderItems, setSliderItems] = useState([
     {
+      id:1,
       imgSrc: img1,
       title: "ALUMINIUM",
       type: "WINDOWS",
       description:
         "Opt for aluminium windows to experience superior durability and contemporary elegance. These windows offer exceptional energy efficiency, minimal maintenance, and a sleek, modern design. Elevate your home or business with a choice that combines style, longevity, and performance.",
+      link:"/products/aluminium-windows"  
     },
     {
+      id:2,
       imgSrc: railing2,
       title: "RAILING",
       type: "GLASS RAILING",
       description:
         "Experience unparalleled clarity and style with Imperio's glass railing systems. Our expertly crafted railings blend safety and sophistication, enhancing any space with innovative, high-quality solutions. Whether for residential or commercial projects, trust Imperio to deliver excellence in every detail.",
-    },
+      link:"/products/railings"
+      },
     {
+      id:3,
       imgSrc: queuemanager,
       title: "QUEUE MANAGER",
       type: "STAINLESS STILL",
       description:
         "Enhance crowd control with our robust aluminium queue manager stands. Designed for durability and elegance, these stands provide a reliable solution for guiding foot traffic in any environment. Ideal for both indoor and outdoor settings, they combine strength with a sleek, modern appearance",
-    },
+      link:"/products/queue-manager"
+      },
     {
+      id:4,
       imgSrc: Invisiblebacony,
       title: "INVISIBLE GRILL",
       type: "STAINLESS STEEL",
       description:
         "Modern safety solution featuring thin, stainless steel wires that provide robust protection without obstructing views. Ideal for windows, balconies, and staircases, it offers a sleek and secure way to enhance safety while maintaining aesthetic appeal. Perfect for both residential and commercial properties.",
-    },
+      link:"products/invisiblegrill"
+      },
     {
+      id:5,
       imgSrc: Longoffice,
       title: "OFFICE PARTITION",
       type: "TRANSPARENT GLASS",
       description:
         "Modern safety solution featuring thin, stainless steel wires that provide robust protection without obstructing views. Ideal for windows, balconies, and staircases, it offers a sleek and secure way to enhance safety while maintaining aesthetic appeal. Perfect for both residential and commercial properties.",
-    },
+      link:"/products/office-partitions"
+      },
     {
+      id:6,
       imgSrc: bathroomPartition1,
       title: "BATHROOM",
       type: "GLASS PARTITIONS",
       description:
         "Transform your bathroom with a sleek glass partition that combines elegance with functionality. Our high-quality glass partitions provide a modern, spacious feel while ensuring privacy and easy maintenance. Enhance your bathroom's aesthetics with a solution that’s both stylish and durable.",
-    },
+      link:"/products/bathroom-partitions"
+      },
   ]);
 
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
@@ -87,6 +99,7 @@ const Home = () => {
       >
         <div className="list relative w-full h-full">
           {sliderItems.map((item, index) => (
+          
             <motion.div
               key={index}
               className={`item absolute inset-0 transition-opacity duration-500 ease-in-out ${
@@ -153,10 +166,12 @@ const Home = () => {
                     >
                       GET IN TOUCH
                     </motion.button>
-                  </Link>
+                    </Link>
+          
                 </motion.div>
               </div>
             </motion.div>
+           
           ))}
         </div>
         <div className="thumbnail absolute bottom-2 xl4:bottom-12 left-1/1 gap-1 ml- transform -translate-x-2/7 flex z-10 md:-translate-x-[-2rem] md:gap-3 lg:gap-4 lg:-translate-x-[-1rem] xl:gap-5 xl:translate-x-60 xl:left-[32%] xl4:mx-[7%] 2xl:-mb-8">

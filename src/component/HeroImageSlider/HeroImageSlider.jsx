@@ -89,7 +89,7 @@ const HeroImageSlider = () => {
                 variants={FadeRight(0.9)}
                 initial="hidden"
                 animate="visible"
-                className="text-xl px-4 text-secondary font-raleway md:ml-8 lg:ml-8 xl:-px-14 xl:ml-[8rem] xl:w-[29rem] xl:-px-14"
+                className="text-2xl px-4 text-secondary font-raleway md:ml-8 lg:ml-8 xl:-px-14 xl:ml-[8rem] xl:w-[29rem] xl:-px-14"
               >
                 Modern Glass Windows{" "}
               </motion.h1>
@@ -105,18 +105,17 @@ const HeroImageSlider = () => {
                 variants={FadeRight(1.3)}
                 initial="hidden"
                 animate="visible"
-                className="text-gray-300 w-[16rem] ml-12  text-[0.600rem] font-raleway md:text-[0.860rem] md:w-[28rem] lg:ml-11 lg:w-[35rem] lg:text-sm xl:ml-36 xl:text-sm xl:w-[38rem] xl:py-2"
+                className="text-gray-300 flex  m-[1.4rem]  text-[0.650rem] font-raleway md:text-[0.860rem] md:w-[28rem] lg:ml-11 lg:w-[35rem] lg:text-sm xl:ml-36 xl:text-sm xl:w-[38rem] xl:py-2"
               >
                 Upgrade your home or office with modern glass windows featuring
                 durable aluminum frames. Our glass door windows are designed for
                 energy efficiency, providing excellent insulation while allowing
-                natural light to flood your space. The sleek aluminum frames
-                offer a contemporary look, enhancing both the interior and
-                exterior aesthetics. Perfect for any architectural style, these
-                windows are low-maintenance, resistant to corrosion, and built
-                to last. Whether you're looking to improve your view or boost
-                property value, our glass door windows with aluminum frames
-                deliver on performance and style. Ideal for residential and
+                natural light to flood your space. The sleek aluminum frames offer
+                a contemporary look, enhancing both the interior and exterior aesthetics.
+                Perfect for any architectural style, these windows are low-maintenance,
+                resistant to corrosion, and built to last. Whether you're looking to
+                improve your view or boost property value, our glass door windows with
+                aluminum frames deliver on performance and style. Ideal for residential
                 commercial applications, they combine the best of form and
                 function.
               </motion.p>
@@ -142,7 +141,7 @@ const HeroImageSlider = () => {
               transition={{ duration: 3, delay: 1.2 }}
               src={circle}
               alt=""
-              className=" h-[18rem] w-[18rem] -mt-10 rounded-full md:mt-2 md:ml-28 md:h-[14rem] md:w-[14rem] lg:h-[20rem] lg:w-[20rem] xl:h-[23rem] xl:w-[23rem] "
+              className=" h-[18rem] w-[18rem] -mt-14 rounded-full md:mt-2 md:ml-28 md:h-[14rem] md:w-[14rem] lg:h-[20rem] lg:w-[20rem] xl:h-[23rem] xl:w-[23rem] "
             />
           </div>
         </div>
