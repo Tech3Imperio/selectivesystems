@@ -13,6 +13,7 @@ import OfficePartitions from "../src/component/Products/OfficePartitions/OfficeP
 import BathroomPartitions from "../src/component/Products/BathroomPartitions/BathroomPartitions.jsx";
 import { Footer } from "./component/Footer/Footer.jsx";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
+import ThankYou from "./component/ThankYou/ThankYou.jsx";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/thankyou" element={<ThankYou />} />
           <Route
             path="/products/aluminium-windows"
             element={<AluminiumWindows />}
