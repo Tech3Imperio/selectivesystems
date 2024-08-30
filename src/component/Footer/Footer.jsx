@@ -220,11 +220,11 @@ export const Footer = () => {
             </p>
             <p className=" font-semibold">
               <span className="font-raleway">Email : </span>
-              info.selectivesystems.com
+              info@selectivesystems.in
             </p>
             <p className=" font-semibold">
               <span className="font-raleway">Website :</span>
-              www.selectivesystem.in
+              www.selectivesystems.in
             </p>
           </div>
         </div>

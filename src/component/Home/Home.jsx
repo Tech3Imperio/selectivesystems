@@ -29,15 +29,15 @@ const Home = () => {
         "Experience unparalleled clarity and style with Imperio's glass railing systems. Our expertly crafted railings blend safety and sophistication, enhancing any space with innovative, high-quality solutions. Whether for residential or commercial projects, trust Imperio to deliver excellence in every detail.",
       link:"/products/railings"
       },
-    {
-      id:3,
-      imgSrc: queuemanager,
-      title: "QUEUE MANAGER",
-      type: "STAINLESS STILL",
-      description:
-        "Enhance crowd control with our robust aluminium queue manager stands. Designed for durability and elegance, these stands provide a reliable solution for guiding foot traffic in any environment. Ideal for both indoor and outdoor settings, they combine strength with a sleek, modern appearance",
-      link:"/products/queue-manager"
-      },
+    // {
+    //   id:3,
+    //   imgSrc: queuemanager,
+    //   title: "QUEUE MANAGER",
+    //   type: "STAINLESS STILL",
+    //   description:
+    //     "Enhance crowd control with our robust aluminium queue manager stands. Designed for durability and elegance, these stands provide a reliable solution for guiding foot traffic in any environment. Ideal for both indoor and outdoor settings, they combine strength with a sleek, modern appearance",
+    //   link:"/products/queue-manager"
+    //   },
     {
       id:4,
       imgSrc: Invisiblebacony,

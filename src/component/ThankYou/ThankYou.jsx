@@ -127,7 +127,7 @@ const ThankYou = () => {
         {/* <p>You'll hear from us soon.</p> */}
         <button className="w-[11rem] h-[3.8rem] poppins-regular border rounded-[2rem] hover:bg-[#25D366] hover:scale-110 text-[#25D366] hover:text-white transition-transform duration-700 flex items-center justify-center mx-auto mt-7">
           <Link
-            to="/contact/thankyou"
+            to="/"
             className="text-xl flex items-center justify-center space-x-2 "
           >
             <FaArrowLeft />

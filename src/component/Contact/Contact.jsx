@@ -7,7 +7,6 @@ import contact from "../../assets/Contact/contact.png";
 import { FadeDown, FadeUp } from "../uitility/animation";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [isLoader, setIsLoader] = useState(false);
@@ -115,7 +114,7 @@ const Contact = () => {
                   Email Address
                 </h3>
                 <p className="text-center font-raleway">
-                  infoselectivesystems.com
+                  info@selectivesystems.in
                 </p>
               </motion.div>
             </div>
@@ -144,7 +143,7 @@ const Contact = () => {
                   Office Address
                 </h3>
                 <p className="text-center font-raleway">
-                  Office No. 1 Aman Chambers Charni Road East, Mumbai 400004
+                  Aman Chambers Charni Road East, Mumbai 400004
                 </p>
               </div>
             </motion.div>
@@ -239,14 +238,12 @@ const Contact = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <Link to="/contact/thankyou">
                 <button
                   type="submit"
                   className="bg-[#25D366] w-[9rem] h-[3rem] mt-[2rem] poppins-regular text-xl text-white px-2 font-semibold rounded-[3rem] md:mt-3 lg:mt-6 xl:-ml-14 shadow-sm hover:text-black hover:bg-secondary hover:border hover:border-black hover:scale-110 transition duration-500 focus:outline-none focus:ring-[#25D366] focus:border-[#25D366]"
                 >
                   {isLoader ? "Sending..." : "Send"}
                 </button>
-                </Link>
               </div>
             </form>
           </div>

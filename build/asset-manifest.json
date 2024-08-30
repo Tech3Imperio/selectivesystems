@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.67eea493.css",
-    "main.js": "/static/js/main.f4d8e938.js",
+    "main.css": "/static/css/main.2cdc3d99.css",
+    "main.js": "/static/js/main.ca33f6f8.js",
     "static/js/453.9b48651e.chunk.js": "/static/js/453.9b48651e.chunk.js",
     "static/media/SelectingSystemDesktop.mp4": "/static/media/SelectingSystemDesktop.78834d95a4b65707b859.mp4",
     "static/media/SelectingSystemmobile.mp4": "/static/media/SelectingSystemmobile.2fe95080da08402486a0.mp4",
@@ -42,6 +42,7 @@
     "static/media/Invisiblebaconyimg.png": "/static/media/Invisiblebaconyimg.13e363414209b3a3afed.png",
     "static/media/Invisiblebacony.webp": "/static/media/Invisiblebacony.17691825b93b3eb982d6.webp",
     "static/media/windows1.webp": "/static/media/windows1.8f65fefc3531611fca1e.webp",
+    "static/media/RainbowConfettiSticker.gif": "/static/media/RainbowConfettiSticker.dc610a0d2bb441d27652.gif",
     "static/media/officepartition.webp": "/static/media/officepartition.b3c3942b41983f419912.webp",
     "static/media/windows2.webp": "/static/media/windows2.45494465adc29ab53ab7.webp",
     "static/media/email.png": "/static/media/email.ef394c34345ec00fcf40.png",
@@ -92,12 +93,12 @@
     "static/media/queue3.png": "/static/media/queue3.d089e264e5061773206a.png",
     "static/media/queue2.jpg": "/static/media/queue2.b9f7a83c49003df9e17c.jpg",
     "index.html": "/index.html",
-    "main.67eea493.css.map": "/static/css/main.67eea493.css.map",
-    "main.f4d8e938.js.map": "/static/js/main.f4d8e938.js.map",
+    "main.2cdc3d99.css.map": "/static/css/main.2cdc3d99.css.map",
+    "main.ca33f6f8.js.map": "/static/js/main.ca33f6f8.js.map",
     "453.9b48651e.chunk.js.map": "/static/js/453.9b48651e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.67eea493.css",
-    "static/js/main.f4d8e938.js"
+    "static/css/main.2cdc3d99.css",
+    "static/js/main.ca33f6f8.js"
   ]
 }

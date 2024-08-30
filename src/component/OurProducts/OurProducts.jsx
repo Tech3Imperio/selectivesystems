@@ -3,6 +3,7 @@ import invisiblegrill from "../../assets/ourproduct/invisiblegrill.webp";
 import glass from "../../assets/ourproduct/glass.webp";
 import officepartition from "../../assets/ourproduct/officepartition.webp";
 import queuestand from "../../assets/ourproduct/queuestand.webp";
+import aluminumPhone from "../../assets/AluminiumProduct/AluminiumPhoneImages/aluminumPhone.jpg";
 import { motion } from "framer-motion";
 import { FadeLeft } from "../uitility/animation";
 import { Link } from "react-router-dom";
@@ -37,11 +38,11 @@ const ProductData = [
   },
   {
     id: 4,
-    title: "Queue Manager",
-    link: "/products/queue-manager", // Updated link
+    title: "Aluminium Windows",
+    link: "/products/aluminium-windows", // Updated link
     Description:
-      "Optimize organization with a durable queue manager aluminum stand, designed for efficient crowd control and modern aesthetics.",
-    img: queuestand,
+      "Enhance your space with sleek, energy-efficient aluminum windows, offering modern aesthetics and long-lasting durability.",
+    img: aluminumPhone,
     delay: 1.2,
   },
 ];
