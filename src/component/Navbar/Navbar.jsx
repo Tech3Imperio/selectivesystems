@@ -1527,7 +1527,10 @@ const Navbar = ({ isHome }) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
+              <Link to="/contact"
+              onClick={handleLinkClick}>
               GET IN TOUCH
+              </Link>
             </button>
           </div>
         </div>

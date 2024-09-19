@@ -18,7 +18,6 @@ const Home = () => {
       type: "WINDOWS",
       description:
         "Opt for aluminium windows to experience superior durability and contemporary elegance. These windows offer exceptional energy efficiency, minimal maintenance, and a sleek, modern design. Elevate your home or business with a choice that combines style, longevity, and performance.",
-      link:"/products/aluminium-windows"  
     },
     {
       id:2,
@@ -27,7 +26,6 @@ const Home = () => {
       type: "GLASS RAILING",
       description:
         "Experience unparalleled clarity and style with Imperio's glass railing systems. Our expertly crafted railings blend safety and sophistication, enhancing any space with innovative, high-quality solutions. Whether for residential or commercial projects, trust Imperio to deliver excellence in every detail.",
-      link:"/products/railings"
       },
     // {
     //   id:3,
@@ -45,7 +43,6 @@ const Home = () => {
       type: "STAINLESS STEEL",
       description:
         "Modern safety solution featuring thin, stainless steel wires that provide robust protection without obstructing views. Ideal for windows, balconies, and staircases, it offers a sleek and secure way to enhance safety while maintaining aesthetic appeal. Perfect for both residential and commercial properties.",
-      link:"products/invisiblegrill"
       },
     {
       id:5,
@@ -54,7 +51,6 @@ const Home = () => {
       type: "TRANSPARENT GLASS",
       description:
         "Modern safety solution featuring thin, stainless steel wires that provide robust protection without obstructing views. Ideal for windows, balconies, and staircases, it offers a sleek and secure way to enhance safety while maintaining aesthetic appeal. Perfect for both residential and commercial properties.",
-      link:"/products/office-partitions"
       },
     {
       id:6,
@@ -63,7 +59,6 @@ const Home = () => {
       type: "GLASS PARTITIONS",
       description:
         "Transform your bathroom with a sleek glass partition that combines elegance with functionality. Our high-quality glass partitions provide a modern, spacious feel while ensuring privacy and easy maintenance. Enhance your bathroom's aesthetics with a solution that’s both stylish and durable.",
-      link:"/products/bathroom-partitions"
       },
   ]);
 
@@ -139,7 +134,7 @@ const Home = () => {
                   {item.type}
                 </motion.div>
                 <motion.div
-                  className="description text-[1em]"
+                  className="description text-[1.1em]"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{
                     opacity: index === currentItemIndex ? 1 : 0,
@@ -150,7 +145,7 @@ const Home = () => {
                   {item.description}
                 </motion.div>
                 <motion.div
-                  className="button grid grid-cols-1 mt-5"
+                  className="button grid grid-cols-1"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{
                     opacity: index === currentItemIndex ? 1 : 0,
@@ -160,7 +155,7 @@ const Home = () => {
                 >
                   <Link to="/contact">
                     <motion.button
-                      className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] poppins-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
+                      className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] mt-14 rounded-[2rem] poppins-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                     >
@@ -178,7 +173,7 @@ const Home = () => {
           {sliderItems.map((item, index) => (
             <div
               key={index}
-              className="item w-[3.7rem] h-[8rem] hover:scale-110 flex-shrink-0 relative cursor-pointer md:h-[10rem] md:w-[6.5rem] lg:h-[15rem] lg:w-[9.2rem] xl:h-[200px] xl:w-[7rem] xl:mb-8 2xl:h-[12rem] xl4:w-[8rem]"
+              className="item w-[4.3rem] h-[8rem] mx-auto hover:scale-110 flex-shrink-0 relative cursor-pointer md:h-[12rem] md:w-[8rem] lg:h-[16rem] lg:w-[11rem] xl:h-[200px] xl:w-[7rem] xl:mb-8 2xl:h-[12rem] xl4:w-[8rem]"
               onClick={() => handleThumbnailClick(index)}
             >
               <img
@@ -189,7 +184,7 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <div className="nextPrevArrows absolute top-[70%] right-[60%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr- md:top-[72%] md:right-[65%] md:gap-5 lg:mr-24 lg:top-[70%] lg:right-[54%] xl:top-[70%] xl:gap-5 xl:right-[36%] xl4:top-[77%]">
+        <div className="nextPrevArrows absolute top-[70%] right-[60%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr- md:top-[72%] md:right-[58%] md:gap-5 lg:mr-24 lg:top-[70%] lg:right-[50%] xl:top-[70%] xl:gap-5 xl:right-[36%] xl4:top-[77%]">
           <button
             className="prev w-10 h-10 rounded-full bg-[#14ff72cb] border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-white hover:text-black sm:h-[2rem] sm:w-[2rem] md:h-[3rem] md:w-[3rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[3rem] xl:w-[3rem]"
             onClick={() => moveSlider("prev")}
