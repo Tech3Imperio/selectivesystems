@@ -27,7 +27,7 @@ const Banner = () => {
           <motion.img
             initial={{ opacity: 0, scale: 0.3 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", stiffness: 100, delay: 1 }}
+            transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
             viewport={{ once: true }}
             src={qualitywhite}
             alt=""
@@ -89,7 +89,7 @@ const Banner = () => {
           <motion.img
             initial={{ opacity: 0, scale: 0.3 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", stiffness: 100, delay: 1 }}
+            transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
             viewport={{ once: true }}
             src={endtoendservice}
             alt=""

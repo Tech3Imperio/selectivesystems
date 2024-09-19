@@ -14,12 +14,13 @@ import BathroomPartitions from "../src/component/Products/BathroomPartitions/Bat
 import { Footer } from "./component/Footer/Footer.jsx";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import ThankYou from "./component/ThankYou/ThankYou.jsx";
+import PageNotFound from "./component/PageNotFound/PageNotFound.jsx";
 
 const App = () => {
   return (
     <Router>
       <div>
-        <Navbar /> {/* Navbar will be included on all pages */}
+        <Navbar />
         <FloatingWhatsApp
           phoneNumber="+91111111111"
           accountName="Selective-Systems"
@@ -51,6 +52,7 @@ const App = () => {
             path="/products/bathroom-partitions"
             element={<BathroomPartitions />}
           />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </div>

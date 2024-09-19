@@ -128,7 +128,7 @@ const About = () => {
               >
                 <img
                   src={terracefloor}
-                  alt="terracse image"
+                  alt="terracseimage"
                   className=" px-2 h-[27rem] -mt-6 w-full rounded-3xl md:h-[40rem] md:w-[45rem] md:ml-6 lg:h-[25rem] lg:w-full xl:h-[35rem] xl:-ml-2 xl:w-[45rem] xl4:w-full xl4:h-[38rem] xl4:w-screen xl4:ml-8 "
                 />
               </motion.div>
@@ -193,7 +193,7 @@ const About = () => {
                   your architectural and design needs, and discover the perfect
                   balance of innovation and quality.
                   <br />
-                  <br /> At Selective Systems, we specialize in providing a
+                  {/* <br /> At Selective Systems, we specialize in providing a
                   diverse range of stainless steel and invisible grill
                   solutions, tailored to meet your specific design needs. Our
                   expertise in customized stainless steel designs ensures that
@@ -208,7 +208,7 @@ const About = () => {
                   every detail is addressed, resulting in products that not only
                   meet but exceed your expectations. We use top-grade materials
                   and cutting-edge technology to deliver solutions that are both
-                  functional and aesthetically pleasing.
+                  functional and aesthetically pleasing. */}
                 </motion.p>
               </div>
             </div>
@@ -222,7 +222,7 @@ const About = () => {
             className=" font-raleway"
           >
             <div className=" lg:flex-row">
-              <p className="mb-2 text-[0.700rem] poppins-extralight lg:mb-0 px-4 md:text-base md:w-[48.2rem] lg:text-sm lg:w-full xl:w-auto xl:mt-8 xl4:text-base">
+              {/* <p className="mb-2 text-[0.700rem] poppins-extralight lg:mb-0 px-4 md:text-base md:w-[48.2rem] lg:text-sm lg:w-full xl:w-auto xl:mt-8 xl4:text-base">
                 Choose Selective Systems for your stainless steel and invisible
                 grill needs, and experience the perfect blend of innovation,
                 quality, and design. Trust us to provide exceptional products
@@ -237,7 +237,7 @@ const About = () => {
                 expertly crafted to streamline customer flow in public and
                 commercial spaces, ensuring efficient organization and a
                 professional look.
-              </p>
+              </p> */}
               <br />
               <p className="mb-6 text-[0.700rem]  poppins-extralight px-4 lg:mb-0 md:text-base md:w-[48.2rem] lg:text-sm lg:w-full xl:w-auto xl4:text-base">
                 We provide customized aluminum windows with a range of color

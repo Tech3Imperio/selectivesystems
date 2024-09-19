@@ -191,9 +191,9 @@ const BathroomPartitions = () => {
             </div>
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 flex items-center justify-center flex-col p-4 transition-opacity duration-300 ease-in-out">
               <div className="text-center">
-                <p className="text-lg font-semibold mb-2 py-2">{item.title}</p>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-                <table className="mt-4 text-left w-full">
+                <p className="text-lg font-semibold mb-2 py-2 select-none">{item.title}</p>
+                <p className="text-gray-600 text-sm select-none">{item.desc}</p>
+                <table className="mt-4 text-left w-full select-none">
                   <tbody>
                     <tr>
                       <td className="font-semibold pr-2">Color:</td>

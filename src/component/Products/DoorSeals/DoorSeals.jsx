@@ -1,68 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import SelectingSystemDesktop from "../../../assets/HeroVideo/SelectingSystemDesktop.mp4"; // Video for screens above 1024px
 import SelectingSystemMobile from "../../../assets/HeroVideo/SelectingSystemmobile.mp4"; // Video for screens up to 1024px
-// import { motion } from "framer-motion";
-// import bathroomPartition1 from "../../../assets/BathroomPartition/bathroomPartition1.jpeg";
-// import bathroomPartition2 from "../../../assets/BathroomPartition/bathroomPartition2.jpeg";
-// import bathroomPartition3 from "../../../assets/BathroomPartition/bathroomPartition3.jpeg";
-// import bathroomPartition4 from "../../../assets/BathroomPartition/bathroomPartition4.jpeg";
+
 import DoorData from "../../../Data/DoorSeals/Doorseals";
 
 const DoorSeals = () => {
-  // const [sliderItems, setSliderItems] = useState([
-  //   {
-  //     imgSrc: bathroomPartition1,
-  //     title: "Bathroom Partitions",
-  //     type: "DOORS",
-  //     description:
-  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
-  //   },
-  //   {
-  //     imgSrc: bathroomPartition2,
-  //     title: "ALUMINIUM",
-  //     type: "WINDOWS",
-  //     description:
-  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
-  //   },
-  //   {
-  //     imgSrc: bathroomPartition3,
-  //     title: "ALUMINIUM",
-  //     type: "SLIDER",
-  //     description:
-  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
-  //   },
-  //   {
-  //     imgSrc: bathroomPartition4,
-  //     title: "ALUMINIUM",
-  //     type: "PARTITION",
-  //     description:
-  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus quis eum consequuntur voluptate quae doloribus distinctio. Possimus, sed recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aut.",
-  //   },
-  // ]);
 
-  // const [currentItemIndex, setCurrentItemIndex] = useState(0);
-  // const aluminiumRef = useRef(null); // Create a ref for the Aluminium component
-
-  // const moveSlider = (direction) => {
-  //   if (direction === "next") {
-  //     setCurrentItemIndex((currentItemIndex + 1) % sliderItems.length);
-  //   } else {
-  //     setCurrentItemIndex(
-  //       (currentItemIndex - 1 + sliderItems.length) % sliderItems.length
-  //     );
-  //   }
-  // };
-
-  // const handleThumbnailClick = (index) => {
-  //   setCurrentItemIndex(index);
-  // };
-
-  // useEffect(() => {
-  //   // Scroll to the top of the component when it comes into view
-  //   if (aluminiumRef.current) {
-  //     aluminiumRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [currentItemIndex]);
 
   const videoRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
@@ -127,114 +70,8 @@ const DoorSeals = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      {/* <div
-        ref={aluminiumRef}
-        className="slider h-screen -mt-10 w-screen overflow-hidden relative"
-      >
-        <div className="list relative w-full h-full">
-          {sliderItems.map((item, index) => (
-            <motion.div
-              key={index}
-              className={`item absolute inset-0 transition-opacity duration-500 ease-in-out ${
-                index === currentItemIndex ? "opacity-100" : "opacity-0"
-              }`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: index === currentItemIndex ? 1 : 0 }}
-              transition={{ duration: 1 }}
-            >
-              <img
-                src={item.imgSrc}
-                alt=""
-                className="w-full h-full object-cover"
-              />
-              <div className="gradient-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-              <div className="content absolute top-[12%] text-sm w-[100%] left-[60%] transform -translate-x-1/2 pr-[30%] box-border text-[#e4e4e4] text-shadow poppins-regular md:top-[20%] lg:top-[20%] xl:top-[15%] ">
-                <motion.div
-                  className="title text-[3em] font-bold leading-[1.3em]"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: index === currentItemIndex ? 1 : 0,
-                    y: index === currentItemIndex ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {item.title}
-                </motion.div>
-                <motion.div
-                  className="type text-[3em] font-bold leading-[1.3em] text-[#14ff72cb]"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: index === currentItemIndex ? 1 : 0,
-                    y: index === currentItemIndex ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {item.type}
-                </motion.div>
-                <motion.div
-                  className="description text-[1.2em]"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: index === currentItemIndex ? 1 : 0,
-                    y: index === currentItemIndex ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {item.description}
-                </motion.div>
-                <motion.div
-                  className="button grid grid-cols-1 mt-5"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: index === currentItemIndex ? 1 : 0,
-                    y: index === currentItemIndex ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <motion.button
-                    className="border-none text-sm bg-[#e4e4e4] text-black w-[8rem] h-[3rem] rounded-[2rem] poppins-regular cursor-pointer transition-all duration-400 md:font-semibold lg:h-[4.5rem] lg:w-[11rem] lg:rounded-[3rem] lg:text-base xl:h-[3.4rem] xl:w-[10rem] xl:text-base"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    GET IN TOUCH
-                  </motion.button>
-                </motion.div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        <div className="thumbnail absolute bottom-14 left-1/1 gap-2 ml-1 transform -translate-x-2/7 flex z-10 md:-translate-x-[-8rem] md:gap-3 lg:gap-4 lg:-translate-x-[-15rem] xl:gap-5 xl:translate-x-60 xl:left-1/3">
-          {sliderItems.map((item, index) => (
-            <div
-              key={index}
-              className="item w-[5.4rem] h-[10rem] hover:scale-110 flex-shrink-0 relative cursor-pointer md:h-[15rem] md:w-[9rem] lg:h-[18rem] lg:w-[11rem] xl:h-[200px] xl:w-[160px]"
-              onClick={() => handleThumbnailClick(index)}
-            >
-              <img
-                src={item.imgSrc}
-                alt=""
-                className="w-full h-full object-cover rounded-[20px] shadow-md"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="nextPrevArrows absolute top-[58%] right-[4%] z-10 w-[300px] max-w-[30%] flex gap-2.5 items-center md:mr-24 md:top-[60%] md:right-[54%] md:gap-5 lg:mr-24 lg:top-[80%] lg:right-[54%] xl:top-[70%] xl:gap-5 xl:right-[36%]">
-          <button
-            className="prev w-10 h-10 rounded-full bg-[#14ff72cb] border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-white hover:text-black sm:h-[2rem] sm:w-[2rem] md:h-[3rem] md:w-[3rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[3rem] xl:w-[3rem]"
-            onClick={() => moveSlider("prev")}
-          >
-            {"<"}
-          </button>
-          <button
-            className="next w-10 h-10 rounded-full bg-[#14ff72cb] border-none text-white font-mono font-bold transition-all duration-500 cursor-pointer hover:bg-white hover:text-black sm:h-[2rem] sm:w-[2rem]  md:h-[3rem] md:w-[3rem] lg:h-[3.5rem] lg:w-[3.5rem] xl:h-[3rem] xl:w-[3rem]"
-            onClick={() => moveSlider("next")}
-          >
-            {">"}
-          </button>
-        </div>
-      </div> */}
       {/* product start */}
-      <div className="grid grid-cols-1 -ml-28 md:grid-cols-2 lg:grid-cols-3 poppins-regular px-32 md:justify-center md:mt-8 md:gap-20 lg:justify-center lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-3 xl:mb-10">
+      <div className="grid grid-cols-1 -ml-28 md:grid-cols-2 lg:grid-cols-3 poppins-regular px-32 md:justify-center md:mt-8 md:gap-20 lg:justify-center lg:-ml-20 lg:gap-16 xl:ml-12 xl:mr-12 xl:mt-3 xl:mb-10 select-none">
         {DoorData.map((item, index) => (
           <div
             key={index}

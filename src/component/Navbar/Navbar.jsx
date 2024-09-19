@@ -1392,12 +1392,6 @@ const Navbar = ({ isHome }) => {
                   Railings
                 </Link>
                 <Link
-                  to="/products/queue-manager"
-                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
-                >
-                  Queue Manager
-                </Link>
-                <Link
                   to="/products/invisiblegrill"
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
@@ -1414,6 +1408,12 @@ const Navbar = ({ isHome }) => {
                   class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Bathroom Partitions
+                </Link>
+                <Link
+                  to="/products/queue-manager"
+                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
+                >
+                  Queue Manager
                 </Link>
               </div>
             </div>
@@ -1484,13 +1484,6 @@ const Navbar = ({ isHome }) => {
                   Railings
                 </Link>
                 <Link
-                  to="/products/queuemanager"
-                  onClick={handleLinkClick}
-                  className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
-                >
-                  Queue Manager
-                </Link>
-                <Link
                   to="/products/invisiblegrill"
                   onClick={handleLinkClick}
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
@@ -1510,6 +1503,13 @@ const Navbar = ({ isHome }) => {
                   className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
                 >
                   Bathroom Partitions
+                </Link>
+                <Link
+                  to="/products/queuemanager"
+                  onClick={handleLinkClick}
+                  className="block px-4 py-2 text-gray-100 hover:bg-gray-400"
+                >
+                  Queue Manager
                 </Link>
               </div>
             )}
