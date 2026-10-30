@@ -1370,7 +1370,7 @@ const Navbar = ({ isHome }) => {
             </Link>
             <div className="relative group">
               <button className="text-white" aria-expanded={isProductsOpen}>
-                Products
+                Product
               </button>
               <div class="absolute left-0 mb-6 mt-0.4 w-52 rounded-2xl bg-[#e4e4e4] shadow-lg hidden group-hover:block">
                 <Link
@@ -1458,7 +1458,7 @@ const Navbar = ({ isHome }) => {
               className="block px-4 py-4 text-white w-full text-left"
               aria-expanded={isProductsOpen}
             >
-              Products
+              Product
             </button>
             {isProductsOpen && (
               <div className="pl-4">
