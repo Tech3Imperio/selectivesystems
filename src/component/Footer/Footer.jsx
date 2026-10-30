@@ -282,7 +282,7 @@ export const Footer = () => {
         </div>
       </div>
       {modalMessage && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="fixed top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white text-black p-6 rounded shadow-lg max-w-md w-full text-center relative">
             <span
               className="absolute top-0 right-2 text-2xl cursor-pointer text-gray-500 hover:text-black"

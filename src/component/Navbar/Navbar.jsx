@@ -1270,14 +1270,14 @@ import whiteLogo from "../../assets/Logo/whiteLogo.png";
 
 const Navbar = ({ isHome }) => {
   const [navbarBg, setNavbarBg] = useState(
-    isHome ? "bg-transparent" : "bg-gray-900 bg-opacity-50 backdrop-blur"
+    isHome ? "bg-transparent" : "bg-gray-500 bg-opacity-50 backdrop-blur"
   );
   const [isOpen, setIsOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   const handleScroll = () => {
     if (isHome && window.scrollY >= 80) {
-      setNavbarBg("bg-gray-900 bg-opacity-50 backdrop-blur");
+      setNavbarBg("bg-gray-500 bg-opacity-50 backdrop-blur");
     } else if (isHome) {
       setNavbarBg("bg-transparent");
     }
@@ -1290,7 +1290,7 @@ const Navbar = ({ isHome }) => {
         window.removeEventListener("scroll", handleScroll);
       };
     } else {
-      setNavbarBg("bg-gray-900 bg-opacity-50 backdrop-blur");
+      setNavbarBg("bg-gray-500 bg-opacity-50 backdrop-blur");
     }
   }, [isHome]);
 
@@ -1375,43 +1375,43 @@ const Navbar = ({ isHome }) => {
               <div class="absolute left-0 mb-6 mt-0.4 w-52 rounded-2xl bg-[#e4e4e4] shadow-lg hidden group-hover:block">
                 <Link
                   to="/products/aluminium-windows"
-                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb]  hover:rounded-2xl"
+                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-gray-500 hover:text-[#14ff72cb]  hover:rounded-2xl"
                 >
                   Aluminium Windows
                 </Link>
                 <Link
                   to="/products/door-seals"
-                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
+                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-gray-500 hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Door Seals
                 </Link>
                 <Link
                   to="/products/railings"
-                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
+                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-gray-500 hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Railings
                 </Link>
                 <Link
                   to="/products/invisiblegrill"
-                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
+                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-gray-500 hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Invisible Grill
                 </Link>
                 <Link
                   to="/products/office-partitions"
-                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
+                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-gray-500 hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Office Partitions
                 </Link>
                 <Link
                   to="/products/bathroom-partitions"
-                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
+                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-gray-500 hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Bathroom Partitions
                 </Link>
                 <Link
                   to="/products/queue-manager"
-                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-[#2f2c2c] hover:text-[#14ff72cb] hover:rounded-2xl"
+                  class="block px-4 py-2 poppins-light text-[#000] hover:bg-gray-500 hover:text-[#14ff72cb] hover:rounded-2xl"
                 >
                   Queue Manager
                 </Link>
@@ -1437,7 +1437,7 @@ const Navbar = ({ isHome }) => {
         </div>
       </div>
       {isOpen && (
-        <div className="lg:hidden bg-gray-900 bg-opacity-50 backdrop-blur h-full px-2 pt-2 pb-3 space-y-1 sm:px-3 transition-transform duration-300 transform">
+        <div className="lg:hidden bg-gray-500 bg-opacity-50 backdrop-blur h-full px-2 pt-2 pb-3 space-y-1 sm:px-3 transition-transform duration-300 transform">
           <Link
             to="/"
             onClick={handleLinkClick}
